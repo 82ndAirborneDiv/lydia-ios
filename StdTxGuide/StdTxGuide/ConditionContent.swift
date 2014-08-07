@@ -1,0 +1,109 @@
+//
+//  ConditionContent.swift
+//  CdcContentJsonParser
+//
+//  Created by jtq6 on 8/5/14.
+//  Copyright (c) 2014 jtq6. All rights reserved.
+//
+
+import Foundation
+
+
+class ConditionContent {
+    
+    let CONTENT_MAP_FILENAME = "content/condition-content-map.txt"
+    let filepath = "/Users/jtq6/informaticslab/lydia-ios/StdTxGuide/StdTxGuide/content/condition-content-map.txt"
+    let rootCondition:Condition?
+    var currCondition:Condition?
+    var allConditions:Array<Condition>
+    
+    init () {
+        
+        var error: NSError?
+        allConditions = Array<Condition>()
+        
+        println("Initializing ConditionContent object....")
+        println("Using file \(filepath)......")
+        let jsonData = NSData.dataWithContentsOfFile(filepath, options: .DataReadingMappedIfSafe, error: nil)
+        let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
+        
+        println("JSON loaded, initializing Condition objects....")
+        rootCondition = parseConditions(jsonCondition)
+        currCondition = rootCondition
+        dumpConditions()
+    }
+    
+    func resetCurrentCondition() {
+        currCondition = rootCondition
+    }
+    
+    func dumpConditions() {
+        for c:Condition in allConditions {
+            println("Condition: \(c.title) had id=\(c.id) and parent id = \(c.parentId)")
+        }
+    }
+    
+    func parseConditions(conditionJson:Dictionary<String,AnyObject>) ->Condition {
+        
+        var id:Int = 0
+        var parent:Int = 0
+        var hasChildren:Bool
+        var children:Array<Dictionary<String,AnyObject>>
+        var childConditions:Array<Condition> = Array<Condition>()
+        var text:String = ""
+        var regimensPage:String = ""
+        var dxtxPage:String = ""
+        
+        for (key, value) in conditionJson {
+            switch (key as String) {
+            case "id":
+                id = value as Int
+                println("Id: \(id)")
+                break
+            case "hasChildren":
+                hasChildren = value as Bool
+                println("hasChildren: \(hasChildren)")
+                break
+            case "parent":
+                if id == 0 {
+                    parent = -1
+                } else {
+                    parent = value as Int
+                    println("Parent: \(parent)")
+                }
+                break
+            case "text":
+                text = value as String
+                println("Text: \(text)")
+                break
+            case "dxtxPage":
+                dxtxPage = value as String
+                println("DxtTx Page: \(dxtxPage)")
+                break
+            case "regimensPage":
+                regimensPage = value as String
+                println("Regimens Page: \(regimensPage)")
+                break
+            case "children":
+                children = value as Array<Dictionary<String, AnyObject>>
+                println("Found \(children.count) children")
+                for child in children {
+                    childConditions.append(parseConditions(child))
+                }
+                break
+            default:
+                print("")
+            }
+            
+        }
+        
+        let condition:Condition = Condition(id: id, parentId: parent, title: text, regimensPage: regimensPage, dxtxPage: dxtxPage, children: childConditions)
+        allConditions.append(condition)
+        return condition
+    }
+    
+    
+}
+
+
+
