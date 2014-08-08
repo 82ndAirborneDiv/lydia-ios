@@ -8,18 +8,20 @@
 
 import Foundation
 
+let sharedConditionContent = ConditionContent()
 
 class ConditionContent {
     
     let CONTENT_MAP_FILENAME = "content/condition-content-map.txt"
     let filepath = "/Users/jtq6/informaticslab/lydia-ios/StdTxGuide/StdTxGuide/content/condition-content-map.txt"
-    let rootCondition:Condition?
-    var currCondition:Condition?
+    var rootCondition:Condition? = nil
+    var currCondition:Condition? = nil
     var allConditions:Array<Condition>
     
     init () {
         
         var error: NSError?
+        rootCondition = nil
         allConditions = Array<Condition>()
         
         println("Initializing ConditionContent object....")
@@ -43,11 +45,21 @@ class ConditionContent {
         }
     }
     
+    func getChildConditions() -> Array<Condition> {
+        
+        return currCondition!.childrenConditions
+        
+    }
+    
+    func setCurrentCondition(newCondition:Condition) {
+        currCondition = newCondition
+    }
+    
     func parseConditions(conditionJson:Dictionary<String,AnyObject>) ->Condition {
         
         var id:Int = 0
         var parent:Int = 0
-        var hasChildren:Bool
+        var hasChildren:Bool = false
         var children:Array<Dictionary<String,AnyObject>>
         var childConditions:Array<Condition> = Array<Condition>()
         var text:String = ""
@@ -97,7 +109,7 @@ class ConditionContent {
             
         }
         
-        let condition:Condition = Condition(id: id, parentId: parent, title: text, regimensPage: regimensPage, dxtxPage: dxtxPage, children: childConditions)
+        let condition:Condition = Condition(id: id, parentId: parent, title: text, regimensPage: regimensPage, dxtxPage: dxtxPage, hasChildren: hasChildren, children: childConditions)
         allConditions.append(condition)
         return condition
     }

@@ -17,12 +17,12 @@ class Condition {
     var title, regimensPage, dxtxPage:String
     var childrenConditions:Array<Condition>
     
-    init(id:Int, parentId:Int, title:String, regimensPage:String, dxtxPage:String, children:Array<Condition>) {
+    init(id:Int, parentId:Int, title:String, regimensPage:String, dxtxPage:String, hasChildren:Bool, children:Array<Condition>) {
         
         self.id = id
         self.parentId = parentId
         self.title = title
-        self.hasChildren = false
+        self.hasChildren = hasChildren
         self.childrenConditions = children
         self.regimensPage = regimensPage
         self.dxtxPage = dxtxPage
@@ -42,6 +42,5 @@ class Condition {
         }
         return false
     }
-    
-    
+
 }

@@ -83,14 +83,14 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
-				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
-				A650DAF1198BFF4F00223E47 /* MasterViewController.swift */,
-				A650DAF3198BFF4F00223E47 /* DetailViewController.swift */,
-				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
-				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
-				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
 				A650DB0E198C0B6600223E47 /* ConditionContent.swift */,
+				A650DAF3198BFF4F00223E47 /* DetailViewController.swift */,
+				A650DAF1198BFF4F00223E47 /* MasterViewController.swift */,
+				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
+				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
+				A650DAED198BFF4F00223E47 /* Supporting Files */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
