@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC6801993FC3B000CE5C5 /* Condition.swift */; };
 		A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAEF198BFF4F00223E47 /* AppDelegate.swift */; };
-		A650DAF2198BFF4F00223E47 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF1198BFF4F00223E47 /* MasterViewController.swift */; };
-		A650DAF4198BFF4F00223E47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF3198BFF4F00223E47 /* DetailViewController.swift */; };
+		A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */; };
+		A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */; };
 		A650DAF7198BFF4F00223E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A650DAF5198BFF4F00223E47 /* Main.storyboard */; };
 		A650DAF9198BFF4F00223E47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A650DAF8198BFF4F00223E47 /* Images.xcassets */; };
 		A650DB05198BFF4F00223E47 /* StdTxGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DB04198BFF4F00223E47 /* StdTxGuideTests.swift */; };
@@ -33,8 +33,8 @@
 		A650DAEA198BFF4F00223E47 /* StdTxGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StdTxGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A650DAEE198BFF4F00223E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A650DAEF198BFF4F00223E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A650DAF1198BFF4F00223E47 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A650DAF3198BFF4F00223E47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
+		A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionDetailViewController.swift; sourceTree = "<group>"; };
 		A650DAF6198BFF4F00223E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A650DAF8198BFF4F00223E47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A650DAFE198BFF4F00223E47 /* StdTxGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StdTxGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +86,8 @@
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
 				A650DB0E198C0B6600223E47 /* ConditionContent.swift */,
-				A650DAF3198BFF4F00223E47 /* DetailViewController.swift */,
-				A650DAF1198BFF4F00223E47 /* MasterViewController.swift */,
+				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
+				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
 				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
@@ -222,8 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A650DAF4198BFF4F00223E47 /* DetailViewController.swift in Sources */,
-				A650DAF2198BFF4F00223E47 /* MasterViewController.swift in Sources */,
+				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
+				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
 				A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */,
@@ -299,6 +299,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};

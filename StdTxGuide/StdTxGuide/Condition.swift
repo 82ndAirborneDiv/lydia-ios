@@ -32,6 +32,7 @@ class Condition {
     
 
     func numberOfChildren() -> Int {
+        
         return childrenConditions.count
     }
     

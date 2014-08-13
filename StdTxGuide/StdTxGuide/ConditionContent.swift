@@ -17,6 +17,7 @@ class ConditionContent {
     var rootCondition:Condition? = nil
     var currCondition:Condition? = nil
     var allConditions:Array<Condition>
+    var showingDetail:Bool = false
     
     init () {
         
@@ -51,9 +52,37 @@ class ConditionContent {
         
     }
     
+    func setCurrentConditionToParent() {
+        if currCondition?.id != 0 {
+            setCurrentCondition(getConditionFromId(currCondition!.parentId))
+        } else {
+            setCurrentCondition(rootCondition!)
+        }
+    }
+    
+    func getCurrentCondition() -> Condition {
+        
+        return self.currCondition!
+    
+    }
+    
     func setCurrentCondition(newCondition:Condition) {
+    
         currCondition = newCondition
     }
+    
+    
+    func getConditionFromId(id:Int) -> Condition {
+        for cond in allConditions {
+            if cond.id == id {
+                return cond
+            }
+        }
+        
+        // not found return root
+        return rootCondition!
+    }
+    
     
     func parseConditions(conditionJson:Dictionary<String,AnyObject>) ->Condition {
         
