@@ -74,7 +74,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         if segue.identifier == "showConditionDetail" {
             let condition = conditionContent.getCurrentCondition()
             let vc = segue.destinationViewController as ConditionDetailViewController
-            vc.detailItem = condition.title
+            vc.condition = condition
 
          }
     }
