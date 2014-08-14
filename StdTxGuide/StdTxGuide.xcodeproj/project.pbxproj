@@ -125,6 +125,8 @@
 		A6F7C7B4199D28B400A77F2C /* about_us.html in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AD199D28B400A77F2C /* about_us.html */; };
 		A6F7C7B5199D28B400A77F2C /* about.css in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AE199D28B400A77F2C /* about.css */; };
 		A6F7C7B6199D28B400A77F2C /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AF199D28B400A77F2C /* terms.html */; };
+		A6F7C7BA199D33D500A77F2C /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */; };
+		A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +262,8 @@
 		A6F7C7AD199D28B400A77F2C /* about_us.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about_us.html; sourceTree = "<group>"; };
 		A6F7C7AE199D28B400A77F2C /* about.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = about.css; sourceTree = "<group>"; };
 		A6F7C7AF199D28B400A77F2C /* terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms.html; sourceTree = "<group>"; };
+		A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +315,8 @@
 				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
+				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -667,9 +673,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
+				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
+				A6F7C7BA199D33D500A77F2C /* AboutUsViewController.swift in Sources */,
 				A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */,
 				A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */,
 			);
