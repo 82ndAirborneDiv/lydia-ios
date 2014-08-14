@@ -85,7 +85,9 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    
     @IBAction func backButtonTouch(AnyObject) {
+        
         goUpConditionTree()
     }
 

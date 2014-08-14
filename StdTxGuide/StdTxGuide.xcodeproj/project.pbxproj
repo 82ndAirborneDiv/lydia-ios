@@ -117,6 +117,14 @@
 		A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */; };
 		A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E9199BE8DF0030E194 /* recreated_tables.css */; };
 		A68B584F199BE8DF0030E194 /* treatments.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57EA199BE8DF0030E194 /* treatments.css */; };
+		A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */; };
+		A6F7C7B0199D28B400A77F2C /* eula_icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */; };
+		A6F7C7B1199D28B400A77F2C /* eula.css in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AA199D28B400A77F2C /* eula.css */; };
+		A6F7C7B2199D28B400A77F2C /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AB199D28B400A77F2C /* eula.html */; };
+		A6F7C7B3199D28B400A77F2C /* about_icon_page.png in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AC199D28B400A77F2C /* about_icon_page.png */; };
+		A6F7C7B4199D28B400A77F2C /* about_us.html in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AD199D28B400A77F2C /* about_us.html */; };
+		A6F7C7B5199D28B400A77F2C /* about.css in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AE199D28B400A77F2C /* about.css */; };
+		A6F7C7B6199D28B400A77F2C /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AF199D28B400A77F2C /* terms.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +252,14 @@
 		A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.swatch.f.css; sourceTree = "<group>"; };
 		A68B57E9199BE8DF0030E194 /* recreated_tables.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = recreated_tables.css; sourceTree = "<group>"; };
 		A68B57EA199BE8DF0030E194 /* treatments.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = treatments.css; sourceTree = "<group>"; };
+		A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eula_icon_retina.png; sourceTree = "<group>"; };
+		A6F7C7AA199D28B400A77F2C /* eula.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = eula.css; sourceTree = "<group>"; };
+		A6F7C7AB199D28B400A77F2C /* eula.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eula.html; sourceTree = "<group>"; };
+		A6F7C7AC199D28B400A77F2C /* about_icon_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon_page.png; sourceTree = "<group>"; };
+		A6F7C7AD199D28B400A77F2C /* about_us.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about_us.html; sourceTree = "<group>"; };
+		A6F7C7AE199D28B400A77F2C /* about.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = about.css; sourceTree = "<group>"; };
+		A6F7C7AF199D28B400A77F2C /* terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +307,7 @@
 				A650DB0E198C0B6600223E47 /* ConditionContent.swift */,
 				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
+				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
@@ -327,6 +344,13 @@
 		A68B5785199BE8DF0030E194 /* content */ = {
 			isa = PBXGroup;
 			children = (
+				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
+				A6F7C7AA199D28B400A77F2C /* eula.css */,
+				A6F7C7AB199D28B400A77F2C /* eula.html */,
+				A6F7C7AC199D28B400A77F2C /* about_icon_page.png */,
+				A6F7C7AD199D28B400A77F2C /* about_us.html */,
+				A6F7C7AE199D28B400A77F2C /* about.css */,
+				A6F7C7AF199D28B400A77F2C /* terms.html */,
 				A68B5786199BE8DF0030E194 /* c0-clv.html */,
 				A68B5787199BE8DF0030E194 /* c1-r.html */,
 				A68B5788199BE8DF0030E194 /* c1-t.html */,
@@ -526,11 +550,13 @@
 				A68B5815199BE8DF0030E194 /* c31-t.html in Resources */,
 				A68B583E199BE8DF0030E194 /* c55-r.html in Resources */,
 				A68B5825199BE8DF0030E194 /* c40-t.html in Resources */,
+				A6F7C7B2199D28B400A77F2C /* eula.html in Resources */,
 				A68B584F199BE8DF0030E194 /* treatments.css in Resources */,
 				A68B57F0199BE8DF0030E194 /* c11-r.html in Resources */,
 				A68B57FC199BE8DF0030E194 /* c18-r.html in Resources */,
 				A68B5817199BE8DF0030E194 /* c32-t.html in Resources */,
 				A68B5841199BE8DF0030E194 /* c56-t.html in Resources */,
+				A6F7C7B0199D28B400A77F2C /* eula_icon_retina.png in Resources */,
 				A68B57F2199BE8DF0030E194 /* c12-r.html in Resources */,
 				A68B581D199BE8DF0030E194 /* c37-t.html in Resources */,
 				A68B5806199BE8DF0030E194 /* c22-r.html in Resources */,
@@ -568,6 +594,7 @@
 				A68B57F5199BE8DF0030E194 /* c13-t.html in Resources */,
 				A68B5808199BE8DF0030E194 /* c23-r.html in Resources */,
 				A68B5812199BE8DF0030E194 /* c30-r.html in Resources */,
+				A6F7C7B6199D28B400A77F2C /* terms.html in Resources */,
 				A68B5848199BE8DF0030E194 /* c8-clv.html in Resources */,
 				A68B581E199BE8DF0030E194 /* c38-r.html in Resources */,
 				A68B5837199BE8DF0030E194 /* c51-r.html in Resources */,
@@ -587,7 +614,9 @@
 				A68B5809199BE8DF0030E194 /* c23-t.html in Resources */,
 				A68B57EC199BE8DF0030E194 /* c1-r.html in Resources */,
 				A68B5820199BE8DF0030E194 /* c39-r.html in Resources */,
+				A6F7C7B5199D28B400A77F2C /* about.css in Resources */,
 				A68B584B199BE8DF0030E194 /* condition-content-map.txt in Resources */,
+				A6F7C7B4199D28B400A77F2C /* about_us.html in Resources */,
 				A68B5829199BE8DF0030E194 /* c43-t.html in Resources */,
 				A68B5824199BE8DF0030E194 /* c40-r.html in Resources */,
 				A68B580A199BE8DF0030E194 /* c24-r.html in Resources */,
@@ -605,6 +634,7 @@
 				A68B57ED199BE8DF0030E194 /* c1-t.html in Resources */,
 				A68B57FE199BE8DF0030E194 /* c19-r.html in Resources */,
 				A68B580B199BE8DF0030E194 /* c24-t.html in Resources */,
+				A6F7C7B1199D28B400A77F2C /* eula.css in Resources */,
 				A68B5836199BE8DF0030E194 /* c50-t.html in Resources */,
 				A68B57EE199BE8DF0030E194 /* c10-r.html in Resources */,
 				A68B581A199BE8DF0030E194 /* c35-t.html in Resources */,
@@ -612,6 +642,7 @@
 				A68B5814199BE8DF0030E194 /* c31-r.html in Resources */,
 				A68B5800199BE8DF0030E194 /* c2-r.html in Resources */,
 				A68B581F199BE8DF0030E194 /* c38-t.html in Resources */,
+				A6F7C7B3199D28B400A77F2C /* about_icon_page.png in Resources */,
 				A68B583D199BE8DF0030E194 /* c54-clv.html in Resources */,
 				A68B5802199BE8DF0030E194 /* c20-r.html in Resources */,
 				A68B5803199BE8DF0030E194 /* c20-t.html in Resources */,
@@ -639,6 +670,7 @@
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
+				A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */,
 				A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
