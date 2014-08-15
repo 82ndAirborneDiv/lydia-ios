@@ -22,10 +22,17 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        
+        //self.view.backgroundColor = UIColor.darkGrayColor()
+
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
         hideBackButton()

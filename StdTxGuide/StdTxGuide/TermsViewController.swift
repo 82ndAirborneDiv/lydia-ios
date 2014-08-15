@@ -19,9 +19,10 @@ class TermsViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource("terms", withExtension: "html")
         let request = NSURLRequest(URL:url)
@@ -29,13 +30,22 @@ class TermsViewController: UIViewController {
         
     }
     
+    
     override func viewWillAppear(animated: Bool) {
         
     }
     
+    
     override func viewDidAppear(animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"
     }
+    
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

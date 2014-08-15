@@ -22,11 +22,13 @@ class EulaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource("eula", withExtension: "html")
         let request = NSURLRequest(URL:url)
         webView.loadRequest(request)
+        
         
     }
     
@@ -34,8 +36,11 @@ class EulaViewController: UIViewController {
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
     override func viewDidAppear(animated: Bool) {
-        // detailDescriptionLabel.text = "Loaded!"
     }
     
     override func didReceiveMemoryWarning() {

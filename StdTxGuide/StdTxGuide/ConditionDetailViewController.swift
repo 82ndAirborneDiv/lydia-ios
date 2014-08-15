@@ -44,6 +44,11 @@ class ConditionDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
+
     func loadContent(fileName:String) {
         let url = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html")
         let request = NSURLRequest(URL:url)

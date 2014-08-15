@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
@@ -14,15 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-d4-Ar2">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items/>
-                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="523-mv-Yqf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Conditions" id="HwS-X5-7M0">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fCm-70-2M8">
+                                            <connections>
+                                                <action selector="backButtonTouch:" destination="9pv-A4-QxB" id="LNz-6z-k73"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-T7-wNN">
-                                <rect key="frame" x="16" y="90" width="568" height="453"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConditionCell" id="Ft0-Nf-5o6">
@@ -38,38 +46,20 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="ZQ2-Gh-Z1z"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="523-mv-Yqf">
-                                <rect key="frame" x="140" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Conditions" id="HwS-X5-7M0">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fCm-70-2M8">
-                                            <connections>
-                                                <action selector="backButtonTouch:" destination="9pv-A4-QxB" id="LNz-6z-k73"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="8qp-4k-ywN"/>
-                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="9hT-Pl-9vo"/>
-                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="GCv-eZ-Lr1"/>
-                            <constraint firstAttribute="centerX" secondItem="523-mv-Yqf" secondAttribute="centerX" id="zRo-4T-AKd"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Conditions" image="10-medical" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="parentConditionButton" destination="fCm-70-2M8" id="FYi-L1-3jY"/>
                         <outlet property="tableView" destination="AqA-T7-wNN" id="oOh-XB-Nag"/>
-                        <segue destination="o8A-WI-4Pp" kind="showDetail" identifier="showConditionDetail" id="JyN-Sk-JOq"/>
+                        <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" id="JyN-Sk-JOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="xhG-tK-kuz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="888" y="-293"/>
+            <point key="canvasLocation" x="461" y="-300"/>
         </scene>
         <!--Condition Detail View Controller-->
         <scene sceneID="Vnd-7L-W23">
@@ -80,11 +70,15 @@
                         <viewControllerLayoutGuide type="bottom" id="f4R-Hr-Sau"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dMi-GJ-zvz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
-                                <rect key="frame" x="140" y="28" width="320" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="au0-WA-5Ak">
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Condition Details" id="moC-LP-7Wa">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="4GG-bf-ldt">
@@ -95,8 +89,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
-                                <rect key="frame" x="168" y="520" width="264" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
+                                <rect key="frame" x="28" y="71" width="264" height="29"/>
                                 <segments>
                                     <segment title="Treatments"/>
                                     <segment title="More Info"/>
@@ -105,20 +99,15 @@
                                     <action selector="valueChange:" destination="o8A-WI-4Pp" eventType="valueChanged" id="1ce-yR-B8c"/>
                                 </connections>
                             </segmentedControl>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
-                                <rect key="frame" x="140" y="110" width="320" height="402"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
+                                <rect key="frame" x="16" y="107" width="288" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="RQa-5Q-T49" secondAttribute="centerX" id="5Me-s5-Eff"/>
-                            <constraint firstAttribute="centerX" secondItem="JZw-Lp-IBZ" secondAttribute="centerX" id="C41-Ps-gDh"/>
-                            <constraint firstAttribute="centerX" secondItem="vta-NW-HXZ" secondAttribute="centerX" id="Ilo-V3-QBr"/>
-                            <constraint firstAttribute="centerY" secondItem="RQa-5Q-T49" secondAttribute="centerY" constant="-8.5" id="py7-jZ-1UO"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gQI-1K-Hec"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="parentConditionButton" destination="4GG-bf-ldt" id="Weu-mz-2MP"/>
@@ -128,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPi-8O-kbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="-293"/>
+            <point key="canvasLocation" x="936" y="-300"/>
         </scene>
         <!--Terms-->
         <scene sceneID="wg7-f3-ORb">
@@ -139,28 +128,21 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem id="WaP-O7-m87"/>
-                                </items>
-                            </navigationBar>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-xz-3Yd">
-                                <rect key="frame" x="140" y="100" width="320" height="400"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-xz-3Yd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-WU-JIq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Terms &amp; Abbreviations" id="wyY-cH-nZu"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" id="C9p-N0-R4o"/>
-                            <constraint firstAttribute="centerY" secondItem="t4F-xz-3Yd" secondAttribute="centerY" id="WbK-2c-9bP"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="ZQW-8Y-bT4"/>
-                            <constraint firstAttribute="centerX" secondItem="t4F-xz-3Yd" secondAttribute="centerX" id="aC1-Bo-L8a"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="dYc-7R-70W"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Terms" image="96-book" id="cPa-gy-q4n"/>
                     <connections>
@@ -169,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="392"/>
+            <point key="canvasLocation" x="473" y="370"/>
         </scene>
         <!--About Us-->
         <scene sceneID="bUb-Qa-lVu">
@@ -180,19 +162,21 @@
                         <viewControllerLayoutGuide type="bottom" id="Xwq-K7-82v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jEe-Vu-jQP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
-                                <rect key="frame" x="140" y="100" width="320" height="400"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2X6-SP-heQ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="About Us" id="CLX-yK-okR"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zCM-EE-L3W" secondAttribute="centerX" id="Q39-0c-fbf"/>
-                            <constraint firstAttribute="centerY" secondItem="zCM-EE-L3W" secondAttribute="centerY" id="rQh-5r-KjY"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Us" image="112-group" id="8rh-S8-AXB"/>
                     <connections>
@@ -201,30 +185,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQL-UE-shO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="1067"/>
+            <point key="canvasLocation" x="211" y="1010"/>
         </scene>
-        <!--Agreement-->
+        <!--EULA-->
         <scene sceneID="KxS-TY-jfe">
             <objects>
-                <viewController id="zqW-1X-omP" customClass="EulaViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="EULA" id="zqW-1X-omP" customClass="EulaViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4pN-t4-b5c"/>
                         <viewControllerLayoutGuide type="bottom" id="nqU-R6-gAI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WaO-VS-27C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-SU-BL8">
-                                <rect key="frame" x="140" y="100" width="320" height="400"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-SU-BL8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkk-ag-Dw1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="End User Agreement" id="5sz-Rt-uuz"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="2dc-SU-BL8" secondAttribute="centerX" id="RtB-UR-K59"/>
-                            <constraint firstAttribute="centerY" secondItem="2dc-SU-BL8" secondAttribute="centerY" id="SVk-sK-eal"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agreement" image="179-notepad" id="9c4-2R-nTN"/>
                     <connections>
@@ -233,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXP-tf-5Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="1066"/>
+            <point key="canvasLocation" x="573" y="1009"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -263,4 +249,12 @@
         <image name="179-notepad" width="22" height="28"/>
         <image name="96-book" width="18" height="26"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
 </document>
