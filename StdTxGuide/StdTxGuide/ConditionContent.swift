@@ -12,8 +12,8 @@ let sharedConditionContent = ConditionContent()
 
 class ConditionContent {
     
-    let CONTENT_MAP_FILENAME = "content/condition-content-map.txt"
-    let filepath = "/Users/jtq6/informaticslab/lydia-ios/StdTxGuide/StdTxGuide/content/condition-content-map.txt"
+    let CONTENT_MAP_FILENAME = "condition-content-map"
+    let CONTENT_MAP_FILE_EXT = "txt"
     var rootCondition:Condition? = nil
     var currCondition:Condition? = nil
     var allConditions:Array<Condition>
@@ -26,8 +26,9 @@ class ConditionContent {
         allConditions = Array<Condition>()
         
         println("Initializing ConditionContent object....")
-        println("Using file \(filepath)......")
-        let jsonData = NSData.dataWithContentsOfFile(filepath, options: .DataReadingMappedIfSafe, error: nil)
+        println("Using file \(CONTENT_MAP_FILENAME).\(CONTENT_MAP_FILE_EXT)......")
+        let path = NSBundle.mainBundle().pathForResource(CONTENT_MAP_FILENAME, ofType: CONTENT_MAP_FILE_EXT)
+        let jsonData = NSData.dataWithContentsOfFile(path!, options: .DataReadingMappedIfSafe, error: nil)
         let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
         
         println("JSON loaded, initializing Condition objects....")

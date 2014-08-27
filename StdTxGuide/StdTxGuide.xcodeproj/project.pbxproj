@@ -112,7 +112,6 @@
 		A68B5848199BE8DF0030E194 /* c8-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E3199BE8DF0030E194 /* c8-clv.html */; };
 		A68B5849199BE8DF0030E194 /* c9-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E4199BE8DF0030E194 /* c9-r.html */; };
 		A68B584A199BE8DF0030E194 /* c9-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E5199BE8DF0030E194 /* c9-t.html */; };
-		A68B584B199BE8DF0030E194 /* condition-content-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E6199BE8DF0030E194 /* condition-content-map.txt */; };
 		A68B584C199BE8DF0030E194 /* custom_arrow.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E7199BE8DF0030E194 /* custom_arrow.css */; };
 		A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */; };
 		A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E9199BE8DF0030E194 /* recreated_tables.css */; };
@@ -350,16 +349,29 @@
 		A68B5785199BE8DF0030E194 /* content */ = {
 			isa = PBXGroup;
 			children = (
-				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
-				A6F7C7AA199D28B400A77F2C /* eula.css */,
-				A6F7C7AB199D28B400A77F2C /* eula.html */,
-				A6F7C7AC199D28B400A77F2C /* about_icon_page.png */,
-				A6F7C7AD199D28B400A77F2C /* about_us.html */,
 				A6F7C7AE199D28B400A77F2C /* about.css */,
-				A6F7C7AF199D28B400A77F2C /* terms.html */,
+				A68B57E7199BE8DF0030E194 /* custom_arrow.css */,
+				A6F7C7AA199D28B400A77F2C /* eula.css */,
+				A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */,
+				A68B57E9199BE8DF0030E194 /* recreated_tables.css */,
+				A68B57EA199BE8DF0030E194 /* treatments.css */,
+				A6F7C7AD199D28B400A77F2C /* about_us.html */,
 				A68B5786199BE8DF0030E194 /* c0-clv.html */,
 				A68B5787199BE8DF0030E194 /* c1-r.html */,
 				A68B5788199BE8DF0030E194 /* c1-t.html */,
+				A68B579B199BE8DF0030E194 /* c2-r.html */,
+				A68B579C199BE8DF0030E194 /* c2-t.html */,
+				A68B57AC199BE8DF0030E194 /* c3-clv.html */,
+				A68B57BD199BE8DF0030E194 /* c4-r.html */,
+				A68B57BE199BE8DF0030E194 /* c4-t.html */,
+				A68B57CF199BE8DF0030E194 /* c5-t.html */,
+				A68B57DF199BE8DF0030E194 /* c6-r.html */,
+				A68B57E0199BE8DF0030E194 /* c6-t.html */,
+				A68B57E1199BE8DF0030E194 /* c7-r.html */,
+				A68B57E2199BE8DF0030E194 /* c7-t.html */,
+				A68B57E3199BE8DF0030E194 /* c8-clv.html */,
+				A68B57E4199BE8DF0030E194 /* c9-r.html */,
+				A68B57E5199BE8DF0030E194 /* c9-t.html */,
 				A68B5789199BE8DF0030E194 /* c10-r.html */,
 				A68B578A199BE8DF0030E194 /* c10-t.html */,
 				A68B578B199BE8DF0030E194 /* c11-r.html */,
@@ -378,8 +390,6 @@
 				A68B5798199BE8DF0030E194 /* c18-t.html */,
 				A68B5799199BE8DF0030E194 /* c19-r.html */,
 				A68B579A199BE8DF0030E194 /* c19-t.html */,
-				A68B579B199BE8DF0030E194 /* c2-r.html */,
-				A68B579C199BE8DF0030E194 /* c2-t.html */,
 				A68B579D199BE8DF0030E194 /* c20-r.html */,
 				A68B579E199BE8DF0030E194 /* c20-t.html */,
 				A68B579F199BE8DF0030E194 /* c21-r.html */,
@@ -395,7 +405,6 @@
 				A68B57A9199BE8DF0030E194 /* c27-t.html */,
 				A68B57AA199BE8DF0030E194 /* c28-t.html */,
 				A68B57AB199BE8DF0030E194 /* c29-clv.html */,
-				A68B57AC199BE8DF0030E194 /* c3-clv.html */,
 				A68B57AD199BE8DF0030E194 /* c30-r.html */,
 				A68B57AE199BE8DF0030E194 /* c30-t.html */,
 				A68B57AF199BE8DF0030E194 /* c31-r.html */,
@@ -412,8 +421,6 @@
 				A68B57BA199BE8DF0030E194 /* c38-t.html */,
 				A68B57BB199BE8DF0030E194 /* c39-r.html */,
 				A68B57BC199BE8DF0030E194 /* c39-t.html */,
-				A68B57BD199BE8DF0030E194 /* c4-r.html */,
-				A68B57BE199BE8DF0030E194 /* c4-t.html */,
 				A68B57BF199BE8DF0030E194 /* c40-r.html */,
 				A68B57C0199BE8DF0030E194 /* c40-t.html */,
 				A68B57C1199BE8DF0030E194 /* c41-clv.html */,
@@ -430,7 +437,6 @@
 				A68B57CC199BE8DF0030E194 /* c48-t.html */,
 				A68B57CD199BE8DF0030E194 /* c49-r.html */,
 				A68B57CE199BE8DF0030E194 /* c49-t.html */,
-				A68B57CF199BE8DF0030E194 /* c5-t.html */,
 				A68B57D0199BE8DF0030E194 /* c50-r.html */,
 				A68B57D1199BE8DF0030E194 /* c50-t.html */,
 				A68B57D2199BE8DF0030E194 /* c51-r.html */,
@@ -446,18 +452,11 @@
 				A68B57DC199BE8DF0030E194 /* c56-t.html */,
 				A68B57DD199BE8DF0030E194 /* c57-r.html */,
 				A68B57DE199BE8DF0030E194 /* c57-t.html */,
-				A68B57DF199BE8DF0030E194 /* c6-r.html */,
-				A68B57E0199BE8DF0030E194 /* c6-t.html */,
-				A68B57E1199BE8DF0030E194 /* c7-r.html */,
-				A68B57E2199BE8DF0030E194 /* c7-t.html */,
-				A68B57E3199BE8DF0030E194 /* c8-clv.html */,
-				A68B57E4199BE8DF0030E194 /* c9-r.html */,
-				A68B57E5199BE8DF0030E194 /* c9-t.html */,
+				A6F7C7AB199D28B400A77F2C /* eula.html */,
+				A6F7C7AF199D28B400A77F2C /* terms.html */,
+				A6F7C7AC199D28B400A77F2C /* about_icon_page.png */,
+				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
 				A68B57E6199BE8DF0030E194 /* condition-content-map.txt */,
-				A68B57E7199BE8DF0030E194 /* custom_arrow.css */,
-				A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */,
-				A68B57E9199BE8DF0030E194 /* recreated_tables.css */,
-				A68B57EA199BE8DF0030E194 /* treatments.css */,
 			);
 			name = content;
 			path = StdTxGuide/content;
@@ -621,7 +620,6 @@
 				A68B57EC199BE8DF0030E194 /* c1-r.html in Resources */,
 				A68B5820199BE8DF0030E194 /* c39-r.html in Resources */,
 				A6F7C7B5199D28B400A77F2C /* about.css in Resources */,
-				A68B584B199BE8DF0030E194 /* condition-content-map.txt in Resources */,
 				A6F7C7B4199D28B400A77F2C /* about_us.html in Resources */,
 				A68B5829199BE8DF0030E194 /* c43-t.html in Resources */,
 				A68B5824199BE8DF0030E194 /* c40-r.html in Resources */,
@@ -773,7 +771,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
