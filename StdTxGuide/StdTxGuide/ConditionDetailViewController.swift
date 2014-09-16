@@ -26,7 +26,7 @@ class ConditionDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource(condition.regimensPage.stringByDeletingPathExtension, withExtension: "html")
-        let request = NSURLRequest(URL:url)
+        let request = NSURLRequest(URL:url!)
         webView.loadRequest(request)
 
     }
@@ -51,7 +51,7 @@ class ConditionDetailViewController: UIViewController {
 
     func loadContent(fileName:String) {
         let url = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html")
-        let request = NSURLRequest(URL:url)
+        let request = NSURLRequest(URL:url!)
         webView.loadRequest(request)
     }
     

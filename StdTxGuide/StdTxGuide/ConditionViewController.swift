@@ -114,12 +114,11 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) as UITableViewCell
 
         let condition = conditions[indexPath.row]
-        cell.textLabel.text = condition.title
+        cell.textLabel?.text = condition.title
         return cell
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        let indexPath = self.tableView.indexPathForSelectedRow()
         let condition = conditions[indexPath.row]
         conditionContent.setCurrentCondition(condition)
         if condition.hasChildren == false {

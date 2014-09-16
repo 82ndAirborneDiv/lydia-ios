@@ -25,7 +25,7 @@ class TermsViewController: UIViewController {
     
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource("terms", withExtension: "html")
-        let request = NSURLRequest(URL:url)
+        let request = NSURLRequest(URL:url!)
         webView.loadRequest(request)
         
     }
