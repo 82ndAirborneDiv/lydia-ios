@@ -25,9 +25,26 @@ class ConditionDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource(condition.regimensPage.stringByDeletingPathExtension, withExtension: "html")
-        let request = NSURLRequest(URL:url!)
-        webView.loadRequest(request)
+//        let url = NSBundle.mainBundle().URLForResource(condition.regimensPage.stringByDeletingPathExtension, withExtension: "html")
+//        let request = NSURLRequest(URL:url!)
+//        webView.loadRequest(request)
+//        
+        if condition.hasRegimens == false {
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
+            segmentedControl.selectedSegmentIndex = 1;
+            loadDxTxContent()
+        } else {
+            segmentedControl.setEnabled(true, forSegmentAtIndex: 0)
+            segmentedControl.selectedSegmentIndex = 0;
+            loadRegimensContent()
+            
+        }
+        if condition.hasDxTx == false {
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
+        } else {
+            segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
+            
+        }
 
     }
     

@@ -13,7 +13,7 @@ import Foundation
 class Condition {
     
     var id, parentId:Int
-    var hasChildren:Bool
+    var hasChildren, hasDxTx, hasRegimens:Bool
     var title, regimensPage, dxtxPage:String
     var childrenConditions:Array<Condition>
     
@@ -26,6 +26,19 @@ class Condition {
         self.childrenConditions = children
         self.regimensPage = regimensPage
         self.dxtxPage = dxtxPage
+        
+        if self.dxtxPage == "" {
+            self.hasDxTx = false
+        } else {
+            self.hasDxTx = true
+        }
+        
+        if self.regimensPage == "" {
+            self.hasRegimens = false
+        } else {
+            self.hasRegimens = true
+        }
+        
         println("Condition object created with name = \(self.title) has \(self.numberOfChildren()) children.")
         
     }
