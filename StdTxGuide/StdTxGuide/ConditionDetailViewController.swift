@@ -24,11 +24,8 @@ class ConditionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-//        let url = NSBundle.mainBundle().URLForResource(condition.regimensPage.stringByDeletingPathExtension, withExtension: "html")
-//        let request = NSURLRequest(URL:url!)
-//        webView.loadRequest(request)
-//        
+        // check if condtion has regimens content and set it as selcted index
+        // if not use dxtx content
         if condition.hasRegimens == false {
             segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
             segmentedControl.selectedSegmentIndex = 1;
@@ -39,11 +36,11 @@ class ConditionDetailViewController: UIViewController {
             loadRegimensContent()
             
         }
+        
         if condition.hasDxTx == false {
             segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
         } else {
             segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
-            
         }
 
     }
@@ -101,7 +98,6 @@ class ConditionDetailViewController: UIViewController {
                 break;
         }
     }
-    
 
 }
 
