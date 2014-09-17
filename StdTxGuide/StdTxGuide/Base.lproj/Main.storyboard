@@ -164,13 +164,25 @@
                     <view key="view" contentMode="scaleToFill" id="bzV-bh-RXm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taking a Sexual History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-fJ-iNl">
+                                <rect key="frame" x="70" y="94" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Q19-fJ-iNl" secondAttribute="centerX" id="2p8-Ve-0cG"/>
+                            <constraint firstAttribute="centerY" secondItem="Q19-fJ-iNl" secondAttribute="centerY" constant="179.5" id="gbU-OK-8Ym"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sexual History" id="dAm-Yi-XgI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qba-XC-WWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-561" y="824"/>
+            <point key="canvasLocation" x="-540" y="947"/>
         </scene>
         <!--References-->
         <scene sceneID="0dP-Kw-3oa">
@@ -183,13 +195,25 @@
                     <view key="view" contentMode="scaleToFill" id="nkR-Hi-4ZM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="References" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl9-xN-mdX">
+                                <rect key="frame" x="117" y="100" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="zl9-xN-mdX" secondAttribute="centerY" constant="173.5" id="7WA-eI-2Rr"/>
+                            <constraint firstAttribute="centerX" secondItem="zl9-xN-mdX" secondAttribute="centerX" constant="-0.5" id="L28-yz-veu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="References" id="mGQ-VX-aZX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9Q-Cm-b2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="944"/>
+            <point key="canvasLocation" x="-169" y="947"/>
         </scene>
         <!--About Us-->
         <scene sceneID="bUb-Qa-lVu">
