@@ -153,6 +153,44 @@
             </objects>
             <point key="canvasLocation" x="473" y="370"/>
         </scene>
+        <!--Sexual History-->
+        <scene sceneID="ItU-hj-W2d">
+            <objects>
+                <viewController id="GWr-yT-toC" customClass="SexualHistoryViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GwV-rO-6oY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Chx-BF-EXx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bzV-bh-RXm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sexual History" id="dAm-Yi-XgI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qba-XC-WWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-561" y="824"/>
+        </scene>
+        <!--References-->
+        <scene sceneID="0dP-Kw-3oa">
+            <objects>
+                <viewController id="GI3-2p-qTy" customClass="ReferencesViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i5b-Bb-MsJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLb-ku-fqq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nkR-Hi-4ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="References" id="mGQ-VX-aZX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9Q-Cm-b2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="944"/>
+        </scene>
         <!--About Us-->
         <scene sceneID="bUb-Qa-lVu">
             <objects>
@@ -236,6 +274,8 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Z6f-GO-kpi" kind="relationship" relationship="viewControllers" id="ZfU-tt-i6f"/>
                         <segue destination="zqW-1X-omP" kind="relationship" relationship="viewControllers" id="5Gb-Da-pGX"/>
+                        <segue destination="GI3-2p-qTy" kind="relationship" relationship="viewControllers" id="ePj-lv-tzG"/>
+                        <segue destination="GWr-yT-toC" kind="relationship" relationship="viewControllers" id="Kkf-Sv-g8a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

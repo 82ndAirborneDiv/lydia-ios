@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60DE3FB19C9D799007BBAA7 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */; };
+		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC6801993FC3B000CE5C5 /* Condition.swift */; };
 		A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAEF198BFF4F00223E47 /* AppDelegate.swift */; };
 		A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */; };
@@ -139,6 +141,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A62FC6801993FC3B000CE5C5 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		A650DAEA198BFF4F00223E47 /* StdTxGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StdTxGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A650DAEE198BFF4F00223E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
+				A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */,
+				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -673,8 +679,10 @@
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
 				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
+				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
+				A60DE3FB19C9D799007BBAA7 /* ReferencesViewController.swift in Sources */,
 				A6F7C7BA199D33D500A77F2C /* AboutUsViewController.swift in Sources */,
 				A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */,
 				A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */,
