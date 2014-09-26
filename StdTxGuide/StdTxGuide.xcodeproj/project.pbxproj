@@ -10,6 +10,7 @@
 		A60DE3FB19C9D799007BBAA7 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC6801993FC3B000CE5C5 /* Condition.swift */; };
+		A641345D19CA11FB0041C0E8 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A641345C19CA11FB0041C0E8 /* bootstrap.min.css */; };
 		A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAEF198BFF4F00223E47 /* AppDelegate.swift */; };
 		A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */; };
 		A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */; };
@@ -144,6 +145,7 @@
 		A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A62FC6801993FC3B000CE5C5 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		A641345C19CA11FB0041C0E8 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.min.css; sourceTree = "<group>"; };
 		A650DAEA198BFF4F00223E47 /* StdTxGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StdTxGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A650DAEE198BFF4F00223E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A650DAEF198BFF4F00223E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 		A68B5785199BE8DF0030E194 /* content */ = {
 			isa = PBXGroup;
 			children = (
+				A641345C19CA11FB0041C0E8 /* bootstrap.min.css */,
 				A6F7C7AE199D28B400A77F2C /* about.css */,
 				A68B57E7199BE8DF0030E194 /* custom_arrow.css */,
 				A6F7C7AA199D28B400A77F2C /* eula.css */,
@@ -634,6 +637,7 @@
 				A68B5816199BE8DF0030E194 /* c32-r.html in Resources */,
 				A68B5847199BE8DF0030E194 /* c7-t.html in Resources */,
 				A68B582F199BE8DF0030E194 /* c47-t.html in Resources */,
+				A641345D19CA11FB0041C0E8 /* bootstrap.min.css in Resources */,
 				A68B5811199BE8DF0030E194 /* c3-clv.html in Resources */,
 				A68B5823199BE8DF0030E194 /* c4-t.html in Resources */,
 				A68B57FB199BE8DF0030E194 /* c17-t.html in Resources */,
@@ -738,6 +742,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -755,7 +760,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = NO;
@@ -781,6 +786,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -792,6 +798,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -802,11 +809,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Greg Ledbetter (D5LF2BQKBD)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72c84ac3-d1af-428d-a451-dfd5e6cd8519";
 			};
 			name = Debug;
 		};
@@ -815,11 +824,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72c84ac3-d1af-428d-a451-dfd5e6cd8519";
 			};
 			name = Release;
 		};
