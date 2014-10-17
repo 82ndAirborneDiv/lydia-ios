@@ -119,6 +119,24 @@
 		A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */; };
 		A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E9199BE8DF0030E194 /* recreated_tables.css */; };
 		A68B584F199BE8DF0030E194 /* treatments.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57EA199BE8DF0030E194 /* treatments.css */; };
+		A6BE154919F19A9B008330A1 /* c14-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154719F19A9B008330A1 /* c14-r.html */; };
+		A6BE154A19F19A9B008330A1 /* c14-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154819F19A9B008330A1 /* c14-t.html */; };
+		A6BE155B19F19AE2008330A1 /* c16-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154B19F19AE2008330A1 /* c16-clv.html */; };
+		A6BE155C19F19AE2008330A1 /* c24-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154C19F19AE2008330A1 /* c24-clv.html */; };
+		A6BE155D19F19AE2008330A1 /* c25-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154D19F19AE2008330A1 /* c25-t.html */; };
+		A6BE155E19F19AE2008330A1 /* c28-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154E19F19AE2008330A1 /* c28-clv.html */; };
+		A6BE155F19F19AE2008330A1 /* c29-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154F19F19AE2008330A1 /* c29-r.html */; };
+		A6BE156019F19AE2008330A1 /* c29-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155019F19AE2008330A1 /* c29-t.html */; };
+		A6BE156119F19AE2008330A1 /* c36-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155119F19AE2008330A1 /* c36-r.html */; };
+		A6BE156219F19AE2008330A1 /* c40-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155219F19AE2008330A1 /* c40-clv.html */; };
+		A6BE156319F19AE2008330A1 /* c41-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155319F19AE2008330A1 /* c41-r.html */; };
+		A6BE156419F19AE2008330A1 /* c41-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155419F19AE2008330A1 /* c41-t.html */; };
+		A6BE156519F19AE2008330A1 /* c43-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155519F19AE2008330A1 /* c43-clv.html */; };
+		A6BE156619F19AE2008330A1 /* c44-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155619F19AE2008330A1 /* c44-r.html */; };
+		A6BE156719F19AE2008330A1 /* c44-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155719F19AE2008330A1 /* c44-t.html */; };
+		A6BE156819F19AE2008330A1 /* c46-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155819F19AE2008330A1 /* c46-r.html */; };
+		A6BE156919F19AE2008330A1 /* c46-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155919F19AE2008330A1 /* c46-t.html */; };
+		A6BE156A19F19AE2008330A1 /* c50-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155A19F19AE2008330A1 /* c50-clv.html */; };
 		A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */; };
 		A6F7C7B0199D28B400A77F2C /* eula_icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */; };
 		A6F7C7B1199D28B400A77F2C /* eula.css in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AA199D28B400A77F2C /* eula.css */; };
@@ -259,6 +277,24 @@
 		A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.swatch.f.css; sourceTree = "<group>"; };
 		A68B57E9199BE8DF0030E194 /* recreated_tables.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = recreated_tables.css; sourceTree = "<group>"; };
 		A68B57EA199BE8DF0030E194 /* treatments.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = treatments.css; sourceTree = "<group>"; };
+		A6BE154719F19A9B008330A1 /* c14-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c14-r.html"; sourceTree = "<group>"; };
+		A6BE154819F19A9B008330A1 /* c14-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c14-t.html"; sourceTree = "<group>"; };
+		A6BE154B19F19AE2008330A1 /* c16-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c16-clv.html"; sourceTree = "<group>"; };
+		A6BE154C19F19AE2008330A1 /* c24-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c24-clv.html"; sourceTree = "<group>"; };
+		A6BE154D19F19AE2008330A1 /* c25-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c25-t.html"; sourceTree = "<group>"; };
+		A6BE154E19F19AE2008330A1 /* c28-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c28-clv.html"; sourceTree = "<group>"; };
+		A6BE154F19F19AE2008330A1 /* c29-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c29-r.html"; sourceTree = "<group>"; };
+		A6BE155019F19AE2008330A1 /* c29-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c29-t.html"; sourceTree = "<group>"; };
+		A6BE155119F19AE2008330A1 /* c36-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c36-r.html"; sourceTree = "<group>"; };
+		A6BE155219F19AE2008330A1 /* c40-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c40-clv.html"; sourceTree = "<group>"; };
+		A6BE155319F19AE2008330A1 /* c41-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c41-r.html"; sourceTree = "<group>"; };
+		A6BE155419F19AE2008330A1 /* c41-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c41-t.html"; sourceTree = "<group>"; };
+		A6BE155519F19AE2008330A1 /* c43-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c43-clv.html"; sourceTree = "<group>"; };
+		A6BE155619F19AE2008330A1 /* c44-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c44-r.html"; sourceTree = "<group>"; };
+		A6BE155719F19AE2008330A1 /* c44-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c44-t.html"; sourceTree = "<group>"; };
+		A6BE155819F19AE2008330A1 /* c46-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-r.html"; sourceTree = "<group>"; };
+		A6BE155919F19AE2008330A1 /* c46-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-t.html"; sourceTree = "<group>"; };
+		A6BE155A19F19AE2008330A1 /* c50-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c50-clv.html"; sourceTree = "<group>"; };
 		A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eula_icon_retina.png; sourceTree = "<group>"; };
 		A6F7C7AA199D28B400A77F2C /* eula.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = eula.css; sourceTree = "<group>"; };
@@ -357,14 +393,10 @@
 		A68B5785199BE8DF0030E194 /* content */ = {
 			isa = PBXGroup;
 			children = (
-				A641345C19CA11FB0041C0E8 /* bootstrap.min.css */,
-				A6F7C7AE199D28B400A77F2C /* about.css */,
-				A68B57E7199BE8DF0030E194 /* custom_arrow.css */,
-				A6F7C7AA199D28B400A77F2C /* eula.css */,
-				A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */,
-				A68B57E9199BE8DF0030E194 /* recreated_tables.css */,
-				A68B57EA199BE8DF0030E194 /* treatments.css */,
+				A6F7C7AC199D28B400A77F2C /* about_icon_page.png */,
 				A6F7C7AD199D28B400A77F2C /* about_us.html */,
+				A6F7C7AE199D28B400A77F2C /* about.css */,
+				A641345C19CA11FB0041C0E8 /* bootstrap.min.css */,
 				A68B5786199BE8DF0030E194 /* c0-clv.html */,
 				A68B5787199BE8DF0030E194 /* c1-r.html */,
 				A68B5788199BE8DF0030E194 /* c1-t.html */,
@@ -390,7 +422,10 @@
 				A68B578F199BE8DF0030E194 /* c13-r.html */,
 				A68B5790199BE8DF0030E194 /* c13-t.html */,
 				A68B5791199BE8DF0030E194 /* c14-clv.html */,
+				A6BE154719F19A9B008330A1 /* c14-r.html */,
+				A6BE154819F19A9B008330A1 /* c14-t.html */,
 				A68B5792199BE8DF0030E194 /* c15-clv.html */,
+				A6BE154B19F19AE2008330A1 /* c16-clv.html */,
 				A68B5793199BE8DF0030E194 /* c16-r.html */,
 				A68B5794199BE8DF0030E194 /* c16-t.html */,
 				A68B5795199BE8DF0030E194 /* c17-r.html */,
@@ -407,13 +442,18 @@
 				A68B57A2199BE8DF0030E194 /* c22-t.html */,
 				A68B57A3199BE8DF0030E194 /* c23-r.html */,
 				A68B57A4199BE8DF0030E194 /* c23-t.html */,
+				A6BE154C19F19AE2008330A1 /* c24-clv.html */,
 				A68B57A5199BE8DF0030E194 /* c24-r.html */,
 				A68B57A6199BE8DF0030E194 /* c24-t.html */,
 				A68B57A7199BE8DF0030E194 /* c25-clv.html */,
+				A6BE154D19F19AE2008330A1 /* c25-t.html */,
 				A68B57A8199BE8DF0030E194 /* c26-t.html */,
 				A68B57A9199BE8DF0030E194 /* c27-t.html */,
+				A6BE154E19F19AE2008330A1 /* c28-clv.html */,
 				A68B57AA199BE8DF0030E194 /* c28-t.html */,
 				A68B57AB199BE8DF0030E194 /* c29-clv.html */,
+				A6BE154F19F19AE2008330A1 /* c29-r.html */,
+				A6BE155019F19AE2008330A1 /* c29-t.html */,
 				A68B57AD199BE8DF0030E194 /* c30-r.html */,
 				A68B57AE199BE8DF0030E194 /* c30-t.html */,
 				A68B57AF199BE8DF0030E194 /* c31-r.html */,
@@ -423,6 +463,7 @@
 				A68B57B3199BE8DF0030E194 /* c33-t.html */,
 				A68B57B4199BE8DF0030E194 /* c34-t.html */,
 				A68B57B5199BE8DF0030E194 /* c35-t.html */,
+				A6BE155119F19AE2008330A1 /* c36-r.html */,
 				A68B57B6199BE8DF0030E194 /* c36-t.html */,
 				A68B57B7199BE8DF0030E194 /* c37-r.html */,
 				A68B57B8199BE8DF0030E194 /* c37-t.html */,
@@ -430,22 +471,31 @@
 				A68B57BA199BE8DF0030E194 /* c38-t.html */,
 				A68B57BB199BE8DF0030E194 /* c39-r.html */,
 				A68B57BC199BE8DF0030E194 /* c39-t.html */,
+				A6BE155219F19AE2008330A1 /* c40-clv.html */,
 				A68B57BF199BE8DF0030E194 /* c40-r.html */,
 				A68B57C0199BE8DF0030E194 /* c40-t.html */,
 				A68B57C1199BE8DF0030E194 /* c41-clv.html */,
+				A6BE155319F19AE2008330A1 /* c41-r.html */,
+				A6BE155419F19AE2008330A1 /* c41-t.html */,
 				A68B57C2199BE8DF0030E194 /* c42-r.html */,
 				A68B57C3199BE8DF0030E194 /* c42-t.html */,
+				A6BE155519F19AE2008330A1 /* c43-clv.html */,
 				A68B57C4199BE8DF0030E194 /* c43-t.html */,
 				A68B57C5199BE8DF0030E194 /* c44-clv.html */,
+				A6BE155619F19AE2008330A1 /* c44-r.html */,
+				A6BE155719F19AE2008330A1 /* c44-t.html */,
 				A68B57C6199BE8DF0030E194 /* c45-r.html */,
 				A68B57C7199BE8DF0030E194 /* c45-t.html */,
 				A68B57C8199BE8DF0030E194 /* c46-clv.html */,
+				A6BE155819F19AE2008330A1 /* c46-r.html */,
+				A6BE155919F19AE2008330A1 /* c46-t.html */,
 				A68B57C9199BE8DF0030E194 /* c47-r.html */,
 				A68B57CA199BE8DF0030E194 /* c47-t.html */,
 				A68B57CB199BE8DF0030E194 /* c48-r.html */,
 				A68B57CC199BE8DF0030E194 /* c48-t.html */,
 				A68B57CD199BE8DF0030E194 /* c49-r.html */,
 				A68B57CE199BE8DF0030E194 /* c49-t.html */,
+				A6BE155A19F19AE2008330A1 /* c50-clv.html */,
 				A68B57D0199BE8DF0030E194 /* c50-r.html */,
 				A68B57D1199BE8DF0030E194 /* c50-t.html */,
 				A68B57D2199BE8DF0030E194 /* c51-r.html */,
@@ -461,11 +511,15 @@
 				A68B57DC199BE8DF0030E194 /* c56-t.html */,
 				A68B57DD199BE8DF0030E194 /* c57-r.html */,
 				A68B57DE199BE8DF0030E194 /* c57-t.html */,
-				A6F7C7AB199D28B400A77F2C /* eula.html */,
-				A6F7C7AF199D28B400A77F2C /* terms.html */,
-				A6F7C7AC199D28B400A77F2C /* about_icon_page.png */,
-				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
 				A68B57E6199BE8DF0030E194 /* condition-content-map.txt */,
+				A68B57E7199BE8DF0030E194 /* custom_arrow.css */,
+				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
+				A6F7C7AA199D28B400A77F2C /* eula.css */,
+				A6F7C7AB199D28B400A77F2C /* eula.html */,
+				A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */,
+				A68B57E9199BE8DF0030E194 /* recreated_tables.css */,
+				A6F7C7AF199D28B400A77F2C /* terms.html */,
+				A68B57EA199BE8DF0030E194 /* treatments.css */,
 			);
 			name = content;
 			path = StdTxGuide/content;
@@ -557,10 +611,13 @@
 				A68B5818199BE8DF0030E194 /* c33-t.html in Resources */,
 				A68B57F3199BE8DF0030E194 /* c12-t.html in Resources */,
 				A650DAF7198BFF4F00223E47 /* Main.storyboard in Resources */,
+				A6BE156719F19AE2008330A1 /* c44-t.html in Resources */,
+				A6BE156419F19AE2008330A1 /* c41-t.html in Resources */,
 				A68B582C199BE8DF0030E194 /* c45-t.html in Resources */,
 				A68B584A199BE8DF0030E194 /* c9-t.html in Resources */,
 				A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */,
 				A68B5828199BE8DF0030E194 /* c42-t.html in Resources */,
+				A6BE156219F19AE2008330A1 /* c40-clv.html in Resources */,
 				A68B5815199BE8DF0030E194 /* c31-t.html in Resources */,
 				A68B583E199BE8DF0030E194 /* c55-r.html in Resources */,
 				A68B5825199BE8DF0030E194 /* c40-t.html in Resources */,
@@ -580,6 +637,7 @@
 				A68B5835199BE8DF0030E194 /* c50-r.html in Resources */,
 				A68B5819199BE8DF0030E194 /* c34-t.html in Resources */,
 				A68B580E199BE8DF0030E194 /* c27-t.html in Resources */,
+				A6BE155D19F19AE2008330A1 /* c25-t.html in Resources */,
 				A68B583B199BE8DF0030E194 /* c53-r.html in Resources */,
 				A68B5813199BE8DF0030E194 /* c30-t.html in Resources */,
 				A68B5839199BE8DF0030E194 /* c52-r.html in Resources */,
@@ -591,6 +649,7 @@
 				A68B583F199BE8DF0030E194 /* c55-t.html in Resources */,
 				A68B57F1199BE8DF0030E194 /* c11-t.html in Resources */,
 				A68B57EF199BE8DF0030E194 /* c10-t.html in Resources */,
+				A6BE156119F19AE2008330A1 /* c36-r.html in Resources */,
 				A68B5826199BE8DF0030E194 /* c41-clv.html in Resources */,
 				A68B5827199BE8DF0030E194 /* c42-r.html in Resources */,
 				A68B582E199BE8DF0030E194 /* c47-r.html in Resources */,
@@ -600,10 +659,13 @@
 				A68B5842199BE8DF0030E194 /* c57-r.html in Resources */,
 				A68B5843199BE8DF0030E194 /* c57-t.html in Resources */,
 				A68B582B199BE8DF0030E194 /* c45-r.html in Resources */,
+				A6BE155E19F19AE2008330A1 /* c28-clv.html in Resources */,
 				A68B57F6199BE8DF0030E194 /* c14-clv.html in Resources */,
+				A6BE156619F19AE2008330A1 /* c44-r.html in Resources */,
 				A68B57F9199BE8DF0030E194 /* c16-t.html in Resources */,
 				A68B5821199BE8DF0030E194 /* c39-t.html in Resources */,
 				A68B5804199BE8DF0030E194 /* c21-r.html in Resources */,
+				A6BE155F19F19AE2008330A1 /* c29-r.html in Resources */,
 				A68B5846199BE8DF0030E194 /* c7-r.html in Resources */,
 				A68B57F5199BE8DF0030E194 /* c13-t.html in Resources */,
 				A68B5808199BE8DF0030E194 /* c23-r.html in Resources */,
@@ -614,9 +676,12 @@
 				A68B5837199BE8DF0030E194 /* c51-r.html in Resources */,
 				A68B57FF199BE8DF0030E194 /* c19-t.html in Resources */,
 				A68B5834199BE8DF0030E194 /* c5-t.html in Resources */,
+				A6BE156A19F19AE2008330A1 /* c50-clv.html in Resources */,
 				A650DB11198C15BA00223E47 /* condition-content-map.txt in Resources */,
+				A6BE155B19F19AE2008330A1 /* c16-clv.html in Resources */,
 				A68B5832199BE8DF0030E194 /* c49-r.html in Resources */,
 				A68B57FA199BE8DF0030E194 /* c17-r.html in Resources */,
+				A6BE156819F19AE2008330A1 /* c46-r.html in Resources */,
 				A68B5805199BE8DF0030E194 /* c21-t.html in Resources */,
 				A68B57F7199BE8DF0030E194 /* c15-clv.html in Resources */,
 				A68B5840199BE8DF0030E194 /* c56-r.html in Resources */,
@@ -626,19 +691,23 @@
 				A68B57EB199BE8DF0030E194 /* c0-clv.html in Resources */,
 				A68B5833199BE8DF0030E194 /* c49-t.html in Resources */,
 				A68B5809199BE8DF0030E194 /* c23-t.html in Resources */,
+				A6BE156319F19AE2008330A1 /* c41-r.html in Resources */,
 				A68B57EC199BE8DF0030E194 /* c1-r.html in Resources */,
 				A68B5820199BE8DF0030E194 /* c39-r.html in Resources */,
 				A6F7C7B5199D28B400A77F2C /* about.css in Resources */,
 				A6F7C7B4199D28B400A77F2C /* about_us.html in Resources */,
 				A68B5829199BE8DF0030E194 /* c43-t.html in Resources */,
 				A68B5824199BE8DF0030E194 /* c40-r.html in Resources */,
+				A6BE156919F19AE2008330A1 /* c46-t.html in Resources */,
 				A68B580A199BE8DF0030E194 /* c24-r.html in Resources */,
 				A68B57F8199BE8DF0030E194 /* c16-r.html in Resources */,
 				A68B5816199BE8DF0030E194 /* c32-r.html in Resources */,
 				A68B5847199BE8DF0030E194 /* c7-t.html in Resources */,
+				A6BE156019F19AE2008330A1 /* c29-t.html in Resources */,
 				A68B582F199BE8DF0030E194 /* c47-t.html in Resources */,
 				A641345D19CA11FB0041C0E8 /* bootstrap.min.css in Resources */,
 				A68B5811199BE8DF0030E194 /* c3-clv.html in Resources */,
+				A6BE155C19F19AE2008330A1 /* c24-clv.html in Resources */,
 				A68B5823199BE8DF0030E194 /* c4-t.html in Resources */,
 				A68B57FB199BE8DF0030E194 /* c17-t.html in Resources */,
 				A68B580C199BE8DF0030E194 /* c25-clv.html in Resources */,
@@ -648,10 +717,13 @@
 				A68B57ED199BE8DF0030E194 /* c1-t.html in Resources */,
 				A68B57FE199BE8DF0030E194 /* c19-r.html in Resources */,
 				A68B580B199BE8DF0030E194 /* c24-t.html in Resources */,
+				A6BE154A19F19A9B008330A1 /* c14-t.html in Resources */,
+				A6BE156519F19AE2008330A1 /* c43-clv.html in Resources */,
 				A6F7C7B1199D28B400A77F2C /* eula.css in Resources */,
 				A68B5836199BE8DF0030E194 /* c50-t.html in Resources */,
 				A68B57EE199BE8DF0030E194 /* c10-r.html in Resources */,
 				A68B581A199BE8DF0030E194 /* c35-t.html in Resources */,
+				A6BE154919F19A9B008330A1 /* c14-r.html in Resources */,
 				A68B581B199BE8DF0030E194 /* c36-t.html in Resources */,
 				A68B5814199BE8DF0030E194 /* c31-r.html in Resources */,
 				A68B5800199BE8DF0030E194 /* c2-r.html in Resources */,
