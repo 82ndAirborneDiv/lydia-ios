@@ -98,7 +98,7 @@ class ConditionContent {
         
         for (key, value) in conditionJson {
             switch (key as String) {
-            case "id":
+            case "condition_id":
                 id = value as Int
                 println("Id: \(id)")
                 break

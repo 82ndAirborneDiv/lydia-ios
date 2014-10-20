@@ -347,19 +347,19 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
+				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
 				A650DB0E198C0B6600223E47 /* ConditionContent.swift */,
 				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
+				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
+				A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */,
+				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
-				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
-				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
-				A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */,
-				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
