@@ -28,8 +28,11 @@ class ConditionContent {
         println("Initializing ConditionContent object....")
         println("Using file \(CONTENT_MAP_FILENAME).\(CONTENT_MAP_FILE_EXT)......")
         let path = NSBundle.mainBundle().pathForResource(CONTENT_MAP_FILENAME, ofType: CONTENT_MAP_FILE_EXT)
-        let jsonData = NSData.dataWithContentsOfFile(path!, options: .DataReadingMappedIfSafe, error: nil)
-        let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
+        // let jsonData = NSData.dataWithContentsOfFile(path!, options: .DataReadingMappedIfSafe, error: nil)
+        // let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
+        
+        let jsonData = NSData(contentsOfFile:path!, options: .DataReadingMappedIfSafe, error: nil)
+        let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error) as Dictionary<String, AnyObject>
         
         println("JSON loaded, initializing Condition objects....")
         rootCondition = parseConditions(jsonCondition)

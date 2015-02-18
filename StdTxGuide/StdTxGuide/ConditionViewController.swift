@@ -31,16 +31,33 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
 
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor.darkGrayColor()
+        // Status bar white font
+        //self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        //self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        //self.navigationController?.navigationBar.translucent = true
 
+
+        //self.view.backgroundColor = UIColor.darkGrayColor()
+        var navBackgroundImage = UIImage(named: "nav_bar")
+        [UINavigationBar .appearance().setBackgroundImage(navBackgroundImage, forBarMetrics:.Default)]
+    
+        //UINavigationBar .appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
         hideBackButton()
+  
+
+        
+
+
 
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        //UINavigationBar .appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
+
     }
     
     func showBackButton() {
