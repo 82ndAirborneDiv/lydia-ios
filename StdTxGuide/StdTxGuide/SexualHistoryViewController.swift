@@ -15,6 +15,8 @@ class SexualHistoryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
+        self.title = "Taking Sexual History"
+
 
     }
 
