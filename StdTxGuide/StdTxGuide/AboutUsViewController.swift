@@ -28,6 +28,8 @@ class AboutUsViewController: UIViewController {
         let request = NSURLRequest(URL:url!)
         webView.loadRequest(request)
         
+        self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,6 +39,12 @@ class AboutUsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+
     
     override func prefersStatusBarHidden() -> Bool {
         return false

@@ -23,10 +23,6 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         super.awakeFromNib()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return false
-    }
-    
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -35,11 +31,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         //self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         //self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         //self.navigationController?.navigationBar.translucent = true
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()
 
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
 
         //self.view.backgroundColor = UIColor.darkGrayColor()
-        var navBackgroundImage = UIImage(named: "nav_bar")
-        [UINavigationBar .appearance().setBackgroundImage(navBackgroundImage, forBarMetrics:.Default)]
+//        var navBackgroundImage = UIImage(named: "nav_bar")
+//        [UINavigationBar .appearance().setBackgroundImage(navBackgroundImage, forBarMetrics:.Default)]
     
         //UINavigationBar .appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
@@ -47,19 +45,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
         hideBackButton()
-  
-
-        
-
-
 
     }
     
-    override func viewWillAppear(animated: Bool) {
-        //UINavigationBar .appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
-
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
-    
+
     func showBackButton() {
         parentConditionButton.enabled = true
         parentConditionButton.title = "Back"
