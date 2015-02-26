@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ConditionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     var conditions = Array<Condition>()
@@ -32,6 +34,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         //self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         //self.navigationController?.navigationBar.translucent = true
         self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()
+        self.tabBarController?.customizableViewControllers = nil
         
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
         self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.Black

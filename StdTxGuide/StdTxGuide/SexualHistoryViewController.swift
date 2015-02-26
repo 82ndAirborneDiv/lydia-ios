@@ -10,13 +10,19 @@ import UIKit
 
 class SexualHistoryViewController: UIViewController {
 
+    @IBOutlet weak var pdfWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
-        self.title = "Taking Sexual History"
+        self.title = "Sexual History"
 
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        var pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("sexualhistory", ofType:"pdf")!) //replace PDF_file with your pdf die name
+        var request = NSURLRequest(URL: pdfLoc!);
+        self.pdfWebView.loadRequest(request);
 
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FB19C9D799007BBAA7 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC6801993FC3B000CE5C5 /* Condition.swift */; };
@@ -160,6 +161,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A62FC6801993FC3B000CE5C5 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		A650DAED198BFF4F00223E47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A60D6C771A9F6205007C818D /* sexualhistory.pdf */,
 				A650DB10198C15BA00223E47 /* condition-content-map.txt */,
 				A650DAEE198BFF4F00223E47 /* Info.plist */,
 			);
@@ -705,6 +708,7 @@
 				A68B5847199BE8DF0030E194 /* c7-t.html in Resources */,
 				A6BE156019F19AE2008330A1 /* c29-t.html in Resources */,
 				A68B582F199BE8DF0030E194 /* c47-t.html in Resources */,
+				A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */,
 				A641345D19CA11FB0041C0E8 /* bootstrap.min.css in Resources */,
 				A68B5811199BE8DF0030E194 /* c3-clv.html in Resources */,
 				A6BE155C19F19AE2008330A1 /* c24-clv.html in Resources */,
