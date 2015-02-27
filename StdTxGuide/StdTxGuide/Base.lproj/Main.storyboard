@@ -154,6 +154,41 @@
             </objects>
             <point key="canvasLocation" x="473" y="370"/>
         </scene>
+        <!--Full Guidelines-->
+        <scene sceneID="Sdl-FQ-Bg0">
+            <objects>
+                <viewController id="mwa-Ea-ePW" customClass="FullGuidelinesViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVN-oN-8Le"/>
+                        <viewControllerLayoutGuide type="bottom" id="e4A-nX-zeC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KMr-f7-kf9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmz-MZ-NZI">
+                                <rect key="frame" x="0.0" y="58" width="320" height="461"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABu-Kh-xIz">
+                                <rect key="frame" x="0.0" y="14" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Full Guidelines" id="qjO-rr-Hwg"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Full Guidelines" image="57-download" id="t3j-pr-som"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="webView" destination="Lmz-MZ-NZI" id="mZH-Ap-GSH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdf-UI-6JR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-902" y="954"/>
+        </scene>
         <!--Sexual History-->
         <scene sceneID="ItU-hj-W2d">
             <objects>
@@ -202,15 +237,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0O-nD-c11">
-                                <rect key="frame" x="0.0" y="64" width="320" height="461"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-LB-vAe">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="References" id="LnY-uK-HMF"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -293,6 +322,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="mwa-Ea-ePW" kind="relationship" relationship="viewControllers" id="jcy-GI-Pfl"/>
                         <segue destination="GWr-yT-toC" kind="relationship" relationship="viewControllers" id="Kkf-Sv-g8a"/>
                         <segue destination="GI3-2p-qTy" kind="relationship" relationship="viewControllers" id="ePj-lv-tzG"/>
                         <segue destination="Z6f-GO-kpi" kind="relationship" relationship="viewControllers" id="ZfU-tt-i6f"/>
@@ -310,6 +340,7 @@
         <image name="123-id-card" width="24" height="17"/>
         <image name="179-notepad" width="22" height="28"/>
         <image name="191-collection" width="26" height="20"/>
+        <image name="57-download" width="19" height="24"/>
         <image name="96-book" width="18" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -120,6 +120,8 @@
 		A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */; };
 		A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E9199BE8DF0030E194 /* recreated_tables.css */; };
 		A68B584F199BE8DF0030E194 /* treatments.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57EA199BE8DF0030E194 /* treatments.css */; };
+		A6AA155F1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */; };
+		A6AA15611AA0E56D00EC5A56 /* full.html in Resources */ = {isa = PBXBuildFile; fileRef = A6AA15601AA0E56D00EC5A56 /* full.html */; };
 		A6BE154919F19A9B008330A1 /* c14-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154719F19A9B008330A1 /* c14-r.html */; };
 		A6BE154A19F19A9B008330A1 /* c14-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154819F19A9B008330A1 /* c14-t.html */; };
 		A6BE155B19F19AE2008330A1 /* c16-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE154B19F19AE2008330A1 /* c16-clv.html */; };
@@ -279,6 +281,8 @@
 		A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.swatch.f.css; sourceTree = "<group>"; };
 		A68B57E9199BE8DF0030E194 /* recreated_tables.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = recreated_tables.css; sourceTree = "<group>"; };
 		A68B57EA199BE8DF0030E194 /* treatments.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = treatments.css; sourceTree = "<group>"; };
+		A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullGuidelinesViewController.swift; sourceTree = "<group>"; };
+		A6AA15601AA0E56D00EC5A56 /* full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = full.html; sourceTree = "<group>"; };
 		A6BE154719F19A9B008330A1 /* c14-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c14-r.html"; sourceTree = "<group>"; };
 		A6BE154819F19A9B008330A1 /* c14-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c14-t.html"; sourceTree = "<group>"; };
 		A6BE154B19F19AE2008330A1 /* c16-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c16-clv.html"; sourceTree = "<group>"; };
@@ -356,12 +360,13 @@
 				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
-				A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */,
-				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
-				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
+				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
 				A650DAF8198BFF4F00223E47 /* Images.xcassets */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
+				A60DE3FA19C9D799007BBAA7 /* ReferencesViewController.swift */,
+				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 				A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */,
 				A6F7C7AA199D28B400A77F2C /* eula.css */,
 				A6F7C7AB199D28B400A77F2C /* eula.html */,
+				A6AA15601AA0E56D00EC5A56 /* full.html */,
 				A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */,
 				A68B57E9199BE8DF0030E194 /* recreated_tables.css */,
 				A6F7C7AF199D28B400A77F2C /* terms.html */,
@@ -648,6 +654,7 @@
 				A650DAF9198BFF4F00223E47 /* Images.xcassets in Resources */,
 				A68B5838199BE8DF0030E194 /* c51-t.html in Resources */,
 				A68B583A199BE8DF0030E194 /* c52-t.html in Resources */,
+				A6AA15611AA0E56D00EC5A56 /* full.html in Resources */,
 				A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */,
 				A68B583F199BE8DF0030E194 /* c55-t.html in Resources */,
 				A68B57F1199BE8DF0030E194 /* c11-t.html in Resources */,
@@ -761,6 +768,7 @@
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
+				A6AA155F1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
 				A60DE3FB19C9D799007BBAA7 /* ReferencesViewController.swift in Sources */,
 				A6F7C7BA199D33D500A77F2C /* AboutUsViewController.swift in Sources */,
