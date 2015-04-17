@@ -32,7 +32,7 @@ class ConditionContent {
         // let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
         
         let jsonData = NSData(contentsOfFile:path!, options: .DataReadingMappedIfSafe, error: nil)
-        let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error) as Dictionary<String, AnyObject>
+        let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error) as! Dictionary<String, AnyObject>
         
         println("JSON loaded, initializing Condition objects....")
         rootCondition = parseConditions(jsonCondition)
@@ -102,35 +102,35 @@ class ConditionContent {
         for (key, value) in conditionJson {
             switch (key as String) {
             case "condition_id":
-                id = value as Int
+                id = value as! Int
                 println("Id: \(id)")
                 break
             case "hasChildren":
-                hasChildren = value as Bool
+                hasChildren = value as! Bool
                 println("hasChildren: \(hasChildren)")
                 break
             case "parent":
                 if id == 0 {
                     parent = -1
                 } else {
-                    parent = value as Int
+                    parent = value as! Int
                     println("Parent: \(parent)")
                 }
                 break
             case "text":
-                text = value as String
+                text = value as! String
                 println("Text: \(text)")
                 break
             case "dxtxPage":
-                dxtxPage = value as String
+                dxtxPage = value as! String
                 println("DxtTx Page: \(dxtxPage)")
                 break
             case "regimensPage":
-                regimensPage = value as String
+                regimensPage = value as! String
                 println("Regimens Page: \(regimensPage)")
                 break
             case "children":
-                children = value as Array<Dictionary<String, AnyObject>>
+                children = value as! Array<Dictionary<String, AnyObject>>
                 println("Found \(children.count) children")
                 for child in children {
                     childConditions.append(parseConditions(child))

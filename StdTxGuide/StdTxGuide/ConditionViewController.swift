@@ -95,7 +95,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showConditionDetail" {
             let condition = conditionContent.getCurrentCondition()
-            let vc = segue.destinationViewController as ConditionDetailViewController
+            let vc = segue.destinationViewController as! ConditionDetailViewController
             vc.condition = condition
 
          }
@@ -126,14 +126,14 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) as! UITableViewCell
 
         let condition = conditions[indexPath.row]
         cell.textLabel?.text = condition.title
         return cell
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let condition = conditions[indexPath.row]
         conditionContent.setCurrentCondition(condition)
         if condition.hasChildren == false {
