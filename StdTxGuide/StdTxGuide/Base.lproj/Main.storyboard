@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Condition View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="ConditionVC" title="Condition View Controller" id="9pv-A4-QxB" customClass="ConditionViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jhG-ys-TcT"/>
+                        <viewControllerLayoutGuide type="bottom" id="G8V-Cy-qgO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" id="523-mv-Yqf">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="523-mv-Yqf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -29,15 +32,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AqA-T7-wNN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-T7-wNN">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConditionCell" id="Ft0-Nf-5o6">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ft0-Nf-5o6" id="fGH-Bp-251">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -54,25 +57,28 @@
                     <connections>
                         <outlet property="parentConditionButton" destination="fCm-70-2M8" id="FYi-L1-3jY"/>
                         <outlet property="tableView" destination="AqA-T7-wNN" id="oOh-XB-Nag"/>
-                        <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" id="JyN-Sk-JOq"/>
+                        <segue destination="o8A-WI-4Pp" kind="presentation" identifier="showConditionDetail" id="JyN-Sk-JOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="xhG-tK-kuz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="936" y="-300"/>
+            <point key="canvasLocation" x="1755" y="-316.9014084507042"/>
         </scene>
         <!--Condition Detail View Controller-->
         <scene sceneID="Vnd-7L-W23">
             <objects>
                 <viewController id="o8A-WI-4Pp" customClass="ConditionDetailViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="erR-3R-oq3"/>
+                        <viewControllerLayoutGuide type="bottom" id="7QS-0U-ePc"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dMi-GJ-zvz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" id="vta-NW-HXZ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Condition Details" id="moC-LP-7Wa">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="4GG-bf-ldt">
@@ -83,9 +89,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="JZw-Lp-IBZ">
-                                <rect key="frame" x="28" y="531" width="264" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
+                                <rect key="frame" x="0.0" y="64" width="600" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
+                                <rect key="frame" x="28" y="513" width="544" height="29"/>
                                 <segments>
                                     <segment title="Treatments"/>
                                     <segment title="More Info"/>
@@ -95,13 +104,20 @@
                                     <action selector="valueChange:" destination="o8A-WI-4Pp" eventType="valueChanged" id="1ce-yR-B8c"/>
                                 </connections>
                             </segmentedControl>
-                            <webView contentMode="scaleToFill" id="RQa-5Q-T49">
-                                <rect key="frame" x="0.0" y="64" width="320" height="459"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vta-NW-HXZ" firstAttribute="leading" secondItem="dMi-GJ-zvz" secondAttribute="leading" id="1vi-Kw-K8e"/>
+                            <constraint firstItem="JZw-Lp-IBZ" firstAttribute="top" secondItem="RQa-5Q-T49" secondAttribute="bottom" constant="10" id="79w-po-mPN"/>
+                            <constraint firstItem="RQa-5Q-T49" firstAttribute="trailing" secondItem="vta-NW-HXZ" secondAttribute="trailing" id="FIi-hg-2EK"/>
+                            <constraint firstItem="vta-NW-HXZ" firstAttribute="top" secondItem="erR-3R-oq3" secondAttribute="bottom" id="P1n-Rt-gOA"/>
+                            <constraint firstItem="JZw-Lp-IBZ" firstAttribute="leading" secondItem="dMi-GJ-zvz" secondAttribute="leadingMargin" constant="12" id="gaV-un-fql"/>
+                            <constraint firstAttribute="trailing" secondItem="vta-NW-HXZ" secondAttribute="trailing" id="icM-gi-nVk"/>
+                            <constraint firstItem="RQa-5Q-T49" firstAttribute="top" secondItem="vta-NW-HXZ" secondAttribute="bottom" id="mmg-kl-fds"/>
+                            <constraint firstItem="7QS-0U-ePc" firstAttribute="top" secondItem="JZw-Lp-IBZ" secondAttribute="bottom" constant="15" id="o4v-DU-07l"/>
+                            <constraint firstItem="vta-NW-HXZ" firstAttribute="leading" secondItem="RQa-5Q-T49" secondAttribute="leading" id="rax-9r-wei"/>
+                            <constraint firstItem="RQa-5Q-T49" firstAttribute="centerX" secondItem="JZw-Lp-IBZ" secondAttribute="centerX" id="zYR-av-B9w"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gQI-1K-Hec"/>
@@ -114,24 +130,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPi-8O-kbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-300"/>
+            <point key="canvasLocation" x="2651.25" y="-316.9014084507042"/>
         </scene>
         <!--Terms-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="TermsViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1vt-O9-neh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rvo-fo-71g"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="t4F-xz-3Yd">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-xz-3Yd">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" id="oPg-WU-JIq">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-WU-JIq">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Terms &amp; Abbreviations" id="wyY-cH-nZu"/>
                                 </items>
@@ -147,24 +165,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="328"/>
+            <point key="canvasLocation" x="1755" y="346.47887323943661"/>
         </scene>
         <!--Full Guidelines-->
         <scene sceneID="Sdl-FQ-Bg0">
             <objects>
                 <viewController id="mwa-Ea-ePW" customClass="FullGuidelinesViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S2w-NW-DLo"/>
+                        <viewControllerLayoutGuide type="bottom" id="nxj-Xe-X8S"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KMr-f7-kf9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="Lmz-MZ-NZI">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmz-MZ-NZI">
                                 <rect key="frame" x="0.0" y="58" width="320" height="461"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" id="ABu-Kh-xIz">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABu-Kh-xIz">
                                 <rect key="frame" x="0.0" y="14" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Full Guidelines" id="qjO-rr-Hwg"/>
                                 </items>
@@ -180,24 +200,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdf-UI-6JR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-902" y="954"/>
+            <point key="canvasLocation" x="-1691.25" y="1007.7464788732393"/>
         </scene>
         <!--Sexual History-->
         <scene sceneID="ItU-hj-W2d">
             <objects>
                 <viewController id="GWr-yT-toC" customClass="SexualHistoryViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5hv-Zy-XKi"/>
+                        <viewControllerLayoutGuide type="bottom" id="pz7-61-JKd"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bzV-bh-RXm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="zl7-Bi-bNf">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl7-Bi-bNf">
                                 <rect key="frame" x="0.0" y="64" width="320" height="461"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" id="y0t-xw-GtH">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0t-xw-GtH">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Taking a Sexual History" id="gcD-vb-SLK"/>
                                 </items>
@@ -213,19 +235,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qba-XC-WWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="947"/>
+            <point key="canvasLocation" x="-1012.5" y="1000.3521126760563"/>
         </scene>
         <!--References-->
         <scene sceneID="0dP-Kw-3oa">
             <objects>
                 <viewController id="GI3-2p-qTy" customClass="ReferencesViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z2c-ge-7Qr"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3Z-8k-1xg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nkR-Hi-4ZM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="K0O-nD-c11">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0O-nD-c11">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -236,19 +261,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9Q-Cm-b2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="947"/>
+            <point key="canvasLocation" x="-337.5" y="1000.3521126760563"/>
         </scene>
         <!--About Us-->
         <scene sceneID="bUb-Qa-lVu">
             <objects>
                 <viewController id="Z6f-GO-kpi" customClass="AboutUsViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i7k-2c-nmO"/>
+                        <viewControllerLayoutGuide type="bottom" id="FHL-GU-RWS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jEe-Vu-jQP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="zCM-EE-L3W">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="494"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -262,19 +290,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQL-UE-shO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="947"/>
+            <point key="canvasLocation" x="309.375" y="1000.3521126760563"/>
         </scene>
         <!--EULA-->
         <scene sceneID="KxS-TY-jfe">
             <objects>
                 <viewController title="EULA" id="zqW-1X-omP" customClass="EulaViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O9O-rz-1Yb"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jj-vf-cP8"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WaO-VS-27C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="2dc-SU-BL8">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-SU-BL8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -288,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXP-tf-5Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="947"/>
+            <point key="canvasLocation" x="1003.125" y="1000.3521126760563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -325,9 +356,4 @@
         <image name="57-download" width="19" height="24"/>
         <image name="96-book" width="18" height="26"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
