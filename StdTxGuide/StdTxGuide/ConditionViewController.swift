@@ -20,6 +20,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet
     var parentConditionButton: UIBarButtonItem!
 
+    @IBOutlet weak var webView: UIWebView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +48,11 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     
         //UINavigationBar .appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
+        // web view for breadcrumbs
+        // Do any additional setup after loading the view, typically from a nib.
+//        let url = NSBundle.mainBundle().URLForResource("test-breadcrumbs", withExtension: "html")
+//        let request = NSURLRequest(URL:url!)
+//        webView.loadRequest(request)
         
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
