@@ -362,10 +362,10 @@
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
-				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
-				A650DAED198BFF4F00223E47 /* Supporting Files */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
+				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
+				A650DAED198BFF4F00223E47 /* Supporting Files */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";

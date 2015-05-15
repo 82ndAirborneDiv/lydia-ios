@@ -13,6 +13,8 @@ class ConditionDetailViewController: UIViewController {
     @IBOutlet var parentConditionButton: UIBarButtonItem!
     @IBOutlet var webView:UIWebView!
     
+    @IBOutlet weak var lblTreatments: UILabel!
+    @IBOutlet weak var lblMoreInfo: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var condition:Condition!
@@ -26,22 +28,42 @@ class ConditionDetailViewController: UIViewController {
         
         // check if condtion has regimens content and set it as selcted index
         // if not use dxtx content
-        if condition.hasRegimens == false {
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
-            segmentedControl.selectedSegmentIndex = 1;
-            loadDxTxContent()
-        } else {
+        if condition.hasRegimens == true && condition.hasDxTx == true {
+            
+            // display both so use segmented control
+            // the only thing to display is More Info (DxTx) Label
+            lblMoreInfo.hidden = true;
+            lblMoreInfo.enabled = false;
+            lblTreatments.hidden = true;
+            lblTreatments.enabled = false;
+            segmentedControl.hidden = false;
+            segmentedControl.enabled = true;
             segmentedControl.setEnabled(true, forSegmentAtIndex: 0)
+            segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
             segmentedControl.selectedSegmentIndex = 0;
             loadRegimensContent()
-            
+        } else if condition.hasRegimens == false && condition.hasDxTx == true {
+            // the only thing to display is More Info (DxTx) Label
+            lblMoreInfo.hidden = false;
+            lblMoreInfo.enabled = true;
+            lblTreatments.hidden = true;
+            lblTreatments.enabled = false;
+            segmentedControl.hidden = true;
+            segmentedControl.enabled = false;
+            loadDxTxContent()
+           
+        } else if condition.hasRegimens == true && condition.hasDxTx == false {
+            // the only thing to display is Treatments (Regimens)
+            lblMoreInfo.hidden = true;
+            lblMoreInfo.enabled = false;
+            lblTreatments.hidden = false;
+            lblTreatments.enabled = true;
+            segmentedControl.hidden = true;
+            segmentedControl.enabled = false;
+            loadRegimensContent()
+
         }
         
-        if condition.hasDxTx == false {
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
-        } else {
-            segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
-        }
         segmentedControl.tintColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
         super.setNeedsStatusBarAppearanceUpdate()
