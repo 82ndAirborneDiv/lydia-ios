@@ -14,8 +14,8 @@ class ConditionContent {
     
     let CONTENT_MAP_FILENAME = "condition-content-map"
     let CONTENT_MAP_FILE_EXT = "txt"
-    var rootCondition:Condition? = nil
-    var currCondition:Condition? = nil
+    var rootCondition:Condition! = nil
+    var currCondition:Condition! = nil
     var allConditions:Array<Condition>
     var showingDetail:Bool = false
     
@@ -28,9 +28,6 @@ class ConditionContent {
         println("Initializing ConditionContent object....")
         println("Using file \(CONTENT_MAP_FILENAME).\(CONTENT_MAP_FILE_EXT)......")
         let path = NSBundle.mainBundle().pathForResource(CONTENT_MAP_FILENAME, ofType: CONTENT_MAP_FILE_EXT)
-        // let jsonData = NSData.dataWithContentsOfFile(path!, options: .DataReadingMappedIfSafe, error: nil)
-        // let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as Dictionary<String, AnyObject>
-        
         let jsonData = NSData(contentsOfFile:path!, options: .DataReadingMappedIfSafe, error: nil)
         let jsonCondition = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error) as! Dictionary<String, AnyObject>
         
@@ -56,6 +53,15 @@ class ConditionContent {
         
     }
     
+    func isCurrentConditionRootCondition() -> Bool {
+        
+        if currCondition.id == rootCondition.id {
+            return true
+        }
+        
+        return false
+    }
+    
     func setCurrentConditionToParent() {
         if currCondition?.id != 0 {
             setCurrentCondition(getConditionFromId(currCondition!.parentId))
@@ -69,6 +75,7 @@ class ConditionContent {
         return self.currCondition!
     
     }
+    
     
     func setCurrentCondition(newCondition:Condition) {
     
@@ -97,6 +104,7 @@ class ConditionContent {
         var childConditions:Array<Condition> = Array<Condition>()
         var text:String = ""
         var regimensPage:String = ""
+        var childBreadcrumbs:String = ""
         var dxtxPage:String = ""
         
         for (key, value) in conditionJson {
@@ -136,13 +144,16 @@ class ConditionContent {
                     childConditions.append(parseConditions(child))
                 }
                 break
+            case "childBreadcrumbs":
+                childBreadcrumbs = value as! String
+                break
             default:
                 print("")
             }
             
         }
         
-        let condition:Condition = Condition(id: id, parentId: parent, title: text, regimensPage: regimensPage, dxtxPage: dxtxPage, hasChildren: hasChildren, children: childConditions)
+        let condition:Condition = Condition(id: id, parentId: parent, title: text, regimensPage: regimensPage, dxtxPage: dxtxPage, hasChildren: hasChildren, children: childConditions, childBreadcrumbs:childBreadcrumbs)
         allConditions.append(condition)
         return condition
     }

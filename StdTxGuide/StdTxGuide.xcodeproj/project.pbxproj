@@ -119,6 +119,7 @@
 		A68B584D199BE8DF0030E194 /* jquery.mobile.swatch.f.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */; };
 		A68B584E199BE8DF0030E194 /* recreated_tables.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57E9199BE8DF0030E194 /* recreated_tables.css */; };
 		A68B584F199BE8DF0030E194 /* treatments.css in Resources */ = {isa = PBXBuildFile; fileRef = A68B57EA199BE8DF0030E194 /* treatments.css */; };
+		A69DAEB61B0B61C30058F90E /* SubConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */; };
 		A6A9D8421AF1159100CD2800 /* test-breadcrumbs.html in Resources */ = {isa = PBXBuildFile; fileRef = A6A9D8411AF1159100CD2800 /* test-breadcrumbs.html */; };
 		A6AA155F1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */; };
 		A6AA15611AA0E56D00EC5A56 /* full.html in Resources */ = {isa = PBXBuildFile; fileRef = A6AA15601AA0E56D00EC5A56 /* full.html */; };
@@ -280,6 +281,7 @@
 		A68B57E8199BE8DF0030E194 /* jquery.mobile.swatch.f.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jquery.mobile.swatch.f.css; sourceTree = "<group>"; };
 		A68B57E9199BE8DF0030E194 /* recreated_tables.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = recreated_tables.css; sourceTree = "<group>"; };
 		A68B57EA199BE8DF0030E194 /* treatments.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = treatments.css; sourceTree = "<group>"; };
+		A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubConditionViewController.swift; sourceTree = "<group>"; };
 		A6A9D8411AF1159100CD2800 /* test-breadcrumbs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-breadcrumbs.html"; sourceTree = "<group>"; };
 		A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullGuidelinesViewController.swift; sourceTree = "<group>"; };
 		A6AA15601AA0E56D00EC5A56 /* full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = full.html; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
+				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
@@ -766,6 +769,7 @@
 			files = (
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
 				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
+				A69DAEB61B0B61C30058F90E /* SubConditionViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,

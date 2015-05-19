@@ -1,17 +1,16 @@
 //
-//  ConditionViewController.swift
+//  SubConditionViewController.swift
 //  StdTxGuide
 //
-//  Created by jtq6 on 8/1/14.
-//  Copyright (c) 2014 jtq6. All rights reserved.
+//  Created by jtq6 on 5/19/15.
+//  Copyright (c) 2015 jtq6. All rights reserved.
 //
 
 import UIKit
 
 
-
-class ConditionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
+class SubConditionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
     var conditions = Array<Condition>()
     let conditionContent = sharedConditionContent
     var count = 0;
@@ -19,14 +18,16 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     var tableView: UITableView!
     @IBOutlet
     var parentConditionButton: UIBarButtonItem!
+    
+    var currCondition:Condition!
 
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         
         // Status bar white font
@@ -35,7 +36,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
         self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.Black
-
+        
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,13 +44,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
         
         hideBackButton()
-
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-
+    
     func showBackButton() {
         parentConditionButton.enabled = true
         parentConditionButton.title = "Back"
@@ -59,7 +60,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     func hideBackButton() {
         parentConditionButton.enabled = false
         parentConditionButton.title = nil
-
+        
     }
     
     func goUpConditionTree()
@@ -68,12 +69,12 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         conditions = conditionContent.getChildConditions()
         if conditionContent.currCondition?.id == conditionContent.rootCondition?.id {
             hideBackButton()
-         } else {
+        } else {
             showBackButton()
         }
         tableView.reloadData()
         
-
+        
     }
     
     
@@ -81,7 +82,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -89,14 +90,8 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
             let condition = conditionContent.getCurrentCondition()
             let vc = segue.destinationViewController as! ConditionDetailViewController
             vc.condition = condition
-
-        } else if segue.identifier == "showSubConditions" {
-            let condition = conditionContent.getCurrentCondition()
-            let vc = segue.destinationViewController as! SubConditionViewController
-            vc.currCondition = condition
             
         }
-
     }
     
     @IBAction func unwindToConditionList(segue: UIStoryboardSegue) {
@@ -107,25 +102,29 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     @IBAction func backButtonTouch(AnyObject) {
-        
         goUpConditionTree()
     }
-
-
+    
+    
     // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         count = conditions.count
         return count
     }
-
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let parent = conditionContent.getConditionFromId(conditions[0].parentId)
+        return parent.childBreadcrumbs
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) as! UITableViewCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("SubConditionCell", forIndexPath: indexPath) as! UITableViewCell
+        
         let condition = conditions[indexPath.row]
         cell.textLabel?.text = condition.title
         return cell
@@ -138,13 +137,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
             performSegueWithIdentifier("showConditionDetail", sender: self)
             
         } else {
-            performSegueWithIdentifier("showSubConditions", sender: self)
-//            conditions = conditionContent.getChildConditions()
-//            showBackButton()
-//            println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
-//            tableView.reloadData()
+            conditions = conditionContent.getChildConditions()
+            showBackButton()
+            tableView.reloadData()
+            println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
+            
         }
-
+        
     }
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // return false if you do not want the specified item to be editable.
@@ -157,7 +156,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
+    
+    
+    
 }
-

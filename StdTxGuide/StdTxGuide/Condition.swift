@@ -14,10 +14,11 @@ class Condition {
     
     var id, parentId:Int
     var hasChildren, hasDxTx, hasRegimens:Bool
-    var title, regimensPage, dxtxPage:String
+    var title, regimensPage, dxtxPage :String
+    var childBreadcrumbs:String
     var childrenConditions:Array<Condition>
     
-    init(id:Int, parentId:Int, title:String, regimensPage:String, dxtxPage:String, hasChildren:Bool, children:Array<Condition>) {
+    init(id:Int, parentId:Int, title:String, regimensPage:String, dxtxPage:String, hasChildren:Bool, children:Array<Condition>, childBreadcrumbs:String) {
         
         self.id = id
         self.parentId = parentId
@@ -27,6 +28,7 @@ class Condition {
         self.regimensPage = regimensPage
         self.dxtxPage = dxtxPage
         
+        self.childBreadcrumbs = childBreadcrumbs
         if self.dxtxPage == "" {
             self.hasDxTx = false
         } else {
@@ -43,7 +45,6 @@ class Condition {
         
     }
     
-
     func numberOfChildren() -> Int {
         
         return childrenConditions.count
@@ -56,5 +57,6 @@ class Condition {
         }
         return false
     }
+    
 
 }
