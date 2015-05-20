@@ -141,6 +141,7 @@
 		A6BE156819F19AE2008330A1 /* c46-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155819F19AE2008330A1 /* c46-r.html */; };
 		A6BE156919F19AE2008330A1 /* c46-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155919F19AE2008330A1 /* c46-t.html */; };
 		A6BE156A19F19AE2008330A1 /* c50-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155A19F19AE2008330A1 /* c50-clv.html */; };
+		A6E3F4C11B0D013900982CAF /* ConditionsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */; };
 		A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */; };
 		A6F7C7B0199D28B400A77F2C /* eula_icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */; };
 		A6F7C7B1199D28B400A77F2C /* eula.css in Resources */ = {isa = PBXBuildFile; fileRef = A6F7C7AA199D28B400A77F2C /* eula.css */; };
@@ -303,6 +304,7 @@
 		A6BE155819F19AE2008330A1 /* c46-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-r.html"; sourceTree = "<group>"; };
 		A6BE155919F19AE2008330A1 /* c46-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-t.html"; sourceTree = "<group>"; };
 		A6BE155A19F19AE2008330A1 /* c50-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c50-clv.html"; sourceTree = "<group>"; };
+		A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionsRootViewController.swift; sourceTree = "<group>"; };
 		A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		A6F7C7A9199D28B400A77F2C /* eula_icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eula_icon_retina.png; sourceTree = "<group>"; };
 		A6F7C7AA199D28B400A77F2C /* eula.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = eula.css; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 			files = (
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
 				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
+				A6E3F4C11B0D013900982CAF /* ConditionsRootViewController.swift in Sources */,
 				A69DAEB61B0B61C30058F90E /* SubConditionViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,

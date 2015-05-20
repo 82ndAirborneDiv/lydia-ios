@@ -52,14 +52,14 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func showBackButton() {
-        parentConditionButton.enabled = true
-        parentConditionButton.title = "Back"
+//        parentConditionButton.enabled = true
+//        parentConditionButton.title = "Back"
         
     }
     
     func hideBackButton() {
-        parentConditionButton.enabled = false
-        parentConditionButton.title = nil
+//        parentConditionButton.enabled = false
+//        parentConditionButton.title = nil
         
     }
     

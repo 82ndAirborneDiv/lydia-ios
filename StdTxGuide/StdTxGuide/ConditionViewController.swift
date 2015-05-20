@@ -37,6 +37,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.Black
 
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        self.title = "Conditions"
         
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
@@ -51,14 +52,14 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func showBackButton() {
-        parentConditionButton.enabled = true
-        parentConditionButton.title = "Back"
+//        parentConditionButton.enabled = true
+//        parentConditionButton.title = "Back"
         
     }
     
     func hideBackButton() {
-        parentConditionButton.enabled = false
-        parentConditionButton.title = nil
+//        parentConditionButton.enabled = false
+//        parentConditionButton.title = nil
 
     }
     

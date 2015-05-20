@@ -17,22 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="523-mv-Yqf">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Conditions" id="HwS-X5-7M0">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fCm-70-2M8">
-                                            <connections>
-                                                <action selector="backButtonTouch:" destination="9pv-A4-QxB" id="LNz-6z-k73"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-T7-wNN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-T7-wNN">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -51,20 +36,25 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="AqA-T7-wNN" firstAttribute="bottom" secondItem="RX5-K4-1TC" secondAttribute="top" id="NJM-Lc-55V"/>
+                            <constraint firstItem="AqA-T7-wNN" firstAttribute="top" secondItem="XBi-6e-ers" secondAttribute="bottom" id="QbW-gt-QLy"/>
+                            <constraint firstAttribute="trailing" secondItem="AqA-T7-wNN" secondAttribute="trailing" id="a9b-qP-n06"/>
+                            <constraint firstItem="AqA-T7-wNN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="qlO-lF-JsF"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Conditions" image="10-medical" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="7zL-YL-1dk"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="parentConditionButton" destination="fCm-70-2M8" id="FYi-L1-3jY"/>
                         <outlet property="tableView" destination="AqA-T7-wNN" id="oOh-XB-Nag"/>
                         <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="JyN-Sk-JOq"/>
-                        <segue destination="Em4-7W-rwd" kind="modal" identifier="showSubConditions" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="wZB-qD-dLN"/>
+                        <segue destination="Em4-7W-rwd" kind="push" identifier="showSubConditions" id="OI9-sR-4YN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="xhG-tK-kuz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="936" y="-300.09333333333331"/>
+            <point key="canvasLocation" x="1507" y="-643"/>
         </scene>
         <!--Condition Detail View Controller-->
         <scene sceneID="Vnd-7L-W23">
@@ -157,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPi-8O-kbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="0.0"/>
+            <point key="canvasLocation" x="1611" y="92"/>
         </scene>
         <!--Terms-->
         <scene sceneID="wg7-f3-ORb">
@@ -334,7 +324,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="GVG-6a-PW0" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="mwa-Ea-ePW" kind="relationship" relationship="viewControllers" id="jcy-GI-Pfl"/>
                         <segue destination="GWr-yT-toC" kind="relationship" relationship="viewControllers" id="Kkf-Sv-g8a"/>
@@ -355,27 +345,12 @@
                         <viewControllerLayoutGuide type="bottom" id="3KS-5U-VbK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yq2-yu-pa4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Od-gL-bR9">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Conditions" id="gQK-7K-GtQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="86W-aP-5Sa">
-                                            <connections>
-                                                <action selector="backButtonTouch:" destination="Em4-7W-rwd" id="ojn-ha-fb8"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="nk4-y2-Flo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="nk4-y2-Flo">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubConditionCell" id="2ZQ-2v-yR4">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -392,19 +367,43 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nk4-y2-Flo" secondAttribute="trailing" id="1px-dO-zBz"/>
+                            <constraint firstItem="nk4-y2-Flo" firstAttribute="top" secondItem="VZu-19-ey7" secondAttribute="bottom" id="9FF-tZ-atL"/>
+                            <constraint firstItem="nk4-y2-Flo" firstAttribute="leading" secondItem="yq2-yu-pa4" secondAttribute="leading" id="Os9-ca-35e"/>
+                            <constraint firstItem="nk4-y2-Flo" firstAttribute="bottom" secondItem="3KS-5U-VbK" secondAttribute="top" id="Xny-WF-Qqb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Conditions" image="10-medical" id="i5c-4c-1O3"/>
                     <navigationItem key="navigationItem" id="PPt-4Z-9Ch"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="parentConditionButton" destination="86W-aP-5Sa" id="ML8-1i-BOr"/>
                         <outlet property="tableView" destination="nk4-y2-Flo" id="DSg-8S-rdy"/>
                         <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" id="KW1-he-bro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dm3-GJ-zQ2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1523" y="-675"/>
+            <point key="canvasLocation" x="2055" y="-675"/>
+        </scene>
+        <!--Conditions-->
+        <scene sceneID="xXf-1S-4fa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GVG-6a-PW0" customClass="ConditionsRootViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conditions" image="10-medical" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ECg-42-1gk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="e7O-xa-TON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="372-g4-W6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="-643"/>
         </scene>
     </scenes>
     <resources>
