@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Condition View Controller-->
@@ -44,7 +43,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7zL-YL-1dk"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="AqA-T7-wNN" id="oOh-XB-Nag"/>
                         <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="JyN-Sk-JOq"/>
@@ -68,7 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Condition Details" id="moC-LP-7Wa">
@@ -80,15 +78,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
-                                <rect key="frame" x="0.0" y="108" width="320" height="416"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
+                                <rect key="frame" x="0.0" y="152" width="320" height="372"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD0-0z-QRQ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="45"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD0-0z-QRQ" userLabel="Segmented Control View">
+                                <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
-                                        <rect key="frame" x="28" y="9" width="264" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
+                                        <rect key="frame" x="28" y="8" width="264" height="29"/>
                                         <segments>
                                             <segment title="Treatments"/>
                                             <segment title="More Info"/>
@@ -99,45 +97,40 @@
                                         </connections>
                                     </segmentedControl>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jde-Xx-7TO">
-                                        <rect key="frame" x="28" y="12" width="264" height="21"/>
+                                        <rect key="frame" x="28" y="11" width="264" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treatments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gby-Ud-8C8">
-                                        <rect key="frame" x="28" y="11" width="264" height="21"/>
+                                        <rect key="frame" x="28" y="10" width="264" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="JZw-Lp-IBZ" firstAttribute="centerX" secondItem="JD0-0z-QRQ" secondAttribute="centerX" id="IB8-70-dtK"/>
-                                    <constraint firstItem="JZw-Lp-IBZ" firstAttribute="leading" secondItem="JD0-0z-QRQ" secondAttribute="leading" constant="28" id="fRv-iu-TMe"/>
-                                    <constraint firstItem="JZw-Lp-IBZ" firstAttribute="bottom" secondItem="JD0-0z-QRQ" secondAttribute="bottomMargin" id="jTs-wM-Ors"/>
-                                    <constraint firstItem="JZw-Lp-IBZ" firstAttribute="top" secondItem="JD0-0z-QRQ" secondAttribute="top" constant="9" id="syq-sG-BRR"/>
-                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wac-B3-e9A" userLabel="Label View">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Condition Breadcrumb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJB-gO-ct3">
+                                        <rect key="frame" x="8" y="11" width="304" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="JD0-0z-QRQ" firstAttribute="top" secondItem="vta-NW-HXZ" secondAttribute="bottom" id="BlJ-VC-qv0"/>
-                            <constraint firstItem="RQa-5Q-T49" firstAttribute="bottom" secondItem="gd4-i8-04r" secondAttribute="top" id="F7p-bA-qaZ"/>
-                            <constraint firstItem="vta-NW-HXZ" firstAttribute="leading" secondItem="dMi-GJ-zvz" secondAttribute="leading" id="VdL-1l-LRc"/>
-                            <constraint firstItem="vta-NW-HXZ" firstAttribute="top" secondItem="wtr-G7-JeM" secondAttribute="bottom" id="am1-Qn-clA"/>
-                            <constraint firstItem="JD0-0z-QRQ" firstAttribute="trailing" secondItem="vta-NW-HXZ" secondAttribute="trailing" id="esc-XR-eME"/>
-                            <constraint firstItem="RQa-5Q-T49" firstAttribute="trailing" secondItem="JD0-0z-QRQ" secondAttribute="trailing" id="hbp-wc-E0x"/>
-                            <constraint firstItem="JD0-0z-QRQ" firstAttribute="leading" secondItem="vta-NW-HXZ" secondAttribute="leading" id="lki-Bt-7dX"/>
-                            <constraint firstItem="JD0-0z-QRQ" firstAttribute="leading" secondItem="RQa-5Q-T49" secondAttribute="leading" id="mdb-Bz-eig"/>
-                            <constraint firstAttribute="trailing" secondItem="JD0-0z-QRQ" secondAttribute="trailing" id="wuQ-dp-AX0"/>
-                            <constraint firstItem="RQa-5Q-T49" firstAttribute="top" secondItem="JD0-0z-QRQ" secondAttribute="bottom" constant="-1" id="xWh-6b-deC"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gQI-1K-Hec"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="lblBreadcrumb" destination="DJB-gO-ct3" id="dMo-M8-kUV"/>
                         <outlet property="lblMoreInfo" destination="jde-Xx-7TO" id="fxl-hT-KNv"/>
                         <outlet property="lblTreatments" destination="gby-Ud-8C8" id="3mX-fV-kSh"/>
                         <outlet property="parentConditionButton" destination="4GG-bf-ldt" id="Weu-mz-2MP"/>

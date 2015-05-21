@@ -28,7 +28,10 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
+        super.setNeedsStatusBarAppearanceUpdate()
+
+
         // Status bar white font
         self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()
         self.tabBarController?.customizableViewControllers = nil

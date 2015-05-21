@@ -12,11 +12,12 @@ class ConditionDetailViewController: UIViewController {
                             
     @IBOutlet var parentConditionButton: UIBarButtonItem!
     @IBOutlet var webView:UIWebView!
-    
     @IBOutlet weak var lblTreatments: UILabel!
     @IBOutlet weak var lblMoreInfo: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var lblBreadcrumb: UILabel!
     
+    let conditionContent = sharedConditionContent
     var condition:Condition!
  
     required init(coder aDecoder: NSCoder) {
@@ -70,7 +71,20 @@ class ConditionDetailViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         //self.webView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleBottomMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
-
+        
+        // breadcrumbs text label
+        lblBreadcrumb.textColor = UIColor.darkGrayColor()
+        lblBreadcrumb.font = UIFont.boldSystemFontOfSize(14)
+        lblBreadcrumb.textAlignment = NSTextAlignment.Center
+        let parent = conditionContent.getConditionFromId(condition.parentId)
+        
+        if parent.childBreadcrumbs == "" {
+            lblBreadcrumb.text = condition.title
+            
+        } else {
+            lblBreadcrumb.text = parent.childBreadcrumbs + " / " + condition.title
+            
+        }
 
 
     }
