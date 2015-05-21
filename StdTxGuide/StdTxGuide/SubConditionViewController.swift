@@ -122,6 +122,18 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         return parent.childBreadcrumbs
     }
     
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel.textColor = UIColor.darkGrayColor()
+        header.textLabel.font = UIFont.boldSystemFontOfSize(14)
+        let headerFrame = header.frame
+        header.textLabel.frame = headerFrame
+        header.textLabel.textAlignment = NSTextAlignment.Left
+        let parent = conditionContent.getConditionFromId(conditions[0].parentId)
+        header.textLabel.text =  parent.childBreadcrumbs
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SubConditionCell", forIndexPath: indexPath) as! UITableViewCell
         

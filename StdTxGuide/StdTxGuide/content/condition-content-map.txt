@@ -1276,17 +1276,47 @@
                     "hasDxTx": true
                 }, 
                 {
-                    "childBreadcrumbs": "Syphilis / Neurosyphilis and Ocular Syphilis\u201d\nregimens,syphilis-neurosyphilis-rec,syphilis-neurosyphilis-alt\ndx-tx,syphilis-neurosyphilis\ncond2,In Persons with HIV Infection\"", 
+                    "childBreadcrumbs": "Syphilis / Neurosyphilis and Ocular Syphilis", 
                     "childrenListViewPageId": "c48-clv", 
                     "pageId": "c48", 
                     "parent": 44, 
                     "hasChildren": false, 
                     "childrenListViewPage": "c48-clv.html", 
                     "dxtxPageId": "c48-t", 
-                    "text": "Neurosyphilis and Ocular Syphilis\u201d\nregimens,syphilis-neurosyphilis-rec,syphilis-neurosyphilis-alt\ndx-tx,syphilis-neurosyphilis\ncond2,In Persons with HIV Infection\"", 
+                    "text": "Neurosyphilis and Ocular Syphilis", 
                     "condition_id": 48, 
                     "dxtxPage": "c48-t.html", 
                     "regimensPage": "c48-r.html", 
+                    "regimens": [
+                        "syphilis-neurosyphilis-rec", 
+                        "syphilis-neurosyphilis-alt"
+                    ], 
+                    "breadcrumbs": [
+                        {
+                            "text": "Syphilis", 
+                            "link": "c44-clv.html"
+                        }
+                    ], 
+                    "regimensPageId": "c48-r", 
+                    "dxtx": [
+                        "syphilis-neurosyphilis"
+                    ], 
+                    "hasRegimens": true, 
+                    "children": [], 
+                    "hasDxTx": true
+                }, 
+                {
+                    "childBreadcrumbs": "Syphilis / In Persons with HIV Infection", 
+                    "childrenListViewPageId": "c49-clv", 
+                    "pageId": "c49", 
+                    "parent": 44, 
+                    "hasChildren": false, 
+                    "childrenListViewPage": "c49-clv.html", 
+                    "dxtxPageId": "c49-t", 
+                    "text": "In Persons with HIV Infection", 
+                    "condition_id": 49, 
+                    "dxtxPage": "c49-t.html", 
+                    "regimensPage": "c49-r.html", 
                     "regimens": [
                         "syphilis-hiv-primary-rec", 
                         "syphilis-hiv-latent-early-rec", 
@@ -1298,7 +1328,7 @@
                             "link": "c44-clv.html"
                         }
                     ], 
-                    "regimensPageId": "c48-r", 
+                    "regimensPageId": "c49-r", 
                     "dxtx": [
                         "syphilis-hiv"
                     ], 
@@ -1308,42 +1338,15 @@
                 }, 
                 {
                     "childBreadcrumbs": "Syphilis / In Pregnancy", 
-                    "childrenListViewPageId": "c49-clv", 
-                    "pageId": "c49", 
-                    "parent": 44, 
-                    "hasChildren": false, 
-                    "childrenListViewPage": "c49-clv.html", 
-                    "dxtxPageId": "c49-t", 
-                    "text": "In Pregnancy", 
-                    "condition_id": 49, 
-                    "dxtxPage": "c49-t.html", 
-                    "regimensPage": "", 
-                    "regimens": [], 
-                    "breadcrumbs": [
-                        {
-                            "text": "Syphilis", 
-                            "link": "c44-clv.html"
-                        }
-                    ], 
-                    "regimensPageId": "c49-r", 
-                    "dxtx": [
-                        "syphilis-pregnancy"
-                    ], 
-                    "hasRegimens": false, 
-                    "children": [], 
-                    "hasDxTx": true
-                }, 
-                {
-                    "childBreadcrumbs": "Syphilis / Congenital", 
                     "childrenListViewPageId": "c50-clv", 
                     "pageId": "c50", 
                     "parent": 44, 
-                    "hasChildren": true, 
+                    "hasChildren": false, 
                     "childrenListViewPage": "c50-clv.html", 
                     "dxtxPageId": "c50-t", 
-                    "text": "Congenital", 
+                    "text": "In Pregnancy", 
                     "condition_id": 50, 
-                    "dxtxPage": "", 
+                    "dxtxPage": "c50-t.html", 
                     "regimensPage": "", 
                     "regimens": [], 
                     "breadcrumbs": [
@@ -1353,21 +1356,48 @@
                         }
                     ], 
                     "regimensPageId": "c50-r", 
+                    "dxtx": [
+                        "syphilis-pregnancy"
+                    ], 
+                    "hasRegimens": false, 
+                    "children": [], 
+                    "hasDxTx": true
+                }, 
+                {
+                    "childBreadcrumbs": "Syphilis / Congenital", 
+                    "childrenListViewPageId": "c51-clv", 
+                    "pageId": "c51", 
+                    "parent": 44, 
+                    "hasChildren": true, 
+                    "childrenListViewPage": "c51-clv.html", 
+                    "dxtxPageId": "c51-t", 
+                    "text": "Congenital", 
+                    "condition_id": 51, 
+                    "dxtxPage": "", 
+                    "regimensPage": "", 
+                    "regimens": [], 
+                    "breadcrumbs": [
+                        {
+                            "text": "Syphilis", 
+                            "link": "c44-clv.html"
+                        }
+                    ], 
+                    "regimensPageId": "c51-r", 
                     "dxtx": [], 
                     "hasRegimens": false, 
                     "children": [
                         {
                             "childBreadcrumbs": "Syphilis / Congenital / Neonates", 
-                            "childrenListViewPageId": "c51-clv", 
-                            "pageId": "c51", 
-                            "parent": 50, 
+                            "childrenListViewPageId": "c52-clv", 
+                            "pageId": "c52", 
+                            "parent": 51, 
                             "hasChildren": false, 
-                            "childrenListViewPage": "c51-clv.html", 
-                            "dxtxPageId": "c51-t", 
+                            "childrenListViewPage": "c52-clv.html", 
+                            "dxtxPageId": "c52-t", 
                             "text": "Neonates", 
-                            "condition_id": 51, 
-                            "dxtxPage": "c51-t.html", 
-                            "regimensPage": "c51-r.html", 
+                            "condition_id": 52, 
+                            "dxtxPage": "c52-t.html", 
+                            "regimensPage": "c52-r.html", 
                             "regimens": [
                                 "syphilis-congenital-neonate-proven", 
                                 "syphilis-congenital-neonate-possible", 
@@ -1381,10 +1411,10 @@
                                 }, 
                                 {
                                     "text": "Congenital", 
-                                    "link": "c50-clv.html"
+                                    "link": "c51-clv.html"
                                 }
                             ], 
-                            "regimensPageId": "c51-r", 
+                            "regimensPageId": "c52-r", 
                             "dxtx": [
                                 "syphilis-congenital-first-month"
                             ], 
@@ -1394,16 +1424,16 @@
                         }, 
                         {
                             "childBreadcrumbs": "Syphilis / Congenital / Older Infants and Children", 
-                            "childrenListViewPageId": "c52-clv", 
-                            "pageId": "c52", 
-                            "parent": 50, 
+                            "childrenListViewPageId": "c53-clv", 
+                            "pageId": "c53", 
+                            "parent": 51, 
                             "hasChildren": false, 
-                            "childrenListViewPage": "c52-clv.html", 
-                            "dxtxPageId": "c52-t", 
+                            "childrenListViewPage": "c53-clv.html", 
+                            "dxtxPageId": "c53-t", 
                             "text": "Older Infants and Children", 
-                            "condition_id": 52, 
-                            "dxtxPage": "c52-t.html", 
-                            "regimensPage": "c52-r.html", 
+                            "condition_id": 53, 
+                            "dxtxPage": "c53-t.html", 
+                            "regimensPage": "c53-r.html", 
                             "regimens": [
                                 "syphilis-congenital-infant"
                             ], 
@@ -1414,10 +1444,10 @@
                                 }, 
                                 {
                                     "text": "Congenital", 
-                                    "link": "c50-clv.html"
+                                    "link": "c51-clv.html"
                                 }
                             ], 
-                            "regimensPageId": "c52-r", 
+                            "regimensPageId": "c53-r", 
                             "dxtx": [
                                 "syphilis-congenital-infant"
                             ], 
@@ -1433,22 +1463,22 @@
         }, 
         {
             "childBreadcrumbs": "Trichomoniasis", 
-            "childrenListViewPageId": "c53-clv", 
-            "pageId": "c53", 
+            "childrenListViewPageId": "c54-clv", 
+            "pageId": "c54", 
             "parent": 0, 
             "hasChildren": false, 
-            "childrenListViewPage": "c53-clv.html", 
-            "dxtxPageId": "c53-t", 
+            "childrenListViewPage": "c54-clv.html", 
+            "dxtxPageId": "c54-t", 
             "text": "Trichomoniasis", 
-            "condition_id": 53, 
-            "dxtxPage": "c53-t.html", 
-            "regimensPage": "c53-r.html", 
+            "condition_id": 54, 
+            "dxtxPage": "c54-t.html", 
+            "regimensPage": "c54-r.html", 
             "regimens": [
                 "trichomoniasis-rec", 
                 "trichomoniasis-alt"
             ], 
             "breadcrumbs": [], 
-            "regimensPageId": "c53-r", 
+            "regimensPageId": "c54-r", 
             "dxtx": [
                 "trichomoniasis"
             ], 
@@ -1458,16 +1488,16 @@
         }, 
         {
             "childBreadcrumbs": "Warts - Genital", 
-            "childrenListViewPageId": "c54-clv", 
-            "pageId": "c54", 
+            "childrenListViewPageId": "c55-clv", 
+            "pageId": "c55", 
             "parent": 0, 
             "hasChildren": false, 
-            "childrenListViewPage": "c54-clv.html", 
-            "dxtxPageId": "c54-t", 
+            "childrenListViewPage": "c55-clv.html", 
+            "dxtxPageId": "c55-t", 
             "text": "Warts - Genital", 
-            "condition_id": 54, 
-            "dxtxPage": "c54-t.html", 
-            "regimensPage": "c54-r.html", 
+            "condition_id": 55, 
+            "dxtxPage": "c55-t.html", 
+            "regimensPage": "c55-r.html", 
             "regimens": [
                 "warts-external", 
                 "warts-cervical", 
@@ -1476,7 +1506,7 @@
                 "warts-anal"
             ], 
             "breadcrumbs": [], 
-            "regimensPageId": "c54-r", 
+            "regimensPageId": "c55-r", 
             "dxtx": [
                 "warts-genital"
             ], 
