@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,10 +14,10 @@
 		A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAEF198BFF4F00223E47 /* AppDelegate.swift */; };
 		A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */; };
 		A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */; };
-		A650DAF7198BFF4F00223E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A650DAF5198BFF4F00223E47 /* Main.storyboard */; };
 		A650DB05198BFF4F00223E47 /* StdTxGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DB04198BFF4F00223E47 /* StdTxGuideTests.swift */; };
 		A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DB0E198C0B6600223E47 /* ConditionContent.swift */; };
 		A650DB11198C15BA00223E47 /* condition-content-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = A650DB10198C15BA00223E47 /* condition-content-map.txt */; };
+		A66281A81B0F7E91007BF007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A650DAF5198BFF4F00223E47 /* Main.storyboard */; };
 		A67011CC1B05383D00308A15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67011CB1B05383D00308A15 /* Images.xcassets */; };
 		A68B57EB199BE8DF0030E194 /* c0-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B5786199BE8DF0030E194 /* c0-clv.html */; };
 		A68B57EC199BE8DF0030E194 /* c1-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B5787199BE8DF0030E194 /* c1-r.html */; };
@@ -598,7 +598,7 @@
 				};
 			};
 			buildConfigurationList = A650DAE5198BFF4F00223E47 /* Build configuration list for PBXProject "StdTxGuide" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -625,7 +625,6 @@
 				A68B5801199BE8DF0030E194 /* c2-t.html in Resources */,
 				A68B5818199BE8DF0030E194 /* c33-t.html in Resources */,
 				A68B57F3199BE8DF0030E194 /* c12-t.html in Resources */,
-				A650DAF7198BFF4F00223E47 /* Main.storyboard in Resources */,
 				A6BE156719F19AE2008330A1 /* c44-t.html in Resources */,
 				A6BE156419F19AE2008330A1 /* c41-t.html in Resources */,
 				A68B582C199BE8DF0030E194 /* c45-t.html in Resources */,
@@ -649,6 +648,7 @@
 				A68B5806199BE8DF0030E194 /* c22-r.html in Resources */,
 				A68B5845199BE8DF0030E194 /* c6-t.html in Resources */,
 				A68B5822199BE8DF0030E194 /* c4-r.html in Resources */,
+				A66281A81B0F7E91007BF007 /* Main.storyboard in Resources */,
 				A68B581C199BE8DF0030E194 /* c37-r.html in Resources */,
 				A68B5835199BE8DF0030E194 /* c50-r.html in Resources */,
 				A68B5819199BE8DF0030E194 /* c34-t.html in Resources */,
