@@ -262,12 +262,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="494"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zCM-EE-L3W" firstAttribute="top" secondItem="jEe-Vu-jQP" secondAttribute="top" id="AIE-88-XYq"/>
+                            <constraint firstItem="zCM-EE-L3W" firstAttribute="leading" secondItem="jEe-Vu-jQP" secondAttribute="leading" id="Vg3-y5-Qkw"/>
+                            <constraint firstAttribute="trailing" secondItem="zCM-EE-L3W" secondAttribute="trailing" id="bg7-Qo-Aon"/>
+                            <constraint firstItem="zCM-EE-L3W" firstAttribute="bottom" secondItem="tDh-co-hDe" secondAttribute="top" id="ghv-uF-7B0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Us" image="112-group" id="8rh-S8-AXB"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -291,12 +297,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-SU-BL8">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-SU-BL8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2dc-SU-BL8" firstAttribute="leading" secondItem="WaO-VS-27C" secondAttribute="leading" id="2Y5-pO-el2"/>
+                            <constraint firstItem="2dc-SU-BL8" firstAttribute="bottom" secondItem="Aqk-uP-Pu7" secondAttribute="top" id="JZb-Kd-om8"/>
+                            <constraint firstAttribute="trailing" secondItem="2dc-SU-BL8" secondAttribute="trailing" id="bXu-uh-KF9"/>
+                            <constraint firstItem="2dc-SU-BL8" firstAttribute="top" secondItem="WaO-VS-27C" secondAttribute="top" id="gWT-ex-KTY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agreement" image="179-notepad" id="9c4-2R-nTN"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
