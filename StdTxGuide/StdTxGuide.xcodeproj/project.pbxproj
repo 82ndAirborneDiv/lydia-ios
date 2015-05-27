@@ -18,6 +18,7 @@
 		A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DB0E198C0B6600223E47 /* ConditionContent.swift */; };
 		A650DB11198C15BA00223E47 /* condition-content-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = A650DB10198C15BA00223E47 /* condition-content-map.txt */; };
 		A66281A81B0F7E91007BF007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A650DAF5198BFF4F00223E47 /* Main.storyboard */; };
+		A66335901B1511D0001B4D9C /* SiteCatalystService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */; };
 		A67011CC1B05383D00308A15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67011CB1B05383D00308A15 /* Images.xcassets */; };
 		A68B57EB199BE8DF0030E194 /* c0-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B5786199BE8DF0030E194 /* c0-clv.html */; };
 		A68B57EC199BE8DF0030E194 /* c1-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A68B5787199BE8DF0030E194 /* c1-r.html */; };
@@ -180,6 +181,7 @@
 		A650DB04198BFF4F00223E47 /* StdTxGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdTxGuideTests.swift; sourceTree = "<group>"; };
 		A650DB0E198C0B6600223E47 /* ConditionContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionContent.swift; sourceTree = "<group>"; };
 		A650DB10198C15BA00223E47 /* condition-content-map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "condition-content-map.txt"; path = "content/condition-content-map.txt"; sourceTree = "<group>"; };
+		A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCatalystService.swift; sourceTree = "<group>"; };
 		A67011CB1B05383D00308A15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = StdTxGuide/Images.xcassets; sourceTree = "<group>"; };
 		A68B5786199BE8DF0030E194 /* c0-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c0-clv.html"; sourceTree = "<group>"; };
 		A68B5787199BE8DF0030E194 /* c1-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c1-r.html"; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
+				A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */,
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
@@ -776,6 +779,7 @@
 				A69DAEB61B0B61C30058F90E /* SubConditionViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
 				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,
+				A66335901B1511D0001B4D9C /* SiteCatalystService.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A6AA155F1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
