@@ -22,6 +22,8 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_EVENT_CONTENT_BROWSE = "Content:Browse"
     
     let SC_SECTION_CONDITIONS = "Conditions"
+    let SC_SECTION_CONDITION_DETAILS_TREATMENTS = "Condition Details - Treatments"
+    let SC_SECTION_CONDITION_DETAILS_MORE_INFO = "Condition Details - More Info"
     let SC_SECTION_TERMS = "Terms"
     let SC_SECTION_FULL_GUIDELINES = "Full Guidelines"
     let SC_SECTION_SEXUAL_HISTORY = "Sexual History"
@@ -32,9 +34,12 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_PAGE_TITLE_LAUNCH = "STD Tx Guide 2015"
     let SC_PAGE_TITLE_ALL_CONDITIONS = "All Conditions"
     let SC_PAGE_TITLE_INFO = "Information"
-    let SC_PAGE_TITLE_ABOUT = "About"
+    let SC_PAGE_TITLE_ABOUT = "About Us"
     let SC_PAGE_TITLE_HELP = "Help"
     let SC_PAGE_TITLE_EULA = "EULA"
+    let SC_PAGE_FULL_GUIDELINES = "Full Guidelines"
+    let SC_PAGE_TERMS = "Terms"
+    let SC_PAGE_SEXUAL_HISTORY = "Sexual History"
     
     let cdcServer = "http://tools.cdc.gov/metrics.aspx?"
     let localServer = "http://localhost:5000/metrics?"
@@ -93,6 +98,12 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     {
         trackEvent(SC_EVENT_NAV_SECTION, title:pageTitle, section:section)
 
+    }
+    
+    func trackContentBrowseEvent(pageTitle:String, section:String)
+    {
+        trackEvent(SC_EVENT_CONTENT_BROWSE, title:pageTitle, section:section)
+        
     }
     
     func postSCEvent(scString:String)

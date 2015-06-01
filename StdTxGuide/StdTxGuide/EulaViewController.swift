@@ -14,7 +14,8 @@ class EulaViewController: UIViewController {
     
     @IBOutlet var webView:UIWebView!
     
-    
+    var sc = SiteCatalystService()
+
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,6 +35,8 @@ class EulaViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent(sc.SC_PAGE_TITLE_EULA, section: sc.SC_SECTION_EULA)
         
     }
     

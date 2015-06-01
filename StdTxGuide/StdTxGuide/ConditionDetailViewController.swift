@@ -20,6 +20,7 @@ class ConditionDetailViewController: UIViewController {
     let conditionContent = sharedConditionContent
     var condition:Condition!
     var sc = SiteCatalystService()
+    var scBreadcrumb = ""
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,6 +28,26 @@ class ConditionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // breadcrumbs text label
+        lblBreadcrumb.textColor = UIColor.darkGrayColor()
+        lblBreadcrumb.font = UIFont.boldSystemFontOfSize(14)
+        lblBreadcrumb.textAlignment = NSTextAlignment.Center
+        let parent = conditionContent.getConditionFromId(condition.parentId)
+        
+        if parent.childBreadcrumbs == "" {
+            lblBreadcrumb.text = condition.title
+            scBreadcrumb = condition.title
+            
+        } else {
+            let breadcrumb = parent.childBreadcrumbs + " / " + condition.title
+            lblBreadcrumb.text = breadcrumb
+            scBreadcrumb = breadcrumb
+            
+        }
+        
+        sc.trackNavigationEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITIONS)
+        
+
         
         // check if condtion has regimens content and set it as selcted index
         // if not use dxtx content
@@ -44,6 +65,8 @@ class ConditionDetailViewController: UIViewController {
             segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
             segmentedControl.selectedSegmentIndex = 0;
             loadRegimensContent()
+
+            
         } else if condition.hasRegimens == false && condition.hasDxTx == true {
             // the only thing to display is More Info (DxTx) Label
             lblMoreInfo.hidden = false;
@@ -73,24 +96,6 @@ class ConditionDetailViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         //self.webView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleBottomMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
         
-        // breadcrumbs text label
-        lblBreadcrumb.textColor = UIColor.darkGrayColor()
-        lblBreadcrumb.font = UIFont.boldSystemFontOfSize(14)
-        lblBreadcrumb.textAlignment = NSTextAlignment.Center
-        let parent = conditionContent.getConditionFromId(condition.parentId)
-        
-        if parent.childBreadcrumbs == "" {
-            lblBreadcrumb.text = condition.title
-            sc.trackNavigationEvent(condition.title, section: sc.SC_SECTION_CONDITIONS)
-            
-        } else {
-            let breadcrumb = parent.childBreadcrumbs + " / " + condition.title
-            lblBreadcrumb.text = breadcrumb
-            sc.trackNavigationEvent(breadcrumb, section: sc.SC_SECTION_CONDITIONS)
-            
-        }
-        
-
 
 
     }
@@ -128,6 +133,8 @@ class ConditionDetailViewController: UIViewController {
         
         var fileName = condition.regimensPage.stringByDeletingPathExtension
         loadContent(fileName)
+        sc.trackContentBrowseEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITION_DETAILS_TREATMENTS)
+
    
     }
     
@@ -136,6 +143,7 @@ class ConditionDetailViewController: UIViewController {
         
         var fileName = condition.dxtxPage.stringByDeletingPathExtension
         loadContent(fileName)
+        sc.trackContentBrowseEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITION_DETAILS_MORE_INFO)
         
     }
 

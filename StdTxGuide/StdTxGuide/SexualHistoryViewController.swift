@@ -11,6 +11,10 @@ import UIKit
 class SexualHistoryViewController: UIViewController {
 
     @IBOutlet weak var pdfWebView: UIWebView!
+    
+    var sc = SiteCatalystService()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +29,14 @@ class SexualHistoryViewController: UIViewController {
         self.pdfWebView.loadRequest(request);
 
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent(sc.SC_PAGE_SEXUAL_HISTORY, section: sc.SC_SECTION_SEXUAL_HISTORY)
+        
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

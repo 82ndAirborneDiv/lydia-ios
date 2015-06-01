@@ -13,7 +13,8 @@ class TermsViewController: UIViewController {
     
     @IBOutlet var webView:UIWebView!
     
-    
+    var sc = SiteCatalystService()
+
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,9 +34,10 @@ class TermsViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent(sc.SC_PAGE_TERMS, section: sc.SC_SECTION_TERMS)
         
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"

@@ -11,6 +11,9 @@ import UIKit
 class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
+
+    var sc = SiteCatalystService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +29,13 @@ class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
 
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent(sc.SC_PAGE_FULL_GUIDELINES, section: sc.SC_SECTION_FULL_GUIDELINES)
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

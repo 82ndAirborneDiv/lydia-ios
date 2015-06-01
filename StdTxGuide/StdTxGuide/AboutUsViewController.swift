@@ -14,7 +14,7 @@ class AboutUsViewController: UIViewController {
     
     @IBOutlet var webView:UIWebView!
     
-    
+    var sc = SiteCatalystService()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -37,8 +37,11 @@ class AboutUsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ABOUT, section: sc.SC_SECTION_ABOUT)
         
     }
+    
     
     override func viewDidAppear(animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"

@@ -54,7 +54,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        sc.trackNavigationEvent("All Conditions", section: sc.SC_SECTION_CONDITIONS)
+        sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ALL_CONDITIONS, section: sc.SC_SECTION_CONDITIONS)
         
     }
     
@@ -80,10 +80,8 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         conditions = conditionContent.getChildConditions()
         if conditionContent.currCondition?.id == conditionContent.rootCondition?.id {
             hideBackButton()
-            sc.trackNavigationEvent(conditionContent.currCondition.childBreadcrumbs, section: sc.SC_SECTION_CONDITIONS)
          } else {
             showBackButton()
-            sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ALL_CONDITIONS, section: sc.SC_SECTION_CONDITIONS)
         }
         tableView.reloadData()
         
