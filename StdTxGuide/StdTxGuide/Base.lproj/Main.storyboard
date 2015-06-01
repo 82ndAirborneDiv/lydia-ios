@@ -82,7 +82,7 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
-                                <rect key="frame" x="0.0" y="152" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="152" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD0-0z-QRQ" userLabel="Segmented Control View">
@@ -131,7 +131,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gQI-1K-Hec"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lblBreadcrumb" destination="DJB-gO-ct3" id="dMo-M8-kUV"/>
                         <outlet property="lblMoreInfo" destination="jde-Xx-7TO" id="fxl-hT-KNv"/>
@@ -387,7 +387,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="nk4-y2-Flo" id="DSg-8S-rdy"/>
-                        <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" id="KW1-he-bro"/>
+                        <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="KW1-he-bro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dm3-GJ-zQ2" sceneMemberID="firstResponder"/>
@@ -428,6 +428,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="JyN-Sk-JOq"/>
+        <segue reference="KW1-he-bro"/>
     </inferredMetricsTieBreakers>
 </document>
