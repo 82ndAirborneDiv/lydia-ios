@@ -19,38 +19,26 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_EVENT_INFO_BUTTON = "Info:Button"
     let SC_EVENT_SHARE_BUTTON = "Share:Button"
     let SC_EVENT_INFO_BROWSE = "Info:Browse"
+    let SC_EVENT_CONTENT_BROWSE = "Content:Browse"
     
-    let SC_SECTION_ARTICLES = "Articles"
-    let SC_SECTION_SEARCH = "Search"
-    let SC_SECTION_SHARE = "Share"
-    let SC_SECTION_ABOUT = "About"
+    let SC_SECTION_CONDITIONS = "Conditions"
+    let SC_SECTION_TERMS = "Terms"
+    let SC_SECTION_FULL_GUIDELINES = "Full Guidelines"
+    let SC_SECTION_SEXUAL_HISTORY = "Sexual History"
+    let SC_SECTION_ABOUT = "About Us"
     let SC_SECTION_HELP = "Help"
-    let SC_SECTION_EULA = "Eula"
-    let SC_SECTION_SUMMARY = "Summary"
-    let SC_SECTION_DETAILS = "Article-Details"
+    let SC_SECTION_EULA = "Agreement"
     
-    
-    
-    let SC_PAGE_TITLE_LAUNCH = "MMWR Express"
+    let SC_PAGE_TITLE_LAUNCH = "STD Tx Guide 2015"
+    let SC_PAGE_TITLE_ALL_CONDITIONS = "All Conditions"
     let SC_PAGE_TITLE_INFO = "Information"
     let SC_PAGE_TITLE_ABOUT = "About"
     let SC_PAGE_TITLE_HELP = "Help"
     let SC_PAGE_TITLE_EULA = "EULA"
-    let SC_PAGE_TITLE_SUMMARY = "Blue-Box-Summary"
-    let SC_PAGE_TITLE_LIST = "Articles"
-    let SC_PAGE_TITLE_DETAILS = "Article-Details"
-    let SC_PAGE_TITLE_SEARCH_KEYWORDS = "Search-Keywords"
-    let SC_PAGE_TITLE_SEARCH_KEYWORD_ARTICLES = "Search-Keywords-Articles"
-    let SC_PAGE_TITLE_FULL = "View-Full-Article"
-    let SC_PAGE_TITLE_SHARE = "Share"
-    let SC_PAGE_TITLE_SHARE_MAIL = "Share-Via-Mail"
-    let SC_PAGE_TITLE_SHARE_MESSAGE = "Share-Via-Message"
-    let SC_PAGE_TITLE_SHARE_TWITTER = "Share-Via-Twitter"
-    let SC_PAGE_TITLE_SHARE_FACEBOOK = "Share-Via-Facebook"
     
     let cdcServer = "http://tools.cdc.gov/metrics.aspx?"
-    let localServer = "http://localhost:8989/metrics?"
-    let commonConstParams = "c8=Mobile App&c51=Standalone&c52=MMWR Express&c5=eng&channel=IIU"
+    let localServer = "http://localhost:5000/metrics?"
+    let commonConstParams = "c8=Mobile App&c51=Standalone&c52=STD Tx Guide 2015&c5=eng&channel=IIU"
     let prodConstParams = "reportsuite=cdcsynd"
     let debugConstParams = "reportsuite=devcdc"
     
@@ -61,8 +49,8 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         // these first change most often depending on version and if debug is true
         let appVersion = getAppVersion()
-        let debug = false
-        let debugLocal = false
+        let debug = true
+        let debugLocal = true
     
         // server information
         let server = debugLocal ? localServer : cdcServer
@@ -97,11 +85,11 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
     func trackAppLaunchEvent()
     {
-        trackEvent(SC_EVENT_APP_LAUNCH, title:SC_PAGE_TITLE_LAUNCH, section:SC_SECTION_ARTICLES)
+        trackEvent(SC_EVENT_APP_LAUNCH, title:SC_PAGE_TITLE_LAUNCH, section:SC_SECTION_CONDITIONS)
     
     }
     
-    func trackNavigationEvennt(pageTitle:String, section:String)
+    func trackNavigationEvent(pageTitle:String, section:String)
     {
         trackEvent(SC_EVENT_NAV_SECTION, title:pageTitle, section:section)
 

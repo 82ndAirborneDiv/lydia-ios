@@ -20,6 +20,8 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     var parentConditionButton: UIBarButtonItem!
     
     var currCondition:Condition!
+    var sc = SiteCatalystService()
+ 
 
     
     override func awakeFromNib() {
@@ -42,8 +44,15 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
         println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
-        
         hideBackButton()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let parent = conditionContent.getConditionFromId(conditions[0].parentId)
+        sc.trackNavigationEvent(parent.childBreadcrumbs, section: sc.SC_SECTION_CONDITIONS)
+        
         
     }
     
@@ -153,6 +162,8 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
             showBackButton()
             tableView.reloadData()
             println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
+            sc.trackNavigationEvent(self.conditionContent.getCurrentCondition().childBreadcrumbs, section: sc.SC_SECTION_CONDITIONS)
+
             
         }
         

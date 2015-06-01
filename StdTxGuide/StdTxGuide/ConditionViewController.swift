@@ -19,6 +19,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     var tableView: UITableView!
     @IBOutlet
     var parentConditionButton: UIBarButtonItem!
+    var sc = SiteCatalystService()
 
 
     override func awakeFromNib() {
@@ -48,6 +49,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         
         hideBackButton()
 
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sc.trackNavigationEvent("All Conditions", section: sc.SC_SECTION_CONDITIONS)
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -72,8 +80,10 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         conditions = conditionContent.getChildConditions()
         if conditionContent.currCondition?.id == conditionContent.rootCondition?.id {
             hideBackButton()
+            sc.trackNavigationEvent(conditionContent.currCondition.childBreadcrumbs, section: sc.SC_SECTION_CONDITIONS)
          } else {
             showBackButton()
+            sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ALL_CONDITIONS, section: sc.SC_SECTION_CONDITIONS)
         }
         tableView.reloadData()
         

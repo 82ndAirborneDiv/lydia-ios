@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         UINavigationBar.appearance().translucent = false
         
+        var sc = SiteCatalystService()
+        sc.trackAppLaunchEvent()
+        
         return true
     }
 

@@ -209,14 +209,14 @@
             "hasRegimens": false, 
             "children": [
                 {
-                    "childBreadcrumbs": "Chlamydia / Adolescents & Adults", 
+                    "childBreadcrumbs": "Chlamydia / Adolescents and Adults", 
                     "childrenListViewPageId": "c9-clv", 
                     "pageId": "c9", 
                     "parent": 8, 
                     "hasChildren": false, 
                     "childrenListViewPage": "c9-clv.html", 
                     "dxtxPageId": "c9-t", 
-                    "text": "Adolescents & Adults", 
+                    "text": "Adolescents and Adults", 
                     "condition_id": 9, 
                     "dxtxPage": "c9-t.html", 
                     "regimensPage": "c9-r.html", 
@@ -403,14 +403,14 @@
             "hasRegimens": false, 
             "children": [
                 {
-                    "childBreadcrumbs": "Gonorrhea / Adolescents & Adults", 
+                    "childBreadcrumbs": "Gonorrhea / Adolescents and Adults", 
                     "childrenListViewPageId": "c16-clv", 
                     "pageId": "c16", 
                     "parent": 15, 
                     "hasChildren": true, 
                     "childrenListViewPage": "c16-clv.html", 
                     "dxtxPageId": "c16-t", 
-                    "text": "Adolescents & Adults", 
+                    "text": "Adolescents and Adults", 
                     "condition_id": 16, 
                     "dxtxPage": "", 
                     "regimensPage": "", 
@@ -426,7 +426,7 @@
                     "hasRegimens": false, 
                     "children": [
                         {
-                            "childBreadcrumbs": "Gonorrhea / Adolescents & Adults / Cervix, Urethra, or Rectum - Infection", 
+                            "childBreadcrumbs": "Gonorrhea / Adolescents and Adults / Cervix, Urethra, or Rectum - Infection", 
                             "childrenListViewPageId": "c17-clv", 
                             "pageId": "c17", 
                             "parent": 16, 
@@ -447,7 +447,7 @@
                                     "link": "c15-clv.html"
                                 }, 
                                 {
-                                    "text": "Adolescents & Adults", 
+                                    "text": "Adolescents and Adults", 
                                     "link": "c16-clv.html"
                                 }
                             ], 
@@ -460,7 +460,7 @@
                             "hasDxTx": true
                         }, 
                         {
-                            "childBreadcrumbs": "Gonorrhea / Adolescents & Adults / Pharynx - Infection", 
+                            "childBreadcrumbs": "Gonorrhea / Adolescents and Adults / Pharynx - Infection", 
                             "childrenListViewPageId": "c18-clv", 
                             "pageId": "c18", 
                             "parent": 16, 
@@ -480,7 +480,7 @@
                                     "link": "c15-clv.html"
                                 }, 
                                 {
-                                    "text": "Adolescents & Adults", 
+                                    "text": "Adolescents and Adults", 
                                     "link": "c16-clv.html"
                                 }
                             ], 
@@ -493,7 +493,7 @@
                             "hasDxTx": true
                         }, 
                         {
-                            "childBreadcrumbs": "Gonorrhea / Adolescents & Adults / Conjunctivitis", 
+                            "childBreadcrumbs": "Gonorrhea / Adolescents and Adults / Conjunctivitis", 
                             "childrenListViewPageId": "c19-clv", 
                             "pageId": "c19", 
                             "parent": 16, 
@@ -513,7 +513,7 @@
                                     "link": "c15-clv.html"
                                 }, 
                                 {
-                                    "text": "Adolescents & Adults", 
+                                    "text": "Adolescents and Adults", 
                                     "link": "c16-clv.html"
                                 }
                             ], 
@@ -526,7 +526,7 @@
                             "hasDxTx": true
                         }, 
                         {
-                            "childBreadcrumbs": "Gonorrhea / Adolescents & Adults / Disseminated Gonococcal Infection", 
+                            "childBreadcrumbs": "Gonorrhea / Adolescents and Adults / Disseminated Gonococcal Infection", 
                             "childrenListViewPageId": "c20-clv", 
                             "pageId": "c20", 
                             "parent": 16, 
@@ -548,7 +548,7 @@
                                     "link": "c15-clv.html"
                                 }, 
                                 {
-                                    "text": "Adolescents & Adults", 
+                                    "text": "Adolescents and Adults", 
                                     "link": "c16-clv.html"
                                 }
                             ], 

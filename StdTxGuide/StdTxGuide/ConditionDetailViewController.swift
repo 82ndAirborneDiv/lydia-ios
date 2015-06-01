@@ -19,7 +19,8 @@ class ConditionDetailViewController: UIViewController {
     
     let conditionContent = sharedConditionContent
     var condition:Condition!
- 
+    var sc = SiteCatalystService()
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -80,11 +81,16 @@ class ConditionDetailViewController: UIViewController {
         
         if parent.childBreadcrumbs == "" {
             lblBreadcrumb.text = condition.title
+            sc.trackNavigationEvent(condition.title, section: sc.SC_SECTION_CONDITIONS)
             
         } else {
-            lblBreadcrumb.text = parent.childBreadcrumbs + " / " + condition.title
+            let breadcrumb = parent.childBreadcrumbs + " / " + condition.title
+            lblBreadcrumb.text = breadcrumb
+            sc.trackNavigationEvent(breadcrumb, section: sc.SC_SECTION_CONDITIONS)
             
         }
+        
+
 
 
     }
