@@ -26,17 +26,17 @@
             }
             
             
-            .intro {background: #fef5e2;
+            .intro {background: #eef4f6;
                 width:270px;
                 padding:8px;
-                -moz-border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -khtml-border-radius: 10px;
-                border-radius: 10px;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                border-radius: 8px;
                 text-align:center;
                 border-style:solid;
                 border-width:1px;
-                border-color:#e8d3a7;
+                border-color:#ccdce2;
 				position:relative;
 				top:21px;
             }
@@ -49,7 +49,7 @@
 			
 			.eula_icon {width:48px; height:48px;}
 			
-			.eula_title {color:#077b9a; font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; vertical-align:top; position:relative; top:13px; padding-left:7px;}
+			.eula_title {color:#2d58a7; font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; vertical-align:top; position:relative; top:13px; padding-left:7px;}
         .eula_footer {height:38px;
 		
 		
