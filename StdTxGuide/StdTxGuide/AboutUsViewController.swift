@@ -22,7 +22,9 @@ class AboutUsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        AppearanceHelper.setTranslucentNavBar(navigationController!.navigationBar)
+
+        
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource("about_us", withExtension: "html")
         let request = NSURLRequest(URL:url!)

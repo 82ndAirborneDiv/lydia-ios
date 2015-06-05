@@ -31,6 +31,8 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        AppearanceHelper.setTranslucentNavBar(navigationController!.navigationBar)
+
         
         // Status bar white font
         self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()

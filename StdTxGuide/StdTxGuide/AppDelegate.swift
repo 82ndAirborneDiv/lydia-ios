@@ -28,7 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-        UINavigationBar.appearance().translucent = false
+        
+        if (UIDevice.currentDevice().systemVersion as NSString).floatValue >= 8.0 {
+            
+            UINavigationBar.appearance().translucent = false
+        }
         
         var sc = SiteCatalystService()
         sc.trackAppLaunchEvent()

@@ -24,6 +24,7 @@ class EulaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        AppearanceHelper.setTranslucentNavBar(navigationController!.navigationBar)
 
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSBundle.mainBundle().URLForResource("eula", withExtension: "html")

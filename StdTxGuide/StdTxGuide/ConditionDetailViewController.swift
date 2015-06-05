@@ -28,6 +28,8 @@ class ConditionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         // breadcrumbs text label
         lblBreadcrumb.textColor = UIColor.darkGrayColor()
         lblBreadcrumb.font = UIFont.boldSystemFontOfSize(14)

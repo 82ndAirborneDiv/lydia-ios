@@ -148,6 +148,7 @@
 		A6BE156819F19AE2008330A1 /* c46-r.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155819F19AE2008330A1 /* c46-r.html */; };
 		A6BE156919F19AE2008330A1 /* c46-t.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155919F19AE2008330A1 /* c46-t.html */; };
 		A6BE156A19F19AE2008330A1 /* c50-clv.html in Resources */ = {isa = PBXBuildFile; fileRef = A6BE155A19F19AE2008330A1 /* c50-clv.html */; };
+		A6DC6EE41B21EDBD00A057A5 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */; };
 		A6DF28B81B1F9C3F00F3BF9D /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */; };
 		A6E3F4C11B0D013900982CAF /* ConditionsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */; };
 		A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */; };
@@ -319,6 +320,7 @@
 		A6BE155819F19AE2008330A1 /* c46-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-r.html"; sourceTree = "<group>"; };
 		A6BE155919F19AE2008330A1 /* c46-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c46-t.html"; sourceTree = "<group>"; };
 		A6BE155A19F19AE2008330A1 /* c50-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c50-clv.html"; sourceTree = "<group>"; };
+		A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionsRootViewController.swift; sourceTree = "<group>"; };
 		A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			children = (
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
+				A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */,
 				A62FC6801993FC3B000CE5C5 /* Condition.swift */,
 				A650DB0E198C0B6600223E47 /* ConditionContent.swift */,
 				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
@@ -383,14 +386,14 @@
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
+				A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */,
+				A66335C11B178CE1001B4D9C /* Remote.swift */,
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 				A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */,
 				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
-				A66335C11B178CE1001B4D9C /* Remote.swift */,
-				A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
+				A6DC6EE41B21EDBD00A057A5 /* AppearanceHelper.swift in Sources */,
 				A6DF28B81B1F9C3F00F3BF9D /* Logging.swift in Sources */,
 				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
 				A6E3F4C11B0D013900982CAF /* ConditionsRootViewController.swift in Sources */,
@@ -936,7 +940,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -951,7 +955,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
