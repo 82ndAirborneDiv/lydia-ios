@@ -59,7 +59,14 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func displayEula() {
-        performSegueWithIdentifier("showModalEula", sender: self)
+        
+        let userPrefs = NSUserDefaults.standardUserDefaults()
+        if let city = userPrefs.stringForKey("agreedToEula") {
+            return
+        } else {
+            performSegueWithIdentifier("showModalEula", sender: self)
+            userPrefs.setValue("true", forKey: "agreedToEula")
+        }
 
         
     }

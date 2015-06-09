@@ -389,14 +389,14 @@
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
 				A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */,
+				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
+				A622D5741B27321700414533 /* ModalEulaViewController.swift */,
 				A66335C11B178CE1001B4D9C /* Remote.swift */,
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 				A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */,
 				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
-				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
-				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
-				A622D5741B27321700414533 /* ModalEulaViewController.swift */,
+				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
