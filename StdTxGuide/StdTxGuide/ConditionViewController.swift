@@ -52,9 +52,18 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
         
         hideBackButton()
+        
+        displayEula()
 
 
     }
+    
+    func displayEula() {
+        performSegueWithIdentifier("showModalEula", sender: self)
+
+        
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

@@ -51,12 +51,13 @@
                         <outlet property="tableView" destination="AqA-T7-wNN" id="oOh-XB-Nag"/>
                         <segue destination="o8A-WI-4Pp" kind="modal" identifier="showConditionDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="JyN-Sk-JOq"/>
                         <segue destination="Em4-7W-rwd" kind="push" identifier="showSubConditions" id="OI9-sR-4YN"/>
+                        <segue destination="V3F-hS-YMg" kind="modal" identifier="showModalEula" id="szc-ri-wRz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="xhG-tK-kuz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="-643"/>
+            <point key="canvasLocation" x="1507" y="-678"/>
         </scene>
         <!--Condition Detail View Controller-->
         <scene sceneID="Vnd-7L-W23">
@@ -145,6 +146,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPi-8O-kbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1791" y="79"/>
+        </scene>
+        <!--EULA-->
+        <scene sceneID="Wu1-MY-lwx">
+            <objects>
+                <viewController id="V3F-hS-YMg" customClass="ModalEulaViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yvw-4f-knn"/>
+                        <viewControllerLayoutGuide type="bottom" id="TFi-tW-3nG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hMN-9v-UV9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-y8-fgp">
+                                <rect key="frame" x="0.0" y="28" width="320" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ciu-0c-M22">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="I Agree" id="RIT-Wj-Rzh">
+                                        <connections>
+                                            <action selector="btnAgreeTouchUp:" destination="V3F-hS-YMg" id="yUR-dO-bzd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EULA" id="fTR-mr-E2q"/>
+                    <connections>
+                        <outlet property="webView" destination="W6q-y8-fgp" id="fTQ-lt-gNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkK-6N-zCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507" y="-1368"/>
         </scene>
         <!--Terms-->
         <scene sceneID="wg7-f3-ORb">
@@ -429,6 +468,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KW1-he-bro"/>
+        <segue reference="JyN-Sk-JOq"/>
     </inferredMetricsTieBreakers>
 </document>

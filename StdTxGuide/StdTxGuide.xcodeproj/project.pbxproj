@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
+		A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A622D5741B27321700414533 /* ModalEulaViewController.swift */; };
 		A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC6801993FC3B000CE5C5 /* Condition.swift */; };
 		A641345D19CA11FB0041C0E8 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A641345C19CA11FB0041C0E8 /* bootstrap.min.css */; };
 		A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650DAEF198BFF4F00223E47 /* AppDelegate.swift */; };
@@ -176,6 +177,7 @@
 /* Begin PBXFileReference section */
 		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
+		A622D5741B27321700414533 /* ModalEulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEulaViewController.swift; sourceTree = "<group>"; };
 		A62FC6801993FC3B000CE5C5 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		A641345C19CA11FB0041C0E8 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.min.css; sourceTree = "<group>"; };
 		A650DAEA198BFF4F00223E47 /* StdTxGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StdTxGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +396,7 @@
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAF5198BFF4F00223E47 /* Main.storyboard */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				A622D5741B27321700414533 /* ModalEulaViewController.swift */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				A66335C21B178CE1001B4D9C /* Remote.swift in Sources */,
 				A69DAEB61B0B61C30058F90E /* SubConditionViewController.swift in Sources */,
 				A650DAF2198BFF4F00223E47 /* ConditionViewController.swift in Sources */,
+				A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */,
 				A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */,
 				A66335901B1511D0001B4D9C /* SiteCatalystService.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
