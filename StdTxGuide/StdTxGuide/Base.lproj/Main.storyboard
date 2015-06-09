@@ -159,11 +159,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-y8-fgp">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-y8-fgp">
                                 <rect key="frame" x="0.0" y="28" width="320" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ciu-0c-M22">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ciu-0c-M22">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="I Agree" id="RIT-Wj-Rzh">
@@ -175,6 +175,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W6q-y8-fgp" firstAttribute="top" secondItem="yvw-4f-knn" secondAttribute="bottom" constant="8" symbolic="YES" id="0do-tU-SzW"/>
+                            <constraint firstItem="Ciu-0c-M22" firstAttribute="bottom" secondItem="TFi-tW-3nG" secondAttribute="top" id="4aB-ha-Pkq"/>
+                            <constraint firstItem="W6q-y8-fgp" firstAttribute="leading" secondItem="hMN-9v-UV9" secondAttribute="leading" id="DPc-VQ-3sF"/>
+                            <constraint firstItem="Ciu-0c-M22" firstAttribute="leading" secondItem="W6q-y8-fgp" secondAttribute="leading" id="I7F-CM-tk1"/>
+                            <constraint firstAttribute="trailing" secondItem="Ciu-0c-M22" secondAttribute="trailing" id="l1w-uE-Z2b"/>
+                            <constraint firstItem="W6q-y8-fgp" firstAttribute="trailing" secondItem="Ciu-0c-M22" secondAttribute="trailing" id="rFk-wh-aVM"/>
+                            <constraint firstItem="Ciu-0c-M22" firstAttribute="top" secondItem="W6q-y8-fgp" secondAttribute="bottom" id="ypK-wS-hyO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="EULA" id="fTR-mr-E2q"/>
                     <connections>

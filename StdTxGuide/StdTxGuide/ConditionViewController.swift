@@ -66,6 +66,9 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         } else {
             performSegueWithIdentifier("showModalEula", sender: self)
             userPrefs.setValue("true", forKey: "agreedToEula")
+            if (UIDevice.currentDevice().systemVersion as NSString).floatValue < 8.0 {
+                userPrefs.synchronize()
+            }
         }
 
         
