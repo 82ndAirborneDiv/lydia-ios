@@ -25,8 +25,8 @@ class SexualHistoryViewController: UIViewController {
 
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
-        var pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("sexualhistory", ofType:"pdf")!) //replace PDF_file with your pdf die name
-        var request = NSURLRequest(URL: pdfLoc!);
+        let pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("sexualhistory", ofType:"pdf")!) //replace PDF_file with your pdf die name
+        let request = NSURLRequest(URL: pdfLoc);
         self.pdfWebView.loadRequest(request);
 
     }

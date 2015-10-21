@@ -14,10 +14,8 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     var conditions = Array<Condition>()
     let conditionContent = sharedConditionContent
     var count = 0;
-    @IBOutlet
-    var tableView: UITableView!
-    @IBOutlet
-    var parentConditionButton: UIBarButtonItem!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var parentConditionButton: UIBarButtonItem!
     
     var currCondition:Condition!
     var sc = SiteCatalystService()
@@ -112,7 +110,7 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     
-    @IBAction func backButtonTouch(AnyObject) {
+    @IBAction func backButtonTouch(sender: AnyObject) {
         goUpConditionTree()
     }
     
@@ -135,18 +133,18 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel.textColor = UIColor.darkGrayColor()
-        header.textLabel.font = UIFont.boldSystemFontOfSize(14)
+        header.textLabel!.textColor = UIColor.darkGrayColor()
+        header.textLabel!.font = UIFont.boldSystemFontOfSize(14)
         let headerFrame = header.frame
-        header.textLabel.frame = headerFrame
-        header.textLabel.textAlignment = NSTextAlignment.Left
+        header.textLabel!.frame = headerFrame
+        header.textLabel!.textAlignment = NSTextAlignment.Left
         let parent = conditionContent.getConditionFromId(conditions[0].parentId)
-        header.textLabel.text =  parent.childBreadcrumbs
+        header.textLabel!.text =  parent.childBreadcrumbs
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubConditionCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SubConditionCell", forIndexPath: indexPath) 
         
         let condition = conditions[indexPath.row]
         cell.textLabel?.text = condition.title

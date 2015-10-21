@@ -17,7 +17,7 @@ class AboutUsViewController: UIViewController {
     var sc = SiteCatalystService()
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
     }
     
     override func viewDidLoad() {

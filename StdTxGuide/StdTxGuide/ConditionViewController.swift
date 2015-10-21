@@ -61,7 +61,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     func displayEula() {
         
         let userPrefs = NSUserDefaults.standardUserDefaults()
-        if let city = userPrefs.stringForKey("agreedToEula") {
+        if let _ = userPrefs.stringForKey("agreedToEula") {
             return
         } else {
             performSegueWithIdentifier("showModalEula", sender: self)
@@ -141,7 +141,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    @IBAction func backButtonTouch(AnyObject) {
+    @IBAction func backButtonTouch(sender:AnyObject) {
         
         goUpConditionTree()
     }
@@ -159,7 +159,7 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) 
 
         let condition = conditions[indexPath.row]
         cell.textLabel?.text = condition.title

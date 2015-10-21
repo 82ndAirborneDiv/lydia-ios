@@ -23,7 +23,7 @@ class ConditionDetailViewController: UIViewController {
     var scBreadcrumb = ""
 
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
     }
     
     override func viewDidLoad() {
@@ -126,25 +126,23 @@ class ConditionDetailViewController: UIViewController {
     
 
     func loadContent(fileName:String) {
-        let url = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html")
+        let fileUrl = NSURL.init(fileURLWithPath:fileName).URLByDeletingPathExtension?.lastPathComponent
+        let url = NSBundle.mainBundle().URLForResource(fileUrl, withExtension: "html")
         let request = NSURLRequest(URL:url!)
         webView.loadRequest(request)
     }
     
     func loadRegimensContent() {
         
-        var fileName = condition.regimensPage.stringByDeletingPathExtension
-        loadContent(fileName)
+        loadContent(condition.regimensPage)
         sc.trackContentBrowseEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITION_DETAILS_TREATMENTS)
-
    
     }
     
     
     func loadDxTxContent() {
         
-        var fileName = condition.dxtxPage.stringByDeletingPathExtension
-        loadContent(fileName)
+        loadContent(condition.dxtxPage)
         sc.trackContentBrowseEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITION_DETAILS_MORE_INFO)
         
     }

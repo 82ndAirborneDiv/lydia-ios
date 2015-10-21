@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().translucent = false
         }
         
-        var sc = SiteCatalystService()
+        let sc = SiteCatalystService()
         sc.trackAppLaunchEvent()
         
         return true

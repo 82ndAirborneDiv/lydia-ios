@@ -16,14 +16,11 @@ class Remote: NSObject, NSURLConnectionDelegate {
     
     func connect(query:NSString) {
         
-        var response: NSURLResponse?
         
-        var error: NSError?
-        
-        var origUrl = "http://127.0.0.1:5000/metrics?c54=ios&c55=iphone6&c56=33"
-        var url =  NSURL(string:origUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        var request = NSURLRequest(URL: url!)
-        var conn = NSURLConnection(request: request, delegate: self, startImmediately: true)
+//        let origUrl = "http://127.0.0.1:5000/metrics?c54=ios&c55=iphone6&c56=33"
+//        let url =  NSURL(string:origUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+//        let request = NSURLRequest(URL: url!)
+//        var conn = NSURLConnection(request: request, delegate: self, startImmediately: true)
 
     }
     

@@ -110,7 +110,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     {
     
         // create request
-        var request:NSMutableURLRequest = NSMutableURLRequest(URL: NSURL(string:scString)!)
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL: NSURL(string:scString)!)
     
         // Specify that it will be a POST request
         request.HTTPMethod = "GET"
@@ -120,7 +120,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         // Convert your data and set your request's HTTPBody property
         let stringData:NSString = ""
-        var requestBodyData:NSData = stringData.dataUsingEncoding(NSUTF8StringEncoding)!
+        let requestBodyData:NSData = stringData.dataUsingEncoding(NSUTF8StringEncoding)!
         request.HTTPBody = requestBodyData
     
         // Create url connection and fire request
