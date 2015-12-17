@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Condition View Controller-->
@@ -22,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConditionCell" id="Ft0-Nf-5o6">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ft0-Nf-5o6" id="fGH-Bp-251">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -386,6 +387,7 @@
                         <segue destination="GWr-yT-toC" kind="relationship" relationship="viewControllers" id="Kkf-Sv-g8a"/>
                         <segue destination="Z6f-GO-kpi" kind="relationship" relationship="viewControllers" id="ZfU-tt-i6f"/>
                         <segue destination="zqW-1X-omP" kind="relationship" relationship="viewControllers" id="5Gb-Da-pGX"/>
+                        <segue destination="ruJ-on-Czo" kind="relationship" relationship="viewControllers" id="qUu-4s-r64"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -409,7 +411,7 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubConditionCell" id="2ZQ-2v-yR4">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ZQ-2v-yR4" id="ALk-Tb-w2S">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -459,22 +461,63 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="372-g4-W6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="-643"/>
+            <point key="canvasLocation" x="535" y="-678"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="WVV-cc-dab">
+            <objects>
+                <viewController title="Support" id="ruJ-on-Czo" customClass="SupportViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xwh-fO-GPw"/>
+                        <viewControllerLayoutGuide type="bottom" id="y8Z-hu-U10"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j7J-bD-RYa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-pH-6bm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juz-YD-Lkb">
+                                <rect key="frame" x="82" y="280" width="156" height="30"/>
+                                <state key="normal" title="Email Support"/>
+                                <connections>
+                                    <action selector="btnEmailSupportTouchUp:" destination="ruJ-on-Czo" eventType="touchUpInside" id="kSI-Vx-E0C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a4L-pH-6bm" firstAttribute="top" secondItem="j7J-bD-RYa" secondAttribute="top" id="9Dv-Gc-oBo"/>
+                            <constraint firstItem="a4L-pH-6bm" firstAttribute="bottom" secondItem="y8Z-hu-U10" secondAttribute="top" id="Hta-hs-e5M"/>
+                            <constraint firstItem="Juz-YD-Lkb" firstAttribute="centerX" secondItem="a4L-pH-6bm" secondAttribute="centerX" id="Oof-qW-rG8"/>
+                            <constraint firstItem="Juz-YD-Lkb" firstAttribute="leading" secondItem="j7J-bD-RYa" secondAttribute="leadingMargin" constant="66" id="Tgl-RY-Khe"/>
+                            <constraint firstItem="Juz-YD-Lkb" firstAttribute="top" secondItem="a4L-pH-6bm" secondAttribute="bottom" constant="-239" id="bMb-e7-NzB"/>
+                            <constraint firstAttribute="trailing" secondItem="a4L-pH-6bm" secondAttribute="trailing" id="eVR-jN-DbR"/>
+                            <constraint firstItem="a4L-pH-6bm" firstAttribute="leading" secondItem="j7J-bD-RYa" secondAttribute="leading" id="pRC-YJ-PhR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Support" image="111-user" id="J8u-L8-CTD"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="webView" destination="a4L-pH-6bm" id="N1i-YC-NOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luc-7p-NCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="947"/>
         </scene>
     </scenes>
     <resources>
         <image name="10-medical" width="22" height="22"/>
+        <image name="111-user" width="24" height="21"/>
         <image name="112-group" width="32" height="21"/>
         <image name="123-id-card" width="24" height="17"/>
         <image name="179-notepad" width="22" height="28"/>
         <image name="57-download" width="19" height="24"/>
         <image name="96-book" width="18" height="26"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="JyN-Sk-JOq"/>
     </inferredMetricsTieBreakers>

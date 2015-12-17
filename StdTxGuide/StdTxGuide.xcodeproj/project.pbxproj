@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3707CE5B1C0F3FC000C85B1F /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */; };
+		37233EFA1C0E209A0042B21B /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37233EF91C0E209A0042B21B /* SupportViewController.swift */; };
+		37233EFC1C0E260C0042B21B /* support.html in Resources */ = {isa = PBXBuildFile; fileRef = 37233EFB1C0E260C0042B21B /* support.html */; };
+		3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD91C1F5E0B000D491B /* libz.tbd */; };
+		3793DFDB1C1F5E1F000D491B /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD71C1F591C000D491B /* Pushwoosh.framework */; };
+		3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */; };
 		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A622D5741B27321700414533 /* ModalEulaViewController.swift */; };
@@ -175,6 +181,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StdTxGuide-Bridging-Header.h"; sourceTree = "<group>"; };
+		3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		37233EF91C0E209A0042B21B /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		37233EFB1C0E260C0042B21B /* support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
+		3793DFD71C1F591C000D491B /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = StdTxGuide/Frameworks/Pushwoosh.framework; sourceTree = "<group>"; };
+		3793DFD91C1F5E0B000D491B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A622D5741B27321700414533 /* ModalEulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEulaViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +356,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */,
+				3793DFDB1C1F5E1F000D491B /* Pushwoosh.framework in Frameworks */,
+				3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +375,9 @@
 		A650DAE1198BFF4F00223E47 = {
 			isa = PBXGroup;
 			children = (
+				3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */,
+				3793DFD91C1F5E0B000D491B /* libz.tbd */,
+				3793DFD71C1F591C000D491B /* Pushwoosh.framework */,
 				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				A68B5785199BE8DF0030E194 /* content */,
 				A650DAEC198BFF4F00223E47 /* StdTxGuide */,
@@ -395,8 +415,12 @@
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
 				A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */,
 				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
-				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				37233EF91C0E209A0042B21B /* SupportViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
+				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */,
+				3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */,
+				3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -565,6 +589,7 @@
 				A6F7C7AF199D28B400A77F2C /* terms.html */,
 				A68B57EA199BE8DF0030E194 /* treatments.css */,
 				A6A9D8411AF1159100CD2800 /* test-breadcrumbs.html */,
+				37233EFB1C0E260C0042B21B /* support.html */,
 			);
 			name = content;
 			path = StdTxGuide/content;
@@ -621,9 +646,15 @@
 					A650DAE9198BFF4F00223E47 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = Z827RBGAJC;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A650DAFD198BFF4F00223E47 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = Z827RBGAJC;
 						TestTargetID = A650DAE9198BFF4F00223E47;
 					};
 				};
@@ -734,6 +765,7 @@
 				A6BE156819F19AE2008330A1 /* c46-r.html in Resources */,
 				A68B5805199BE8DF0030E194 /* c21-t.html in Resources */,
 				A68B57F7199BE8DF0030E194 /* c15-clv.html in Resources */,
+				37233EFC1C0E260C0042B21B /* support.html in Resources */,
 				A68B5840199BE8DF0030E194 /* c56-r.html in Resources */,
 				A68B57FD199BE8DF0030E194 /* c18-t.html in Resources */,
 				A67011CC1B05383D00308A15 /* Images.xcassets in Resources */,
@@ -819,7 +851,9 @@
 				A66335901B1511D0001B4D9C /* SiteCatalystService.swift in Sources */,
 				A650DAF0198BFF4F00223E47 /* AppDelegate.swift in Sources */,
 				A6AA155F1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift in Sources */,
+				3707CE5B1C0F3FC000C85B1F /* DeviceInfo.m in Sources */,
 				A650DB0F198C0B6600223E47 /* ConditionContent.swift in Sources */,
+				37233EFA1C0E209A0042B21B /* SupportViewController.swift in Sources */,
 				A6F7C7BA199D33D500A77F2C /* AboutUsViewController.swift in Sources */,
 				A6F7C7A8199CF7F200A77F2C /* TermsViewController.swift in Sources */,
 				A62FC6811993FC3B000CE5C5 /* Condition.swift in Sources */,
@@ -862,7 +896,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -895,6 +929,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = NO;
@@ -907,7 +942,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -918,7 +953,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -933,6 +968,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -943,14 +979,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
+				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.oid.nchhstp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a48d9582-b829-4898-809b-42cef14b1909";
+				SWIFT_OBJC_BRIDGING_HEADER = "StdTxGuide/StdTxGuide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -959,14 +1004,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
+				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.oid.nchhstp.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a48d9582-b829-4898-809b-42cef14b1909";
+				SWIFT_OBJC_BRIDGING_HEADER = "StdTxGuide/StdTxGuide-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -974,6 +1027,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StdTxGuide.app/StdTxGuide";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -983,6 +1038,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -991,11 +1047,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StdTxGuide.app/StdTxGuide";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StdTxGuideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

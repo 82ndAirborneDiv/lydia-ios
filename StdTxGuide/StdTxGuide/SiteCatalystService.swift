@@ -80,11 +80,12 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         let constParams = String(format:"%@&%@", (debug ? debugConstParams : prodConstParams), commonConstParams)
     
-        let metricUrl = String(format:"%@%@&%@&%@&%@&%@&%@&%@",server, constParams, deviceParams, appInfoParams, deviceOnline, eventInfo, sectionInfo, pageName)
-        let encodedURL = String(format:"%@", metricUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        let metrics = String(format:"%@&%@&%@&%@&%@&%@&%@", constParams, deviceParams, appInfoParams, deviceOnline, eventInfo, sectionInfo, pageName)
+        let metricsWithEscapes = metrics.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())
+        let encodedMetricUrl = String(format:"%@%@",server, metricsWithEscapes!)
     
-        postSCEvent(encodedURL)
-        println("metric URL = %@",metricUrl);
+        postSCEvent(encodedMetricUrl)
+        println("metric URL = %@",encodedMetricUrl);
     
     }
     

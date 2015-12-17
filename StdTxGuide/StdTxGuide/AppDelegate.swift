@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SystemConfiguration
+import CoreLocation
+import AVFoundation
+import ImageIO
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PushNotificationDelegate {
                             
     var window: UIWindow?
 
@@ -18,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //self.window?.tintColor = UIColor.blueColor()
         self.window?.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+
         
          UINavigationBar.appearance().barTintColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         //UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
@@ -27,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UINavigationBar.appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         if (UIDevice.currentDevice().systemVersion as NSString).floatValue >= 8.0 {
             
@@ -36,6 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sc = SiteCatalystService()
         sc.trackAppLaunchEvent()
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        PushNotificationManager.pushManager().delegate = self
+        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
+        PushNotificationManager.pushManager().sendAppOpen()
+        PushNotificationManager.pushManager().registerForPushNotifications()
+
+
         
         return true
     }
@@ -61,6 +73,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        PushNotificationManager.pushManager().handlePushRegistration(deviceToken)
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        PushNotificationManager.pushManager().handlePushRegistrationFailure(error)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        PushNotificationManager.pushManager().handlePushReceived(userInfo)
+    }
+    
+    func onPushAccepted(pushManager: PushNotificationManager!, withNotification pushNotification: [NSObject : AnyObject]!, onStart: Bool) {
+        print("Push notification accepted: \(pushNotification)");
+    }
+
 
 
 }
