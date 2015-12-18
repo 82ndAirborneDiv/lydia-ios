@@ -13,6 +13,8 @@
 		3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD91C1F5E0B000D491B /* libz.tbd */; };
 		3793DFDB1C1F5E1F000D491B /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD71C1F591C000D491B /* Pushwoosh.framework */; };
 		3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */; };
+		37A8E94F1C244980002940A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8E94E1C244980002940A7 /* ShareViewController.swift */; };
+		37A8E9511C244A45002940A7 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 37A8E9501C244A45002940A7 /* share.html */; };
 		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A622D5741B27321700414533 /* ModalEulaViewController.swift */; };
@@ -189,6 +191,8 @@
 		3793DFD91C1F5E0B000D491B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		37A8E94E1C244980002940A7 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		37A8E9501C244A45002940A7 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
 		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A622D5741B27321700414533 /* ModalEulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEulaViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				A650DAF3198BFF4F00223E47 /* ConditionDetailViewController.swift */,
 				A6E3F4C01B0D013900982CAF /* ConditionsRootViewController.swift */,
 				A650DAF1198BFF4F00223E47 /* ConditionViewController.swift */,
+				3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */,
+				3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */,
 				A6F7C7BB199D35AE00A77F2C /* EulaViewController.swift */,
 				A6AA155E1AA0E4E100EC5A56 /* FullGuidelinesViewController.swift */,
 				A6DF28B71B1F9C3F00F3BF9D /* Logging.swift */,
@@ -413,14 +419,13 @@
 				A622D5741B27321700414533 /* ModalEulaViewController.swift */,
 				A66335C11B178CE1001B4D9C /* Remote.swift */,
 				A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */,
+				37A8E94E1C244980002940A7 /* ShareViewController.swift */,
 				A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */,
+				3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */,
 				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
 				37233EF91C0E209A0042B21B /* SupportViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
-				3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */,
-				3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */,
-				3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 		A68B5785199BE8DF0030E194 /* content */ = {
 			isa = PBXGroup;
 			children = (
+				37A8E9501C244A45002940A7 /* share.html */,
 				A66101531B1E0B2200437934 /* c49-clv.html */,
 				A66101541B1E0B2200437934 /* c51-clv.html */,
 				A66101551B1E0B2200437934 /* c54-r.html */,
@@ -688,6 +694,7 @@
 				A661015C1B1E0B2200437934 /* terms.css in Resources */,
 				A68B5818199BE8DF0030E194 /* c33-t.html in Resources */,
 				A68B57F3199BE8DF0030E194 /* c12-t.html in Resources */,
+				37A8E9511C244A45002940A7 /* share.html in Resources */,
 				A6BE156719F19AE2008330A1 /* c44-t.html in Resources */,
 				A6BE156419F19AE2008330A1 /* c41-t.html in Resources */,
 				A68B582C199BE8DF0030E194 /* c45-t.html in Resources */,
@@ -840,6 +847,7 @@
 			files = (
 				A650DAF4198BFF4F00223E47 /* ConditionDetailViewController.swift in Sources */,
 				A6DC6EE41B21EDBD00A057A5 /* AppearanceHelper.swift in Sources */,
+				37A8E94F1C244980002940A7 /* ShareViewController.swift in Sources */,
 				A6DF28B81B1F9C3F00F3BF9D /* Logging.swift in Sources */,
 				A6F7C7BC199D35AE00A77F2C /* EulaViewController.swift in Sources */,
 				A6E3F4C11B0D013900982CAF /* ConditionsRootViewController.swift in Sources */,
@@ -982,7 +990,6 @@
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -993,7 +1000,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a48d9582-b829-4898-809b-42cef14b1909";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StdTxGuide/StdTxGuide-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1006,8 +1013,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1018,7 +1024,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a48d9582-b829-4898-809b-42cef14b1909";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StdTxGuide/StdTxGuide-Bridging-Header.h";
 			};
 			name = Release;

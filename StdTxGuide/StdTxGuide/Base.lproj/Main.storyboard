@@ -388,6 +388,7 @@
                         <segue destination="Z6f-GO-kpi" kind="relationship" relationship="viewControllers" id="ZfU-tt-i6f"/>
                         <segue destination="zqW-1X-omP" kind="relationship" relationship="viewControllers" id="5Gb-Da-pGX"/>
                         <segue destination="ruJ-on-Czo" kind="relationship" relationship="viewControllers" id="qUu-4s-r64"/>
+                        <segue destination="Ge2-qa-xgV" kind="relationship" relationship="viewControllers" id="7ja-BS-pU4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -507,6 +508,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luc-7p-NCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941" y="947"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="nPH-X6-ERg">
+            <objects>
+                <viewController title="Share" id="Ge2-qa-xgV" customClass="ShareViewController" customModule="StdTxGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VBF-OF-48c"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugw-rE-jvr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKI-EH-f3f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOy-9o-bvV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-1p-Mq0">
+                                <rect key="frame" x="82" y="280" width="156" height="30"/>
+                                <state key="normal" title="Email"/>
+                                <connections>
+                                    <action selector="btnEmailShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="zHS-zH-JAy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-FE-5u8">
+                                <rect key="frame" x="82" y="318" width="156" height="30"/>
+                                <state key="normal" title="Text"/>
+                                <connections>
+                                    <action selector="btnMessageShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="gC0-mG-z8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dce-dy-3Fs">
+                                <rect key="frame" x="82" y="356" width="156" height="30"/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="btnFacebookShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="3CB-Ua-rrh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zup-yc-6Bu">
+                                <rect key="frame" x="82" y="394" width="156" height="30"/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="btnTwitterShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="yVS-r5-P02"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oPa-FE-5u8" firstAttribute="trailing" secondItem="MsE-1p-Mq0" secondAttribute="trailing" id="251-Ww-vbJ"/>
+                            <constraint firstItem="dce-dy-3Fs" firstAttribute="trailing" secondItem="zup-yc-6Bu" secondAttribute="trailing" id="8Ui-c0-2AA"/>
+                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="leading" secondItem="GKI-EH-f3f" secondAttribute="leadingMargin" constant="66" id="9kV-JX-8wE"/>
+                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="centerX" secondItem="IOy-9o-bvV" secondAttribute="centerX" id="Anv-bh-nGe"/>
+                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="top" secondItem="IOy-9o-bvV" secondAttribute="bottom" constant="-239" id="EpD-XP-pQk"/>
+                            <constraint firstItem="oPa-FE-5u8" firstAttribute="leading" secondItem="dce-dy-3Fs" secondAttribute="leading" id="J09-O8-ON2"/>
+                            <constraint firstItem="IOy-9o-bvV" firstAttribute="top" secondItem="GKI-EH-f3f" secondAttribute="top" id="K0T-Lf-zln"/>
+                            <constraint firstAttribute="trailing" secondItem="IOy-9o-bvV" secondAttribute="trailing" id="LMo-Ex-a1L"/>
+                            <constraint firstItem="oPa-FE-5u8" firstAttribute="leading" secondItem="MsE-1p-Mq0" secondAttribute="leading" id="MNn-X5-rJg"/>
+                            <constraint firstItem="IOy-9o-bvV" firstAttribute="bottom" secondItem="ugw-rE-jvr" secondAttribute="top" id="UI2-9Z-SJO"/>
+                            <constraint firstItem="zup-yc-6Bu" firstAttribute="top" secondItem="dce-dy-3Fs" secondAttribute="bottom" constant="8" symbolic="YES" id="Vcb-nC-65c"/>
+                            <constraint firstItem="oPa-FE-5u8" firstAttribute="top" secondItem="MsE-1p-Mq0" secondAttribute="bottom" constant="8" symbolic="YES" id="aTz-q8-i29"/>
+                            <constraint firstItem="dce-dy-3Fs" firstAttribute="leading" secondItem="zup-yc-6Bu" secondAttribute="leading" id="dcg-pE-G60"/>
+                            <constraint firstItem="dce-dy-3Fs" firstAttribute="top" secondItem="oPa-FE-5u8" secondAttribute="bottom" constant="8" symbolic="YES" id="hKR-mQ-tSu"/>
+                            <constraint firstItem="oPa-FE-5u8" firstAttribute="trailing" secondItem="dce-dy-3Fs" secondAttribute="trailing" id="kuT-7J-JDa"/>
+                            <constraint firstItem="IOy-9o-bvV" firstAttribute="leading" secondItem="GKI-EH-f3f" secondAttribute="leading" id="unI-us-Wrc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Share" image="111-user" id="Zye-OG-7lH"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="webView" destination="IOy-9o-bvV" id="yw2-S0-yUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3y-3r-2ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="938"/>
         </scene>
     </scenes>
     <resources>

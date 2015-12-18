@@ -30,6 +30,8 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_SECTION_ABOUT = "About Us"
     let SC_SECTION_HELP = "Help"
     let SC_SECTION_EULA = "Agreement"
+    let SC_SECTION_SUPPORT = "Agreement"
+    let SC_SECTION_SHARE = "Agreement"
     
     let SC_PAGE_TITLE_LAUNCH = "STD Tx Guide 2015"
     let SC_PAGE_TITLE_ALL_CONDITIONS = "All Conditions"
@@ -40,6 +42,8 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_PAGE_FULL_GUIDELINES = "Full Guidelines"
     let SC_PAGE_TERMS = "Terms"
     let SC_PAGE_SEXUAL_HISTORY = "Sexual History"
+    let SC_PAGE_SHARE = "Share"
+    let SC_PAGE_SUPPORT = "Support"
     
     let cdcServer = "http://tools.cdc.gov/metrics.aspx?"
     let localServer = "http://localhost:5000/metrics?"
@@ -54,7 +58,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         // these first change most often depending on version and if debug is true
         let appVersion = getAppVersion()
-        let debug = false
+        let debug = true
         let debugLocal = false
     
         // server information
