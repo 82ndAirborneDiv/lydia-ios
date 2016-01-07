@@ -58,7 +58,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         // these first change most often depending on version and if debug is true
         let appVersion = getAppVersion()
-        let debug = true
+        let debug = false
         let debugLocal = false
     
         // server information
