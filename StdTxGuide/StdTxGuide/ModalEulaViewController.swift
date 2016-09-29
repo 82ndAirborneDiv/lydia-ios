@@ -14,8 +14,8 @@ class ModalEulaViewController: UIViewController {
     
     
     @IBOutlet var webView:UIWebView!
-    @IBAction func btnAgreeTouchUp(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func btnAgreeTouchUp(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
 
     }
     
@@ -32,32 +32,32 @@ class ModalEulaViewController: UIViewController {
         //AppearanceHelper.setTranslucentNavBar(navigationController!.navigationBar)
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource("eula", withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+        let url = Bundle.main.url(forResource: "eula", withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.loadRequest(request)
         
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
-        self.tabBarController?.moreNavigationController.navigationBarHidden = true
+        self.tabBarController?.moreNavigationController.isNavigationBarHidden = true
 
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_TITLE_EULA, section: sc.SC_SECTION_EULA)
         
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return false
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {

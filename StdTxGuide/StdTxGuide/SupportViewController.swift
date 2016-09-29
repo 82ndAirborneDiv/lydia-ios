@@ -23,12 +23,12 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
 
     @IBOutlet weak var webView: UIWebView!
     
-    @IBAction func btnEmailSupportTouchUp(sender: AnyObject) {
+    @IBAction func btnEmailSupportTouchUp(_ sender: AnyObject) {
         
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
+            self.present(mailComposeViewController, animated: true, completion: {() in
+                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
                 })
         } else {
             self.showSendMailErrorAlert()
@@ -44,15 +44,15 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource("support", withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+        let url = Bundle.main.url(forResource: "support", withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.loadRequest(request)
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_SUPPORT, section: sc.SC_SECTION_SUPPORT)
 
@@ -83,8 +83,8 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

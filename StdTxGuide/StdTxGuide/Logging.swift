@@ -8,6 +8,6 @@
 
 import Foundation
 
-func println(object: Any...) {
+func println(_ object: Any...) {
     //Swift.println(object)
 }

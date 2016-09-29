@@ -25,12 +25,12 @@ class Remote: NSObject, NSURLConnectionDelegate {
     }
     
     
-    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
+    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: URLResponse!) {
         println("didReceiveResponse")
     }
     
-    func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
-        self.data.appendData(conData)
+    private func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {
+        self.data.append(conData as Data)
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {

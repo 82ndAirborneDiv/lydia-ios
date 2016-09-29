@@ -9,7 +9,7 @@
 import UIKit
 
 
-class AboutUsViewController: UIViewController {
+class AboutUsViewController: UIViewController, UIWebViewDelegate {
     
     
     @IBOutlet var webView:UIWebView!
@@ -26,9 +26,11 @@ class AboutUsViewController: UIViewController {
 
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource("about_us", withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+        let url = Bundle.main.url(forResource: "about_us", withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.loadRequest(request)
+        webView.delegate = self
+        
         
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
@@ -38,24 +40,34 @@ class AboutUsViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+
+        let version  = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "0"
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") ?? "0"
+        let js_func_call = String(format:"insertVersion(\"%@.%@\")", version as! String, build as! String)
+        self.webView.stringByEvaluatingJavaScript(from: js_func_call)
+        
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ABOUT, section: sc.SC_SECTION_ABOUT)
         
     }
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
 
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return false
     }
     

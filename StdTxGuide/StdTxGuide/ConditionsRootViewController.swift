@@ -15,7 +15,7 @@ class ConditionsRootViewController: UINavigationController {
 
 
         // Do any additional setup after loading the view.
-        navigationBar.barStyle = UIBarStyle.Black
+        navigationBar.barStyle = UIBarStyle.black
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         super.setNeedsStatusBarAppearanceUpdate()
 

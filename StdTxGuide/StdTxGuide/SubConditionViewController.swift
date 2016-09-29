@@ -33,13 +33,13 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
 
         
         // Status bar white font
-        self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blue
         self.tabBarController?.customizableViewControllers = nil
         
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
-        self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.Black
+        self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.black
         
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
         
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
@@ -48,7 +48,7 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let parent = conditionContent.getConditionFromId(conditions[0].parentId)
         sc.trackNavigationEvent(parent.childBreadcrumbs, section: sc.SC_SECTION_CONDITIONS)
@@ -56,8 +56,8 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     func showBackButton() {
@@ -94,68 +94,68 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showConditionDetail" {
             let condition = conditionContent.getCurrentCondition()
-            let vc = segue.destinationViewController as! ConditionDetailViewController
+            let vc = segue.destination as! ConditionDetailViewController
             vc.condition = condition
             
         }
     }
     
-    @IBAction func unwindToConditionList(segue: UIStoryboardSegue) {
+    @IBAction func unwindToConditionList(_ segue: UIStoryboardSegue) {
         
         goUpConditionTree()
         
     }
     
     
-    @IBAction func backButtonTouch(sender: AnyObject) {
+    @IBAction func backButtonTouch(_ sender: AnyObject) {
         goUpConditionTree()
     }
     
     
     // MARK: - Table View
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         count = conditions.count
         return count
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let parent = conditionContent.getConditionFromId(conditions[0].parentId)
         return parent.childBreadcrumbs
     }
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel!.textColor = UIColor.darkGrayColor()
-        header.textLabel!.font = UIFont.boldSystemFontOfSize(14)
+        header.textLabel!.textColor = UIColor.darkGray
+        header.textLabel!.font = UIFont.boldSystemFont(ofSize: 14)
         let headerFrame = header.frame
         header.textLabel!.frame = headerFrame
-        header.textLabel!.textAlignment = NSTextAlignment.Left
+        header.textLabel!.textAlignment = NSTextAlignment.left
         let parent = conditionContent.getConditionFromId(conditions[0].parentId)
         header.textLabel!.text =  parent.childBreadcrumbs
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubConditionCell", forIndexPath: indexPath) 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubConditionCell", for: indexPath) 
         
-        let condition = conditions[indexPath.row]
+        let condition = conditions[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = condition.title
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let condition = conditions[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let condition = conditions[(indexPath as NSIndexPath).row]
         conditionContent.setCurrentCondition(condition)
         if condition.hasChildren == false {
-            performSegueWithIdentifier("showConditionDetail", sender: self)
+            performSegue(withIdentifier: "showConditionDetail", sender: self)
             
         } else {
             conditions = conditionContent.getChildConditions()
@@ -168,14 +168,14 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // return false if you do not want the specified item to be editable.
         return false
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-        } else if editingStyle == .Insert {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }

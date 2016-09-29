@@ -31,9 +31,9 @@ class ConditionDetailViewController: UIViewController {
         
 
         // breadcrumbs text label
-        lblBreadcrumb.textColor = UIColor.darkGrayColor()
-        lblBreadcrumb.font = UIFont.boldSystemFontOfSize(14)
-        lblBreadcrumb.textAlignment = NSTextAlignment.Center
+        lblBreadcrumb.textColor = UIColor.darkGray
+        lblBreadcrumb.font = UIFont.boldSystemFont(ofSize: 14)
+        lblBreadcrumb.textAlignment = NSTextAlignment.center
         let parent = conditionContent.getConditionFromId(condition.parentId)
         
         if parent.childBreadcrumbs == "" {
@@ -49,44 +49,42 @@ class ConditionDetailViewController: UIViewController {
         
         sc.trackNavigationEvent(scBreadcrumb, section: sc.SC_SECTION_CONDITIONS)
         
-
-        
         // check if condtion has regimens content and set it as selcted index
         // if not use dxtx content
         if condition.hasRegimens == true && condition.hasDxTx == true {
             
             // display both so use segmented control
             // the only thing to display is More Info (DxTx) Label
-            lblMoreInfo.hidden = true;
-            lblMoreInfo.enabled = false;
-            lblTreatments.hidden = true;
-            lblTreatments.enabled = false;
-            segmentedControl.hidden = false;
-            segmentedControl.enabled = true;
-            segmentedControl.setEnabled(true, forSegmentAtIndex: 0)
-            segmentedControl.setEnabled(true, forSegmentAtIndex: 1)
+            lblMoreInfo.isHidden = true;
+            lblMoreInfo.isEnabled = false;
+            lblTreatments.isHidden = true;
+            lblTreatments.isEnabled = false;
+            segmentedControl.isHidden = false;
+            segmentedControl.isEnabled = true;
+            segmentedControl.setEnabled(true, forSegmentAt: 0)
+            segmentedControl.setEnabled(true, forSegmentAt: 1)
             segmentedControl.selectedSegmentIndex = 0;
             loadRegimensContent()
 
             
         } else if condition.hasRegimens == false && condition.hasDxTx == true {
             // the only thing to display is More Info (DxTx) Label
-            lblMoreInfo.hidden = false;
-            lblMoreInfo.enabled = true;
-            lblTreatments.hidden = true;
-            lblTreatments.enabled = false;
-            segmentedControl.hidden = true;
-            segmentedControl.enabled = false;
+            lblMoreInfo.isHidden = false;
+            lblMoreInfo.isEnabled = true;
+            lblTreatments.isHidden = true;
+            lblTreatments.isEnabled = false;
+            segmentedControl.isHidden = true;
+            segmentedControl.isEnabled = false;
             loadDxTxContent()
            
         } else if condition.hasRegimens == true && condition.hasDxTx == false {
             // the only thing to display is Treatments (Regimens)
-            lblMoreInfo.hidden = true;
-            lblMoreInfo.enabled = false;
-            lblTreatments.hidden = false;
-            lblTreatments.enabled = true;
-            segmentedControl.hidden = true;
-            segmentedControl.enabled = false;
+            lblMoreInfo.isHidden = true;
+            lblMoreInfo.isEnabled = false;
+            lblTreatments.isHidden = false;
+            lblTreatments.isEnabled = true;
+            segmentedControl.isHidden = true;
+            segmentedControl.isEnabled = false;
             loadRegimensContent()
 
         }
@@ -102,16 +100,16 @@ class ConditionDetailViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // detailDescriptionLabel.text = "Loaded!"
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
 
@@ -120,15 +118,15 @@ class ConditionDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return false
     }
     
 
-    func loadContent(fileName:String) {
-        let fileUrl = NSURL.init(fileURLWithPath:fileName).URLByDeletingPathExtension?.lastPathComponent
-        let url = NSBundle.mainBundle().URLForResource(fileUrl, withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+    func loadContent(_ fileName:String) {
+        let fileUrl = NSURL.init(fileURLWithPath:fileName).deletingPathExtension?.lastPathComponent
+        let url = Bundle.main.url(forResource: fileUrl, withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.loadRequest(request)
     }
     
@@ -147,7 +145,7 @@ class ConditionDetailViewController: UIViewController {
         
     }
 
-    @IBAction func valueChange(sender: UISegmentedControl) {
+    @IBAction func valueChange(_ sender: UISegmentedControl) {
         
         // This all works fine and it prints out the value of 3 on any click
         println("# of Segments = \(sender.numberOfSegments)")

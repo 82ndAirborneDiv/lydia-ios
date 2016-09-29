@@ -12,15 +12,15 @@ import UIKit
 
 class AppearanceHelper {
     
-    class func setTranslucentNavBar(navigationBar:UINavigationBar) {
+    class func setTranslucentNavBar(_ navigationBar:UINavigationBar) {
         
         // this only needs to be done for iOS 7
         // for iOS 8 this is done in AppDelegate by setting appearance translucent property
-        if (UIDevice.currentDevice().systemVersion as NSString).floatValue < 8.0 {
+        if (UIDevice.current.systemVersion as NSString).floatValue < 8.0 {
             
-            navigationBar.translucent = false
+            navigationBar.isTranslucent = false
             navigationBar.shadowImage = UIImage()
-            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             
         }
         

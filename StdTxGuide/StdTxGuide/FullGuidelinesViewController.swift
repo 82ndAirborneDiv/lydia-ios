@@ -20,8 +20,8 @@ class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource("full", withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+        let url = Bundle.main.url(forResource: "full", withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.scalesPageToFit = true
         webView.delegate = self
 
@@ -31,7 +31,7 @@ class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_FULL_GUIDELINES, section: sc.SC_SECTION_FULL_GUIDELINES)
         
@@ -43,15 +43,15 @@ class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) ->Bool  {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) ->Bool  {
         
-        if (navigationType == UIWebViewNavigationType.LinkClicked)
+        if (navigationType == UIWebViewNavigationType.linkClicked)
             {
-                UIApplication.sharedApplication().openURL(request.URL!)
+                UIApplication.shared.openURL(request.url!)
                 return false
         }
         

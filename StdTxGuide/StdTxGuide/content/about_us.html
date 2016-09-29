@@ -8,6 +8,12 @@
     <title>About Us</title>
 
     <link href="about.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        function insertVersion (version) {
+            document.getElementById('appver').textContent= "Version: " + version;
+        }
+    </script>
+    
 
 </head>
 <body>
@@ -16,7 +22,7 @@
 <div>
     <img src="about_icon_page.png" style="float:left;margin:-5px 5px 0 0;"/>
     <span style="font-size:18px; position:relative; top:1px;"><strong>About Us</strong></span><br/> 
-    <span style="font-size:14px; position:relative; top:1px;">Version: 2.3.1.2</span>
+    <span style="font-size:14px; position:relative; top:1px;" id="appver"></span>
 </div>
 <br/>
 <div id="about_info">

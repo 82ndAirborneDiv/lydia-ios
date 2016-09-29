@@ -26,18 +26,18 @@ class ConditionContent {
         
         println("Initializing ConditionContent object....")
         println("Using file \(CONTENT_MAP_FILENAME).\(CONTENT_MAP_FILE_EXT)......")
-        let path = NSBundle.mainBundle().pathForResource(CONTENT_MAP_FILENAME, ofType: CONTENT_MAP_FILE_EXT)
+        let path = Bundle.main.path(forResource: CONTENT_MAP_FILENAME, ofType: CONTENT_MAP_FILE_EXT)
         
-        var jsonData: NSData?
+        var jsonData: Data?
         do {
-            jsonData = try NSData(contentsOfFile:path!, options: .DataReadingMappedIfSafe)
+            jsonData = try Data(contentsOf: URL(fileURLWithPath: path!), options: .mappedIfSafe)
         } catch _ as NSError {
             
         }
         
         var jsonCondition: Dictionary<String, AnyObject>?
         do {
-            jsonCondition = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: []) as? Dictionary<String, AnyObject>
+            jsonCondition = try JSONSerialization.jsonObject(with: jsonData!, options: []) as? Dictionary<String, AnyObject>
         } catch {
             
         }
@@ -88,13 +88,13 @@ class ConditionContent {
     }
     
     
-    func setCurrentCondition(newCondition:Condition) {
+    func setCurrentCondition(_ newCondition:Condition) {
     
         currCondition = newCondition
     }
     
     
-    func getConditionFromId(id:Int) -> Condition {
+    func getConditionFromId(_ id:Int) -> Condition {
         for cond in allConditions {
             if cond.id == id {
                 return cond
@@ -106,7 +106,7 @@ class ConditionContent {
     }
     
     
-    func parseConditions(conditionJson:Dictionary<String,AnyObject>) ->Condition {
+    func parseConditions(_ conditionJson:Dictionary<String,AnyObject>) ->Condition {
         
         var id:Int = 0
         var parent:Int = 0

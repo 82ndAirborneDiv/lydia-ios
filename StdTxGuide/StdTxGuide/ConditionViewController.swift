@@ -38,13 +38,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
 
 
         // Status bar white font
-        self.tabBarController?.tabBar.backgroundColor = UIColor.blueColor()
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blue
         self.tabBarController?.customizableViewControllers = nil
         
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
-        self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.Black
+        self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.black
 
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
         self.title = "Conditions"
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -60,13 +60,13 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func displayEula() {
         
-        let userPrefs = NSUserDefaults.standardUserDefaults()
-        if let _ = userPrefs.stringForKey("agreedToEula") {
+        let userPrefs = UserDefaults.standard
+        if let _ = userPrefs.string(forKey: "agreedToEula") {
             return
         } else {
-            performSegueWithIdentifier("showModalEula", sender: self)
+            performSegue(withIdentifier: "showModalEula", sender: self)
             userPrefs.setValue("true", forKey: "agreedToEula")
-            if (UIDevice.currentDevice().systemVersion as NSString).floatValue < 8.0 {
+            if (UIDevice.current.systemVersion as NSString).floatValue < 8.0 {
                 userPrefs.synchronize()
             }
         }
@@ -75,14 +75,14 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_TITLE_ALL_CONDITIONS, section: sc.SC_SECTION_CONDITIONS)
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
     func showBackButton() {
@@ -119,29 +119,29 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
 
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showConditionDetail" {
             let condition = conditionContent.getCurrentCondition()
-            let vc = segue.destinationViewController as! ConditionDetailViewController
+            let vc = segue.destination as! ConditionDetailViewController
             vc.condition = condition
 
         } else if segue.identifier == "showSubConditions" {
             let condition = conditionContent.getCurrentCondition()
-            let vc = segue.destinationViewController as! SubConditionViewController
+            let vc = segue.destination as! SubConditionViewController
             vc.currCondition = condition
             
         }
 
     }
     
-    @IBAction func unwindToConditionList(segue: UIStoryboardSegue) {
+    @IBAction func unwindToConditionList(_ segue: UIStoryboardSegue) {
         
         goUpConditionTree()
         
     }
     
     
-    @IBAction func backButtonTouch(sender:AnyObject) {
+    @IBAction func backButtonTouch(_ sender:AnyObject) {
         
         goUpConditionTree()
     }
@@ -149,31 +149,31 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // MARK: - Table View
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         count = conditions.count
         return count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConditionCell", forIndexPath: indexPath) 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConditionCell", for: indexPath) 
 
-        let condition = conditions[indexPath.row]
+        let condition = conditions[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = condition.title
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let condition = conditions[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let condition = conditions[(indexPath as NSIndexPath).row]
         conditionContent.setCurrentCondition(condition)
         if condition.hasChildren == false {
-            performSegueWithIdentifier("showConditionDetail", sender: self)
+            performSegue(withIdentifier: "showConditionDetail", sender: self)
             
         } else {
-            performSegueWithIdentifier("showSubConditions", sender: self)
+            performSegue(withIdentifier: "showSubConditions", sender: self)
 //            conditions = conditionContent.getChildConditions()
 //            showBackButton()
 //            println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
@@ -181,14 +181,14 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         }
 
     }
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // return false if you do not want the specified item to be editable.
         return false
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-        } else if editingStyle == .Insert {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }

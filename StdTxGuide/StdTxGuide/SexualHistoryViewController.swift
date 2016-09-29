@@ -23,15 +23,15 @@ class SexualHistoryViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         self.title = "Sexual History"
 
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
         
-        let pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("sexualhistory", ofType:"pdf")!) //replace PDF_file with your pdf die name
-        let request = NSURLRequest(URL: pdfLoc);
+        let pdfLoc = URL(fileURLWithPath:Bundle.main.path(forResource: "sexualhistory", ofType:"pdf")!) //replace PDF_file with your pdf die name
+        let request = URLRequest(url: pdfLoc);
         self.pdfWebView.loadRequest(request);
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_SEXUAL_HISTORY, section: sc.SC_SECTION_SEXUAL_HISTORY)
         
@@ -44,8 +44,8 @@ class SexualHistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
 

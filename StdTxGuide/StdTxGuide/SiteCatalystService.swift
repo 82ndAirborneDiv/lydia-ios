@@ -51,7 +51,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let prodConstParams = "reportsuite=cdcsynd"
     let debugConstParams = "reportsuite=devcdc"
     
-    func trackEvent(event:String, title:String, section:String)
+    func trackEvent(_ event:String, title:String, section:String)
     {
 
         println("In trackEvent")
@@ -85,10 +85,10 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
         let constParams = String(format:"%@&%@", (debug ? debugConstParams : prodConstParams), commonConstParams)
     
         let metrics = String(format:"%@&%@&%@&%@&%@&%@&%@", constParams, deviceParams, appInfoParams, deviceOnline, eventInfo, sectionInfo, pageName)
-        let metricsWithEscapes = metrics.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())
+        let metricsWithEscapes = metrics.addingPercentEncoding( withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let encodedMetricUrl = String(format:"%@%@",server, metricsWithEscapes!)
     
-        postSCEvent(encodedMetricUrl)
+        postSCEvent(scString: encodedMetricUrl)
         println("metric URL = %@",encodedMetricUrl);
     
     }
@@ -99,91 +99,101 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
     }
     
-    func trackNavigationEvent(pageTitle:String, section:String)
+    func trackNavigationEvent(_ pageTitle:String, section:String)
     {
         trackEvent(SC_EVENT_NAV_SECTION, title:pageTitle, section:section)
 
     }
     
-    func trackContentBrowseEvent(pageTitle:String, section:String)
+    func trackContentBrowseEvent(_ pageTitle:String, section:String)
     {
         trackEvent(SC_EVENT_CONTENT_BROWSE, title:pageTitle, section:section)
         
     }
     
-    func postSCEvent(scString:String)
+    func postSCEvent(scString:String) {
+        
+        
+        let scUrl = URL(string: scString)
+        var urlRequest = URLRequest(url: scUrl!)
+        urlRequest.httpMethod = "GET";
+        urlRequest.setValue("application/xml; charset=utf-8", forHTTPHeaderField:"Content-Type")
+        
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+        let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) {
+            data, response, error in
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+            
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    self.responseData.append(data!)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    
+    func oldPostSCEvent(_ scString:String)
     {
     
         // create request
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL: NSURL(string:scString)!)
+        let request:NSMutableURLRequest = NSMutableURLRequest(url: URL(string:scString)!)
     
         // Specify that it will be a POST request
-        request.HTTPMethod = "GET"
+        request.httpMethod = "GET"
     
         // This is how we set header fields
         request.setValue("application/xml; charset=utf-8", forHTTPHeaderField:"Content-Type")
     
         // Convert your data and set your request's HTTPBody property
         let stringData:NSString = ""
-        let requestBodyData:NSData = stringData.dataUsingEncoding(NSUTF8StringEncoding)!
-        request.HTTPBody = requestBodyData
+        let requestBodyData:Data = stringData.data(using: String.Encoding.utf8.rawValue)!
+        request.httpBody = requestBodyData
     
         // Create url connection and fire request
-        let conn = NSURLConnection(request:request, delegate:self)
+        _ = NSURLConnection(request:request as URLRequest, delegate:self)
     
     }
     
     
-    func connection(connection:NSURLConnection, didReceiveResponse response:NSURLResponse) {
-    // A response has been received, this is where we initialize the instance var you created
-    // so that we can append data to it in the didReceiveData method
-    // Furthermore, this method is called each time there is a redirect so reinitializing it
-    // also serves to clear it
-        responseData = NSMutableData()
-    }
-    
-    func connection(connection:NSURLConnection, didReceiveData data:NSData) {
-    // Append the new data to the instance variable you declared
-        responseData.appendData(data)
-    }
-    
-    func connection(connection: NSURLConnection, willCacheResponse cachedResponse: NSCachedURLResponse) -> NSCachedURLResponse?
-    {
-        // don't cache anything
-        return nil
-    }
-    
-    func connectionDidFinishLoading(connection:NSURLConnection) {
+    func connectionDidFinishLoading(_ connection:NSURLConnection) {
         // The request is complete and data has been received
         // You can parse the stuff in your instance variable now
         println("Site Catalyst Connection Finished")
     
     }
     
-    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
+    func connection(_ connection: NSURLConnection, didFailWithError error: Error) {
         println("Site Catalyst Connection Error = %@", error)
     }
 
     
     func getDeviceModel() -> String
     {
-        return UIDevice.currentDevice().model
+        return UIDevice.current.model
     }
     
     func getDeviceSystemVersion() -> String
     {
-        return UIDevice.currentDevice().systemVersion
+        return UIDevice.current.systemVersion
     }
     
     func getDeviceSystemName() -> String
     {
-        return UIDevice.currentDevice().systemName
+        return UIDevice.current.systemName
     }
     
     
     func getAppVersion() -> String
     {
-        let dictionary = NSBundle.mainBundle().infoDictionary!
+        let dictionary = Bundle.main.infoDictionary!
         let version = dictionary["CFBundleShortVersionString"] as! String
         let build = dictionary["CFBundleVersion"] as! String
         return "\(version).\(build)"

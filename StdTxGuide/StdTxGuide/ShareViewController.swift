@@ -23,12 +23,12 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
     
 
     @IBOutlet weak var webView: UIWebView!
-    @IBAction func btnEmailShareTouchUp(sender: AnyObject) {
+    @IBAction func btnEmailShareTouchUp(_ sender: AnyObject) {
         
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
+            self.present(mailComposeViewController, animated: true, completion: {() in
+                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
             })
         } else {
             self.showSendMailErrorAlert()
@@ -36,12 +36,12 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
     
-    @IBAction func btnMessageShareTouchUp(sender: AnyObject) {
+    @IBAction func btnMessageShareTouchUp(_ sender: AnyObject) {
         
         let mailComposeViewController = self.configuredMessageComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
+            self.present(mailComposeViewController, animated: true, completion: {() in
+                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
             })
         } else {
             self.showSendMailErrorAlert()
@@ -49,27 +49,25 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
 
-    @IBAction func btnFacebookShareTouchUp(sender: AnyObject) {
+    @IBAction func btnFacebookShareTouchUp(_ sender: AnyObject) {
         let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        vc.setInitialText(shareText)
-        vc.addImage(shareImage)
-        vc.addURL(NSURL(string: shareUrl))
-        presentViewController(vc, animated: true, completion: nil)
+        vc?.setInitialText(shareText)
+        vc?.add(shareImage)
+        vc?.add(URL(string: shareUrl))
+        present(vc!, animated: true, completion: nil)
 
     }
 
-    @IBAction func btnTwitterShareTouchUp(sender: AnyObject) {
+    @IBAction func btnTwitterShareTouchUp(_ sender: AnyObject) {
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        vc.setInitialText(shareText)
-        vc.addImage(shareImage)
-        vc.addURL(NSURL(string: shareUrl))
-        presentViewController(vc, animated: true, completion: nil)
+        vc?.setInitialText(shareText)
+        vc?.add(shareImage)
+        vc?.add(URL(string: shareUrl))
+        present(vc!, animated: true, completion: nil)
         
     }
     
-    
 
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -77,15 +75,15 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSBundle.mainBundle().URLForResource("share", withExtension: "html")
-        let request = NSURLRequest(URL:url!)
+        let url = Bundle.main.url(forResource: "share", withExtension: "html")
+        let request = URLRequest(url:url!)
         webView.loadRequest(request)
         self.view.backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
         
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
      
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_SHARE, section: sc.SC_SECTION_SHARE)
@@ -126,12 +124,12 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
 }
