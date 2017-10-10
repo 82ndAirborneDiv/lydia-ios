@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PushNotificationDelegate 
 
         UINavigationBar.appearance().tintColor = UIColor.white
         //UINavigationBar.appearance().backgroundColor = UIColor(red: 45.0/255.0, green: 88.0/255.0, blue: 167.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         
         if (UIDevice.current.systemVersion as NSString).floatValue >= 8.0 {
