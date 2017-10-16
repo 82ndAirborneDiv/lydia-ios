@@ -44,7 +44,6 @@ class ConditionViewController: UIViewController, UITableViewDelegate, UITableVie
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
         self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.black
 
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
         self.title = "Conditions"
         
         // Do any additional setup after loading the view, typically from a nib.

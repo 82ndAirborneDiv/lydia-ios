@@ -41,6 +41,8 @@
 	</dict>
 	<key>Pushwoosh_APPID</key>
 	<string>8B382-CD725</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIStatusBarHidden</key>

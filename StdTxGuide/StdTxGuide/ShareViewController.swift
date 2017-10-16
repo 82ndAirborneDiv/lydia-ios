@@ -10,7 +10,14 @@ import UIKit
 import MessageUI
 import Social
 
-
+extension MFMailComposeViewController {
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+}
 
 
 class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
@@ -28,7 +35,7 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
+  //              UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
             })
         } else {
             self.showSendMailErrorAlert()
@@ -41,7 +48,7 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         let mailComposeViewController = self.configuredMessageComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
+    //            UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
             })
         } else {
             self.showSendMailErrorAlert()
@@ -67,7 +74,6 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         
     }
     
-
     override func viewDidLoad() {
         
         super.viewDidLoad()

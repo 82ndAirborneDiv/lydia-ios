@@ -15,6 +15,7 @@
 		3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */; };
 		37A8E94F1C244980002940A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8E94E1C244980002940A7 /* ShareViewController.swift */; };
 		37A8E9511C244A45002940A7 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 37A8E9501C244A45002940A7 /* share.html */; };
+		37EA97551F9415E600A4A8C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */; };
 		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A622D5741B27321700414533 /* ModalEulaViewController.swift */; };
@@ -193,6 +194,7 @@
 		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		37A8E94E1C244980002940A7 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		37A8E9501C244A45002940A7 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
+		37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A622D5741B27321700414533 /* ModalEulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEulaViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +218,7 @@
 		A66101571B1E0B2200437934 /* terms.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = terms.css; sourceTree = "<group>"; };
 		A663358F1B1511D0001B4D9C /* SiteCatalystService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCatalystService.swift; sourceTree = "<group>"; };
 		A66335C11B178CE1001B4D9C /* Remote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
-		A67011CB1B05383D00308A15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = StdTxGuide/Images.xcassets; sourceTree = "<group>"; };
+		A67011CB1B05383D00308A15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A68B5786199BE8DF0030E194 /* c0-clv.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c0-clv.html"; sourceTree = "<group>"; };
 		A68B5787199BE8DF0030E194 /* c1-r.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c1-r.html"; sourceTree = "<group>"; };
 		A68B5788199BE8DF0030E194 /* c1-t.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "c1-t.html"; sourceTree = "<group>"; };
@@ -382,7 +384,6 @@
 				3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */,
 				3793DFD91C1F5E0B000D491B /* libz.tbd */,
 				3793DFD71C1F591C000D491B /* Pushwoosh.framework */,
-				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				A68B5785199BE8DF0030E194 /* content */,
 				A650DAEC198BFF4F00223E47 /* StdTxGuide */,
 				A650DB01198BFF4F00223E47 /* StdTxGuideTests */,
@@ -402,6 +403,7 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
+				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */,
@@ -426,6 +428,7 @@
 				37233EF91C0E209A0042B21B /* SupportViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
+				37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				A68B5810199BE8DF0030E194 /* c29-clv.html in Resources */,
 				A68B582D199BE8DF0030E194 /* c46-clv.html in Resources */,
 				A68B582A199BE8DF0030E194 /* c44-clv.html in Resources */,
+				37EA97551F9415E600A4A8C4 /* Launch Screen.storyboard in Resources */,
 				A68B57ED199BE8DF0030E194 /* c1-t.html in Resources */,
 				A68B57FE199BE8DF0030E194 /* c19-r.html in Resources */,
 				A68B580B199BE8DF0030E194 /* c24-t.html in Resources */,
@@ -1008,7 +1012,7 @@
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
 				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1037,7 +1041,7 @@
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
 				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
