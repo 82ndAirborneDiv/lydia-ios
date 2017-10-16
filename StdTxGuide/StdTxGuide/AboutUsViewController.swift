@@ -62,16 +62,13 @@ class AboutUsViewController: UIViewController, UIWebViewDelegate {
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return .lightContent
     }
-    
-
     
     override var prefersStatusBarHidden : Bool {
         return false
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

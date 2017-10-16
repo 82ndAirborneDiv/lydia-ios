@@ -46,7 +46,7 @@ class EulaViewController: UIViewController {
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return .lightContent
     }
     
     override func viewDidAppear(_ animated: Bool) {

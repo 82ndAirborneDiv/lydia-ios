@@ -8,13 +8,7 @@
 
 import UIKit
 import MessageUI
-//extension MFMailComposeViewController {
-//
-//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-//        return UIStatusBarStyle.LightContent
-//    }
-//    
-//}
+
 
 
 class SupportViewController: UIViewController, MFMailComposeViewControllerDelegate {
@@ -28,7 +22,6 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewController, animated: true, completion: {() in
-                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
                 })
         } else {
             self.showSendMailErrorAlert()
@@ -77,9 +70,11 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         return mailComposerVC
     }
     
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+    func showSendMailErrorAlert() {        
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message:"Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        self.present(sendMailErrorAlert, animated: true){}
+
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method

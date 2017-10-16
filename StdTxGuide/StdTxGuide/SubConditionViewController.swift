@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class SubConditionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     var conditions = Array<Condition>()
@@ -38,9 +37,7 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
         
         // following line is ncessary so that the status bar text is white when the More tab is being displayed.
         self.tabBarController?.moreNavigationController.navigationBar.barStyle = UIBarStyle.black
-        
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
-        
+                
         // Do any additional setup after loading the view, typically from a nib.
         conditions = conditionContent.getChildConditions()
         println("Current condition childBreadcrumbs = \(self.conditionContent.getCurrentCondition().childBreadcrumbs)")
@@ -57,7 +54,7 @@ class SubConditionViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return .lightContent
     }
     
     func showBackButton() {

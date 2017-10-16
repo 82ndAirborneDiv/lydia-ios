@@ -109,9 +109,8 @@ class ConditionDetailViewController: UIViewController {
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return .lightContent
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

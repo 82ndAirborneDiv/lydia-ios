@@ -39,9 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PushNotificationDelegate 
         
         let sc = SiteCatalystService()
         sc.trackAppLaunchEvent()
-        
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
-        
+                
         PushNotificationManager.push().delegate = self
         PushNotificationManager.push().handlePushReceived(launchOptions)
         PushNotificationManager.push().sendAppOpen()
