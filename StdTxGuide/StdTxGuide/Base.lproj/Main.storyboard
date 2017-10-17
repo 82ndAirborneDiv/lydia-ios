@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vta-NW-HXZ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Condition Details" id="moC-LP-7Wa">
                                         <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="4GG-bf-ldt">
@@ -83,11 +83,11 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-5Q-T49">
-                                <rect key="frame" x="0.0" y="152" width="375" height="626"/>
+                                <rect key="frame" x="0.0" y="176" width="375" height="602"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD0-0z-QRQ" userLabel="Segmented Control View">
-                                <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lp-IBZ">
                                         <rect key="frame" x="103.66666666666669" y="8" width="167" height="29"/>
@@ -101,7 +101,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jde-Xx-7TO">
-                                        <rect key="frame" x="156.66666666666666" y="14" width="61.666666666666686" height="17"/>
+                                        <rect key="frame" x="156.66666666666666" y="14" width="61.666666666666657" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.13558641076087952" green="0.26101651787757874" blue="0.5887489914894104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -125,10 +125,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wac-B3-e9A" userLabel="Label View">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition Breadcrumb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJB-gO-ct3">
-                                        <rect key="frame" x="101.66666666666669" y="11" width="172.66666666666663" height="21"/>
+                                        <rect key="frame" x="101.66666666666667" y="11" width="172.66666666666663" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -136,6 +136,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7Cw-bL-Dng"/>
                                     <constraint firstItem="DJB-gO-ct3" firstAttribute="centerX" secondItem="wac-B3-e9A" secondAttribute="centerX" id="9eY-o1-NCg"/>
                                     <constraint firstItem="DJB-gO-ct3" firstAttribute="centerY" secondItem="wac-B3-e9A" secondAttribute="centerY" id="oGX-Dy-BCk"/>
                                 </constraints>
@@ -143,12 +144,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wac-B3-e9A" firstAttribute="top" secondItem="vta-NW-HXZ" secondAttribute="bottom" id="354-7d-YCL"/>
                             <constraint firstItem="RQa-5Q-T49" firstAttribute="leading" secondItem="cjg-ir-eNb" secondAttribute="leading" id="5dK-Fa-foK"/>
                             <constraint firstItem="JD0-0z-QRQ" firstAttribute="top" secondItem="wac-B3-e9A" secondAttribute="bottom" id="6Ej-5P-ur7"/>
-                            <constraint firstItem="wac-B3-e9A" firstAttribute="top" secondItem="dMi-GJ-zvz" secondAttribute="top" constant="64" id="7iB-9F-Jye"/>
                             <constraint firstItem="cjg-ir-eNb" firstAttribute="trailing" secondItem="JD0-0z-QRQ" secondAttribute="trailing" id="93K-UQ-CJy"/>
                             <constraint firstItem="wac-B3-e9A" firstAttribute="top" secondItem="vta-NW-HXZ" secondAttribute="bottom" id="CaR-GB-ryg"/>
-                            <constraint firstItem="JD0-0z-QRQ" firstAttribute="top" secondItem="dMi-GJ-zvz" secondAttribute="top" constant="108" id="F90-q2-nNC"/>
                             <constraint firstItem="JD0-0z-QRQ" firstAttribute="leading" secondItem="cjg-ir-eNb" secondAttribute="leading" id="Gmo-Zj-g3x"/>
                             <constraint firstItem="vta-NW-HXZ" firstAttribute="top" secondItem="cjg-ir-eNb" secondAttribute="top" id="LtR-ck-edI"/>
                             <constraint firstItem="RQa-5Q-T49" firstAttribute="centerX" secondItem="cjg-ir-eNb" secondAttribute="centerX" id="VRt-g8-4Sj"/>
