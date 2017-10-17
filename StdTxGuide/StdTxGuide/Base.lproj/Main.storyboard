@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -360,13 +359,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-EE-L3W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zCM-EE-L3W" firstAttribute="top" secondItem="jEe-Vu-jQP" secondAttribute="top" id="AIE-88-XYq"/>
+                            <constraint firstItem="zCM-EE-L3W" firstAttribute="top" secondItem="EF3-0Y-jKW" secondAttribute="top" id="AIE-88-XYq"/>
                             <constraint firstItem="zCM-EE-L3W" firstAttribute="leading" secondItem="EF3-0Y-jKW" secondAttribute="leading" id="Vg3-y5-Qkw"/>
                             <constraint firstItem="EF3-0Y-jKW" firstAttribute="trailing" secondItem="zCM-EE-L3W" secondAttribute="trailing" id="bg7-Qo-Aon"/>
                             <constraint firstItem="zCM-EE-L3W" firstAttribute="bottom" secondItem="EF3-0Y-jKW" secondAttribute="bottom" id="ghv-uF-7B0"/>
@@ -515,7 +514,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-pH-6bm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juz-YD-Lkb">
@@ -529,7 +528,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Juz-YD-Lkb" firstAttribute="centerY" secondItem="j7J-bD-RYa" secondAttribute="centerY" id="7qA-yW-XAB"/>
-                            <constraint firstItem="a4L-pH-6bm" firstAttribute="top" secondItem="j7J-bD-RYa" secondAttribute="top" id="9Dv-Gc-oBo"/>
+                            <constraint firstItem="a4L-pH-6bm" firstAttribute="top" secondItem="8TC-TF-DZt" secondAttribute="top" id="9Dv-Gc-oBo"/>
                             <constraint firstItem="a4L-pH-6bm" firstAttribute="bottom" secondItem="8TC-TF-DZt" secondAttribute="bottom" id="Hta-hs-e5M"/>
                             <constraint firstItem="a4L-pH-6bm" firstAttribute="trailing" secondItem="8TC-TF-DZt" secondAttribute="trailing" id="N9Z-7w-iNz"/>
                             <constraint firstItem="Juz-YD-Lkb" firstAttribute="leading" secondItem="8TC-TF-DZt" secondAttribute="leading" id="dS6-ex-5b2"/>
@@ -557,55 +556,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOy-9o-bvV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-1p-Mq0">
-                                <rect key="frame" x="82" y="490" width="211" height="30"/>
-                                <state key="normal" title="Email"/>
-                                <connections>
-                                    <action selector="btnEmailShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="zHS-zH-JAy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-FE-5u8">
-                                <rect key="frame" x="82" y="528" width="211" height="30"/>
-                                <state key="normal" title="Text"/>
-                                <connections>
-                                    <action selector="btnMessageShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="gC0-mG-z8a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dce-dy-3Fs">
-                                <rect key="frame" x="82" y="566" width="211" height="30"/>
-                                <state key="normal" title="Facebook"/>
-                                <connections>
-                                    <action selector="btnFacebookShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="3CB-Ua-rrh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zup-yc-6Bu">
-                                <rect key="frame" x="82" y="604" width="211" height="30"/>
-                                <state key="normal" title="Twitter"/>
-                                <connections>
-                                    <action selector="btnTwitterShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="yVS-r5-P02"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="giZ-vt-EB7">
+                                <rect key="frame" x="0.0" y="283.66666666666669" width="375" height="162"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-1p-Mq0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                        <connections>
+                                            <action selector="btnEmailShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="zHS-zH-JAy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-FE-5u8">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="30"/>
+                                        <state key="normal" title="Text"/>
+                                        <connections>
+                                            <action selector="btnMessageShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="gC0-mG-z8a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dce-dy-3Fs">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="30"/>
+                                        <state key="normal" title="Facebook"/>
+                                        <connections>
+                                            <action selector="btnFacebookShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="3CB-Ua-rrh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zup-yc-6Bu">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="30"/>
+                                        <state key="normal" title="Twitter"/>
+                                        <connections>
+                                            <action selector="btnTwitterShareTouchUp:" destination="Ge2-qa-xgV" eventType="touchUpInside" id="yVS-r5-P02"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oPa-FE-5u8" firstAttribute="trailing" secondItem="MsE-1p-Mq0" secondAttribute="trailing" id="251-Ww-vbJ"/>
-                            <constraint firstItem="dce-dy-3Fs" firstAttribute="trailing" secondItem="zup-yc-6Bu" secondAttribute="trailing" id="8Ui-c0-2AA"/>
-                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="leading" secondItem="GKI-EH-f3f" secondAttribute="leadingMargin" constant="66" id="9kV-JX-8wE"/>
-                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="centerX" secondItem="IOy-9o-bvV" secondAttribute="centerX" id="Anv-bh-nGe"/>
-                            <constraint firstItem="MsE-1p-Mq0" firstAttribute="top" secondItem="IOy-9o-bvV" secondAttribute="bottom" constant="-239" id="EpD-XP-pQk"/>
-                            <constraint firstItem="oPa-FE-5u8" firstAttribute="leading" secondItem="dce-dy-3Fs" secondAttribute="leading" id="J09-O8-ON2"/>
-                            <constraint firstItem="IOy-9o-bvV" firstAttribute="top" secondItem="GKI-EH-f3f" secondAttribute="top" id="K0T-Lf-zln"/>
+                            <constraint firstItem="giZ-vt-EB7" firstAttribute="leading" secondItem="ptg-Yt-xfS" secondAttribute="leading" id="8We-3V-hlU"/>
                             <constraint firstItem="ptg-Yt-xfS" firstAttribute="trailing" secondItem="IOy-9o-bvV" secondAttribute="trailing" id="LMo-Ex-a1L"/>
-                            <constraint firstItem="oPa-FE-5u8" firstAttribute="leading" secondItem="MsE-1p-Mq0" secondAttribute="leading" id="MNn-X5-rJg"/>
+                            <constraint firstItem="IOy-9o-bvV" firstAttribute="top" secondItem="ptg-Yt-xfS" secondAttribute="top" id="RyQ-M1-Ug1"/>
+                            <constraint firstItem="giZ-vt-EB7" firstAttribute="centerY" secondItem="GKI-EH-f3f" secondAttribute="centerY" id="SJZ-lY-dRR"/>
                             <constraint firstItem="IOy-9o-bvV" firstAttribute="bottom" secondItem="ptg-Yt-xfS" secondAttribute="bottom" id="UI2-9Z-SJO"/>
-                            <constraint firstItem="zup-yc-6Bu" firstAttribute="top" secondItem="dce-dy-3Fs" secondAttribute="bottom" constant="8" symbolic="YES" id="Vcb-nC-65c"/>
-                            <constraint firstItem="oPa-FE-5u8" firstAttribute="top" secondItem="MsE-1p-Mq0" secondAttribute="bottom" constant="8" symbolic="YES" id="aTz-q8-i29"/>
-                            <constraint firstItem="dce-dy-3Fs" firstAttribute="leading" secondItem="zup-yc-6Bu" secondAttribute="leading" id="dcg-pE-G60"/>
-                            <constraint firstItem="dce-dy-3Fs" firstAttribute="top" secondItem="oPa-FE-5u8" secondAttribute="bottom" constant="8" symbolic="YES" id="hKR-mQ-tSu"/>
-                            <constraint firstItem="oPa-FE-5u8" firstAttribute="trailing" secondItem="dce-dy-3Fs" secondAttribute="trailing" id="kuT-7J-JDa"/>
+                            <constraint firstItem="giZ-vt-EB7" firstAttribute="centerX" secondItem="GKI-EH-f3f" secondAttribute="centerX" id="lAe-WN-Zvd"/>
+                            <constraint firstItem="ptg-Yt-xfS" firstAttribute="trailing" secondItem="giZ-vt-EB7" secondAttribute="trailing" id="mDr-FV-Stk"/>
                             <constraint firstItem="IOy-9o-bvV" firstAttribute="leading" secondItem="ptg-Yt-xfS" secondAttribute="leading" id="unI-us-Wrc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ptg-Yt-xfS"/>
@@ -618,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3y-3r-2ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="843.77811094452784"/>
+            <point key="canvasLocation" x="2217" y="851"/>
         </scene>
     </scenes>
     <resources>
