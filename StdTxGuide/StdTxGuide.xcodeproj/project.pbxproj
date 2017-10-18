@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3707CE5B1C0F3FC000C85B1F /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */; };
-		3710F1C51F97BE610002102A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710F1C41F97BE610002102A /* Launch Screen.storyboard */; };
 		3710F1CB1F97E74F0002102A /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3710F1C61F97E61D0002102A /* Pushwoosh.framework */; };
+		3710F1CE1F97FC640002102A /* LaunchImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3710F1CD1F97FC640002102A /* LaunchImages.xcassets */; };
 		37233EFA1C0E209A0042B21B /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37233EF91C0E209A0042B21B /* SupportViewController.swift */; };
 		37233EFC1C0E260C0042B21B /* support.html in Resources */ = {isa = PBXBuildFile; fileRef = 37233EFB1C0E260C0042B21B /* support.html */; };
 		3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD91C1F5E0B000D491B /* libz.tbd */; };
@@ -186,8 +186,8 @@
 /* Begin PBXFileReference section */
 		3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StdTxGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
-		3710F1C41F97BE610002102A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3710F1C61F97E61D0002102A /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = Carthage/Build/iOS/Pushwoosh.framework; sourceTree = "<group>"; };
+		3710F1CD1F97FC640002102A /* LaunchImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImages.xcassets; sourceTree = "<group>"; };
 		37233EF91C0E209A0042B21B /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		37233EFB1C0E260C0042B21B /* support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
 		3793DFD91C1F5E0B000D491B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -389,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				3710F1C61F97E61D0002102A /* Pushwoosh.framework */,
-				3710F1C41F97BE610002102A /* Launch Screen.storyboard */,
 				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */,
 				3793DFD91C1F5E0B000D491B /* libz.tbd */,
@@ -436,6 +435,7 @@
 				A69DAEB51B0B61C30058F90E /* SubConditionViewController.swift */,
 				37233EF91C0E209A0042B21B /* SupportViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
+				3710F1CD1F97FC640002102A /* LaunchImages.xcassets */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
 			);
 			path = StdTxGuide;
@@ -752,7 +752,6 @@
 				A68B583F199BE8DF0030E194 /* c55-t.html in Resources */,
 				A68B57F1199BE8DF0030E194 /* c11-t.html in Resources */,
 				A68B57EF199BE8DF0030E194 /* c10-t.html in Resources */,
-				3710F1C51F97BE610002102A /* Launch Screen.storyboard in Resources */,
 				A6BE156119F19AE2008330A1 /* c36-r.html in Resources */,
 				A68B5826199BE8DF0030E194 /* c41-clv.html in Resources */,
 				A68B5827199BE8DF0030E194 /* c42-r.html in Resources */,
@@ -826,6 +825,7 @@
 				A68B57ED199BE8DF0030E194 /* c1-t.html in Resources */,
 				A68B57FE199BE8DF0030E194 /* c19-r.html in Resources */,
 				A68B580B199BE8DF0030E194 /* c24-t.html in Resources */,
+				3710F1CE1F97FC640002102A /* LaunchImages.xcassets in Resources */,
 				A6BE154A19F19A9B008330A1 /* c14-t.html in Resources */,
 				A6BE156519F19AE2008330A1 /* c43-clv.html in Resources */,
 				A6F7C7B1199D28B400A77F2C /* eula.css in Resources */,
@@ -1027,7 +1027,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1056,7 +1056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
