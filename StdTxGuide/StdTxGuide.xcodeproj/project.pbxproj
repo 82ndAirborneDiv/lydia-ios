@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3707CE5B1C0F3FC000C85B1F /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */; };
+		3710F1C51F97BE610002102A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710F1C41F97BE610002102A /* Launch Screen.storyboard */; };
 		37233EFA1C0E209A0042B21B /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37233EF91C0E209A0042B21B /* SupportViewController.swift */; };
 		37233EFC1C0E260C0042B21B /* support.html in Resources */ = {isa = PBXBuildFile; fileRef = 37233EFB1C0E260C0042B21B /* support.html */; };
 		3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD91C1F5E0B000D491B /* libz.tbd */; };
@@ -15,7 +16,6 @@
 		3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */; };
 		37A8E94F1C244980002940A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8E94E1C244980002940A7 /* ShareViewController.swift */; };
 		37A8E9511C244A45002940A7 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 37A8E9501C244A45002940A7 /* share.html */; };
-		37EA97551F9415E600A4A8C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */; };
 		A60D6C781A9F6205007C818D /* sexualhistory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A60D6C771A9F6205007C818D /* sexualhistory.pdf */; };
 		A60DE3FD19C9DFA4007BBAA7 /* SexualHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */; };
 		A622D5751B27321700414533 /* ModalEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A622D5741B27321700414533 /* ModalEulaViewController.swift */; };
@@ -186,6 +186,7 @@
 /* Begin PBXFileReference section */
 		3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StdTxGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		3710F1C41F97BE610002102A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		37233EF91C0E209A0042B21B /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		37233EFB1C0E260C0042B21B /* support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
 		3793DFD71C1F591C000D491B /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = StdTxGuide/Frameworks/Pushwoosh.framework; sourceTree = "<group>"; };
@@ -194,7 +195,6 @@
 		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		37A8E94E1C244980002940A7 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		37A8E9501C244A45002940A7 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
-		37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A60D6C771A9F6205007C818D /* sexualhistory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sexualhistory.pdf; sourceTree = "<group>"; };
 		A60DE3FC19C9DFA4007BBAA7 /* SexualHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexualHistoryViewController.swift; sourceTree = "<group>"; };
 		A622D5741B27321700414533 /* ModalEulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEulaViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +381,8 @@
 		A650DAE1198BFF4F00223E47 = {
 			isa = PBXGroup;
 			children = (
+				3710F1C41F97BE610002102A /* Launch Screen.storyboard */,
+				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */,
 				3793DFD91C1F5E0B000D491B /* libz.tbd */,
 				3793DFD71C1F591C000D491B /* Pushwoosh.framework */,
@@ -403,7 +405,6 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
-				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */,
@@ -428,7 +429,6 @@
 				37233EF91C0E209A0042B21B /* SupportViewController.swift */,
 				A6F7C7A7199CF7F200A77F2C /* TermsViewController.swift */,
 				A650DAED198BFF4F00223E47 /* Supporting Files */,
-				37EA97541F9415E600A4A8C4 /* Launch Screen.storyboard */,
 			);
 			path = StdTxGuide;
 			sourceTree = "<group>";
@@ -743,6 +743,7 @@
 				A68B583F199BE8DF0030E194 /* c55-t.html in Resources */,
 				A68B57F1199BE8DF0030E194 /* c11-t.html in Resources */,
 				A68B57EF199BE8DF0030E194 /* c10-t.html in Resources */,
+				3710F1C51F97BE610002102A /* Launch Screen.storyboard in Resources */,
 				A6BE156119F19AE2008330A1 /* c36-r.html in Resources */,
 				A68B5826199BE8DF0030E194 /* c41-clv.html in Resources */,
 				A68B5827199BE8DF0030E194 /* c42-r.html in Resources */,
@@ -813,7 +814,6 @@
 				A68B5810199BE8DF0030E194 /* c29-clv.html in Resources */,
 				A68B582D199BE8DF0030E194 /* c46-clv.html in Resources */,
 				A68B582A199BE8DF0030E194 /* c44-clv.html in Resources */,
-				37EA97551F9415E600A4A8C4 /* Launch Screen.storyboard in Resources */,
 				A68B57ED199BE8DF0030E194 /* c1-t.html in Resources */,
 				A68B57FE199BE8DF0030E194 /* c19-r.html in Resources */,
 				A68B580B199BE8DF0030E194 /* c24-t.html in Resources */,
@@ -1001,7 +1001,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1030,7 +1030,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
