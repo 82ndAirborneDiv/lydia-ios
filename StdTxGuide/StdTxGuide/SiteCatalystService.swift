@@ -48,7 +48,7 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     let SC_PAGE_SHARE = "Share"
     let SC_PAGE_SUPPORT = "Support"
     
-    let cdcServer = "http://tools.cdc.gov/metrics.aspx?"
+    let cdcServer = "https://tools.cdc.gov/metrics.aspx?"
     let localServer = "http://localhost:5000/metrics?"
     let commonConstParams = "c8=Mobile App&c51=Standalone&c52=STD Tx Guide 2015&c5=eng&channel=IIU"
     let prodConstParams = "reportsuite=cdcsynd"
