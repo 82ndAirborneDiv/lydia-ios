@@ -13,6 +13,9 @@ import UIKit
 class SiteCatalystService: NSObject, NSURLConnectionDelegate {
 
     var responseData:NSMutableData = NSMutableData()
+    
+    let DEBUG = false
+    let DEBUG_LOCAL = false
 
     let SC_EVENT_APP_LAUNCH = "Application:Launch"
     let SC_EVENT_NAV_SECTION = "Navigation:Section"
@@ -58,11 +61,15 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
     
         // these first change most often depending on version and if debug is true
         let appVersion = getAppVersion()
-        let debug = false
-        let debugLocal = false
     
         // server information
-        let server = debugLocal ? localServer : cdcServer
+        // let server = debugLocal ? localServer : cdcServer
+        #if DEBUG_LOCAL
+            let server = localServer
+        #else
+            let server = cdcServer
+        #endif
+        
     
         // device info
         let deviceParams = String(format:"c54=%@&c55=%@&c56=%@", getDeviceSystemName(), getDeviceSystemVersion(), getDeviceModel())
@@ -82,8 +89,14 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
         // device online status
         let deviceOnline = "c57=1"
     
-        let constParams = String(format:"%@&%@", (debug ? debugConstParams : prodConstParams), commonConstParams)
-    
+        
+        // let constParams = String(format:"%@&%@", (debug ? debugConstParams : prodConstParams), commonConstParams)
+        #if DEBUG
+            let constParams = String(format:"%@&%@", debugConstParams, commonConstParams)
+        #else
+            let constParams = String(format:"%@&%@", prodConstParams, commonConstParams)
+        #endif
+
         let metrics = String(format:"%@&%@&%@&%@&%@&%@&%@", constParams, deviceParams, appInfoParams, deviceOnline, eventInfo, sectionInfo, pageName)
         let metricsWithEscapes = metrics.addingPercentEncoding( withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let encodedMetricUrl = String(format:"%@%@",server, metricsWithEscapes!)
@@ -137,29 +150,6 @@ class SiteCatalystService: NSObject, NSURLConnectionDelegate {
             }
         }
         task.resume()
-    }
-    
-    
-    func oldPostSCEvent(_ scString:String)
-    {
-    
-        // create request
-        let request:NSMutableURLRequest = NSMutableURLRequest(url: URL(string:scString)!)
-    
-        // Specify that it will be a POST request
-        request.httpMethod = "GET"
-    
-        // This is how we set header fields
-        request.setValue("application/xml; charset=utf-8", forHTTPHeaderField:"Content-Type")
-    
-        // Convert your data and set your request's HTTPBody property
-        let stringData:NSString = ""
-        let requestBodyData:Data = stringData.data(using: String.Encoding.utf8.rawValue)!
-        request.httpBody = requestBodyData
-    
-        // Create url connection and fire request
-        _ = NSURLConnection(request:request as URLRequest, delegate:self)
-    
     }
     
     

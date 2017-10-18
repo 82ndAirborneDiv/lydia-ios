@@ -50,7 +50,7 @@ class FullGuidelinesViewController: UIViewController, UIWebViewDelegate {
         
         if (navigationType == UIWebViewNavigationType.linkClicked)
             {
-                UIApplication.shared.openURL(request.url!)
+                UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
                 return false
         }
         
