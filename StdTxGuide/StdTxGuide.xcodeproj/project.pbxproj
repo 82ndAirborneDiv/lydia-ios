@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		3707CE5B1C0F3FC000C85B1F /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */; };
 		3710F1C51F97BE610002102A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710F1C41F97BE610002102A /* Launch Screen.storyboard */; };
+		3710F1CB1F97E74F0002102A /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3710F1C61F97E61D0002102A /* Pushwoosh.framework */; };
 		37233EFA1C0E209A0042B21B /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37233EF91C0E209A0042B21B /* SupportViewController.swift */; };
 		37233EFC1C0E260C0042B21B /* support.html in Resources */ = {isa = PBXBuildFile; fileRef = 37233EFB1C0E260C0042B21B /* support.html */; };
 		3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD91C1F5E0B000D491B /* libz.tbd */; };
-		3793DFDB1C1F5E1F000D491B /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFD71C1F591C000D491B /* Pushwoosh.framework */; };
 		3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */; };
 		37A8E94F1C244980002940A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8E94E1C244980002940A7 /* ShareViewController.swift */; };
 		37A8E9511C244A45002940A7 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 37A8E9501C244A45002940A7 /* share.html */; };
@@ -187,9 +187,9 @@
 		3707CE591C0F3FC000C85B1F /* StdTxGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StdTxGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		3707CE5A1C0F3FC000C85B1F /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
 		3710F1C41F97BE610002102A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3710F1C61F97E61D0002102A /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = Carthage/Build/iOS/Pushwoosh.framework; sourceTree = "<group>"; };
 		37233EF91C0E209A0042B21B /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		37233EFB1C0E260C0042B21B /* support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
-		3793DFD71C1F591C000D491B /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = StdTxGuide/Frameworks/Pushwoosh.framework; sourceTree = "<group>"; };
 		3793DFD91C1F5E0B000D491B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
@@ -362,8 +362,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3710F1CB1F97E74F0002102A /* Pushwoosh.framework in Frameworks */,
 				3793DFDD1C1F5E6D000D491B /* libstdc++.tbd in Frameworks */,
-				3793DFDB1C1F5E1F000D491B /* Pushwoosh.framework in Frameworks */,
 				3793DFDA1C1F5E0B000D491B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,18 +378,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3710F1CA1F97E74F0002102A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A650DAE1198BFF4F00223E47 = {
 			isa = PBXGroup;
 			children = (
+				3710F1C61F97E61D0002102A /* Pushwoosh.framework */,
 				3710F1C41F97BE610002102A /* Launch Screen.storyboard */,
 				A67011CB1B05383D00308A15 /* Images.xcassets */,
 				3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */,
 				3793DFD91C1F5E0B000D491B /* libz.tbd */,
-				3793DFD71C1F591C000D491B /* Pushwoosh.framework */,
 				A68B5785199BE8DF0030E194 /* content */,
 				A650DAEC198BFF4F00223E47 /* StdTxGuide */,
 				A650DB01198BFF4F00223E47 /* StdTxGuideTests */,
 				A650DAEB198BFF4F00223E47 /* Products */,
+				3710F1CA1F97E74F0002102A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -614,6 +622,7 @@
 				A650DAE6198BFF4F00223E47 /* Sources */,
 				A650DAE7198BFF4F00223E47 /* Frameworks */,
 				A650DAE8198BFF4F00223E47 /* Resources */,
+				3710F1CC1F97E9350002102A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -847,6 +856,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3710F1CC1F97E9350002102A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Pushwoosh.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Pushwoosh.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A650DAE6198BFF4F00223E47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -999,7 +1026,6 @@
 		A650DB09198BFF4F00223E47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = NO;
@@ -1010,6 +1036,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1028,7 +1055,6 @@
 		A650DB0A198BFF4F00223E47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = NO;
@@ -1039,6 +1065,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

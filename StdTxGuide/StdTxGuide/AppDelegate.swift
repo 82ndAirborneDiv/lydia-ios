@@ -11,6 +11,8 @@ import SystemConfiguration
 import CoreLocation
 import AVFoundation
 import ImageIO
+import Pushwoosh
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PushNotificationDelegate {
