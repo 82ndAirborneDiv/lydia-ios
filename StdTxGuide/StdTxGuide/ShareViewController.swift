@@ -10,15 +10,6 @@ import UIKit
 import MessageUI
 import Social
 
-extension MFMailComposeViewController {
-    
-    open override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
-}
-
 
 class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
     
@@ -34,6 +25,7 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
+            mailComposeViewController.navigationBar.tintColor = UIColor.white
             self.present(mailComposeViewController, animated: true, completion: {() in
   //              UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
             })
@@ -45,13 +37,14 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
     
     @IBAction func btnMessageShareTouchUp(_ sender: AnyObject) {
         
-        let mailComposeViewController = self.configuredMessageComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: {() in
-    //            UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: false)
+        let messageComposeViewController = self.configuredMessageComposeViewController()
+        if MFMessageComposeViewController.canSendText() {
+            messageComposeViewController.navigationBar.tintColor = UIColor.white
+
+            self.present(messageComposeViewController, animated: true, completion: {() in
             })
         } else {
-            self.showSendMailErrorAlert()
+            self.showSendMessageErrorAlert()
             
         }
     }
@@ -96,6 +89,10 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,7 +103,8 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setSubject("STD Tx Guide App from CDC")
+        mailComposerVC.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        mailComposerVC.setSubject("STD Tx Guide from CDC")
         let messageBody = String(format:"\n %@ \n %@",shareText, shareUrl)
         mailComposerVC.setMessageBody(messageBody, isHTML: false)
         
@@ -130,7 +128,14 @@ class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate
         sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
         self.present(sendMailErrorAlert, animated: true){}
     }
-    
+
+    func showSendMessageErrorAlert() {
+        
+        let sendMessageErrorAlert = UIAlertController(title: "Could Not Send Message", message:"Your device could not send message.", preferredStyle: .alert)
+        sendMessageErrorAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        self.present(sendMessageErrorAlert, animated: true){}
+    }
+
     // MARK: MFMailComposeViewControllerDelegate Method
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)

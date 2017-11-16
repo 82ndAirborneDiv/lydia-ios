@@ -21,6 +21,7 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         
         let mailComposeViewController = self.configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
+            mailComposeViewController.navigationBar.tintColor = UIColor.white
             self.present(mailComposeViewController, animated: true, completion: {() in
                 })
         } else {
@@ -49,10 +50,13 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         super.viewWillAppear(animated)
         sc.trackNavigationEvent(sc.SC_PAGE_SUPPORT, section: sc.SC_SECTION_SUPPORT)
 
-
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,10 +65,10 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-
+        mailComposerVC.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         mailComposerVC.setToRecipients(["informaticslab@cdc.gov"])
-        mailComposerVC.setSubject("App Support Request: STD Tx Guide for iOS")
+        mailComposerVC.setSubject("STD Tx Guide Support")
         let messageBody = String(format:"\n\n\nApp name:  STD Tx Guide for iOS \nApp version:  %@  \nDevice model:  %@ \nSystem name:  %@ \nSystem version:  %@", DeviceInfo.getAppVersion(), DeviceInfo.getDeviceModel(), DeviceInfo.getDeviceSystemName(), DeviceInfo.getDeviceSystemVersion());
         mailComposerVC.setMessageBody(messageBody, isHTML: false)
         return mailComposerVC
