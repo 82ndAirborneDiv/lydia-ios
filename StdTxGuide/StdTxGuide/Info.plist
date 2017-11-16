@@ -20,8 +20,21 @@
 	<string>2.4.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.pushwoosh.scheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>pw-C2A2A-C5E3E</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -40,7 +53,7 @@
 		</dict>
 	</dict>
 	<key>Pushwoosh_APPID</key>
-	<string>8B382-CD725</string>
+	<string>C2A2A-C5E3E</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIStatusBarHidden</key>
@@ -54,18 +67,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>com.pushwoosh.scheme</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>pw-C2A2A-C5E3E</string>
-            </array>
-        </dict>
-    </array>
 </dict>
 </plist>

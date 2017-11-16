@@ -663,7 +663,7 @@
 				TargetAttributes = {
 					A650DAE9198BFF4F00223E47 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = Z827RBGAJC;
+						DevelopmentTeam = J8992FE8QS;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1032,7 +1032,7 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J8992FE8QS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
@@ -1041,7 +1041,7 @@
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
+				PRODUCT_BUNDLE_IDENTIFIER = gov.cdc.oid.nchhstp.StdTxGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1061,7 +1061,7 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J8992FE8QS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StdTxGuide/Frameworks",
@@ -1070,7 +1070,7 @@
 				INFOPLIST_FILE = StdTxGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cdc.iiu.stdtxguide;
+				PRODUCT_BUNDLE_IDENTIFIER = gov.cdc.oid.nchhstp.StdTxGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
