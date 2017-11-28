@@ -190,6 +190,7 @@
 		3710F1CD1F97FC640002102A /* LaunchImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImages.xcassets; sourceTree = "<group>"; };
 		37233EF91C0E209A0042B21B /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		37233EFB1C0E260C0042B21B /* support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
+		377588291FCDC06900A39AED /* StdTxGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StdTxGuide.entitlements; sourceTree = "<group>"; };
 		3793DFD91C1F5E0B000D491B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3793DFDC1C1F5E6D000D491B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		3799BDEF1C10A11A00ACBC08 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
@@ -412,6 +413,7 @@
 		A650DAEC198BFF4F00223E47 /* StdTxGuide */ = {
 			isa = PBXGroup;
 			children = (
+				377588291FCDC06900A39AED /* StdTxGuide.entitlements */,
 				A6F7C7B9199D33D500A77F2C /* AboutUsViewController.swift */,
 				A650DAEF198BFF4F00223E47 /* AppDelegate.swift */,
 				A6DC6EE31B21EDBD00A057A5 /* AppearanceHelper.swift */,
@@ -1042,6 +1044,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				CODE_SIGN_ENTITLEMENTS = StdTxGuide/StdTxGuide.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J8992FE8QS;
@@ -1071,6 +1074,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				CODE_SIGN_ENTITLEMENTS = StdTxGuide/StdTxGuide.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Centers for Disease Control";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J8992FE8QS;
