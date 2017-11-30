@@ -127,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition Breadcrumb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJB-gO-ct3">
-                                        <rect key="frame" x="0.0" y="11" width="375" height="21"/>
+                                        <rect key="frame" x="6" y="11" width="363" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -136,9 +136,9 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Cw-bL-Dng"/>
-                                    <constraint firstAttribute="trailing" secondItem="DJB-gO-ct3" secondAttribute="trailing" id="LrX-6J-HtO"/>
+                                    <constraint firstAttribute="trailing" secondItem="DJB-gO-ct3" secondAttribute="trailing" constant="6" id="LrX-6J-HtO"/>
                                     <constraint firstItem="DJB-gO-ct3" firstAttribute="top" secondItem="wac-B3-e9A" secondAttribute="top" constant="11" id="yd5-nK-mYR"/>
-                                    <constraint firstItem="DJB-gO-ct3" firstAttribute="leading" secondItem="wac-B3-e9A" secondAttribute="leading" id="zOq-3S-6ok"/>
+                                    <constraint firstItem="DJB-gO-ct3" firstAttribute="leading" secondItem="wac-B3-e9A" secondAttribute="leading" constant="6" id="zOq-3S-6ok"/>
                                 </constraints>
                             </view>
                         </subviews>
